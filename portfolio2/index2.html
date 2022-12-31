@@ -1,0 +1,125 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>To do list</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <main id="app">
+    <h3>{{title}}</h3>
+    <form @submit.prevent="addTodo">  
+      <input v-model="newTodo" type="text" name="newTodo" id="newTodo"> 
+      <button type="submit" name="button" id="add">+</button>
+    </form>
+    <ul>
+      <li v-for="todo in todos">
+        <input type="checkbox" v-model="todo.done">
+        <span :class="{ done: todo.done }">{{todo.title}}</span>
+          <button @click="removeTodo(todo)" type="button" id="remove">–</button>
+      </li>
+    </ul>
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        title:'to-do list',
+        newTodo: '',
+        todos: []
+      },
+      methods: {
+        addTodo() {
+          this.todos.push({
+            title: this.newTodo,
+            done: false
+          });
+          this.newTodo = ""
+        },
+        removeTodo(todo) {
+          const todoIndex = this.todos.indexOf(todo);
+          this.todos.splice(todoIndex, 1);
+        }
+      }
+    });
+
+  </script>
+</body>
+<style>
+  main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+form {
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.1);
+  padding: 35px;
+  width: 400px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#add, #remove {
+  background: transparent;
+  border: none;
+  float: right;
+  font: {
+    size: 1.2em;
+    weight: bold;
+  }
+  padding-bottom: 15px;
+  &:hover {
+    color: #FF0080;
+  }
+}
+
+#add {
+  padding-top: 15px;
+}
+
+#newTodo {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: .85em;
+  padding-top: 15px;
+  margin-top: 9px;
+  width: 80%;
+  &:focus {
+    border-bottom: 1px solid #FF0080;
+  }
+}
+
+input[type="text"]:focus, button:focus {
+  outline: none;
+}
+
+li {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  font-size: .85em;
+  list-style-type: none;
+  margin: {
+    bottom: 2em;
+  }
+  padding: 25px;
+  width: 300px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+#remove {
+  float: right;
+}
+</style>
+</html>

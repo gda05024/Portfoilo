@@ -1,0 +1,876 @@
+header{
+
+  max-width: 1200px;
+  margin: 0px auto;
+  /*! background-color: #0000; */
+  /*! overflow: hidden; */
+  padding-top: 103px;
+  padding-bottom: 19px;
+  /*! padding-left: 20px; */
+  /*! color: #ccc; */
+  height: 37px;
+}
+h1{
+
+  float: left;
+  margin-top: -82px;
+  font-size: 50px;
+  /*! margin-right: 3px; */
+}
+.hide{
+  display: none;
+}
+h1 a{
+
+  width: 85px;
+  height: 36px;
+  display: block;
+  background-image: url(https://www.fursys.com/fur_frt/images/text/text_logo.png);
+  text-indent: -1900px;
+}
+header>ul{
+
+  /*! float: left; */
+  /*! display: ; */
+  text-align: right;
+  padding-left: 44px;
+  font-size: 18px;
+}
+
+header>h1+ul{
+
+}
+ul.gnb{
+
+}
+ul.gnb .submenu{
+  position: absolute;
+  top: 38px;
+  /*! background: rgba(0, 0, 0, 0); */
+  border: 1px solid #dfdfdf29;
+  /*! padding: 1px; */
+  width: 135px;
+  left: 0px;
+  text-align: center;
+  display: none;
+  background-color: rgba(255,255,255,0.2);
+}
+ul.gnb .submenu li:first-child{
+  
+}
+ul.gnb li:hover .submenu{
+  display: block;
+}
+
+ul.gnb .submenu ul li:first-child a {
+  font-size: 14px;
+  line-height: 40px;
+  padding-bottom: -5px;
+  display: block;
+  color: #7A7979;
+  background-color: #rgba(255,255,255,0.2);
+}
+ul.gnb .submenu ul li:nth-child(2) a {
+   font-size: 14px;
+  /*! padding-bottom: 16px; */
+   display: block;
+   line-height: 40px;
+   /*! color: #bfbfbf; */
+   color: #7A7979;
+}
+ul.gnb .submenu ul li:first-child a:hover {
+  padding: 1px;
+  background-color: #cccccc5e;
+  color: #bfbfbf;
+}
+ul.gnb .submenu ul li:nth-child(2) a:hover {
+  padding: 1px;
+  background-color: #cccccc4f;
+  color: #bfbfbf;
+}
+ul.gnb>li{
+
+  float: left;
+  margin-left: 36px;
+  /*! border-top: 1px solid; */
+  /*! margin-bottom: px; */
+  position: relative;
+  padding-bottom: 20px;
+}
+ul.gnb li a i{
+  
+  font-size: 26px;
+  color: #a8a8a8;
+}
+ul.gnb li a i:hover{
+  color: #000;
+}
+ul.gnb li h2{
+
+}
+ul.gnb li h2 a{
+
+  border-top: 2px solid;
+  padding-top: 8px;
+  color: #606060;
+  margin-right: -15px;
+  display: inline-block;
+  border-top-color: #bfbfbf;
+  font-size: 17px;
+}
+ul.gnb li h2 a:hover{
+ padding-bottom: 10px;
+ background-color: #cccccc5e;
+  color: #FFF;
+}
+header>h1+ul>li{
+
+}
+header>h1+ul+ul{
+
+
+}
+header > h1 + ul + ul.id{
+
+  margin-top: -95px;
+}
+
+ul.enb{
+
+}
+ul.enb li{
+
+}
+ul.enb li a {
+
+  /*! margin-top: -61px; */
+  display: inline-block;
+  margin-top: 87px;
+  width: 18%;
+  border-bottom: 1px solid;
+  color: #555454;
+  font-size: 15px;
+}
+ul.enb li a i{
+
+  margin-right: 147px;
+  display: inline-block;
+}
+ul.id li{
+
+  display: inline-block;
+}
+ul.id li a{
+
+  display: inline-block;
+  font-size: 12px;
+  /*! margin-top: -21px; */
+}
+
+hr{
+
+  display: none;
+}
+/*타이틀영역*/
+div#title{
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 77PX;
+  background-color: #dbdbdb29;
+  height: 712px;
+  /*! margin-top: 4px; */
+}
+div#title h2{
+
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #717171;
+  /*! margin-top: ; */
+}
+div#title h2+p{
+
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #717171;
+}
+div#title ul{
+
+  text-align: center;
+  overflow: hidden;
+  margin-top: 103px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+div#title ul>li{
+
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+div#title ul>li.right{
+
+  float: right;
+  padding-right: 36px;
+}
+div#title ul>li.left{
+
+  float: left;
+  margin-left: 36px;
+}
+div#title ul li {
+
+}
+div#title ul li a {
+ display: block;
+ padding: 30px;
+ position: relative;
+}
+div#title ul li a::before{
+
+  content: "";
+  width: 100%;
+  height: 330px;
+  display: block;
+  background-image: url(../img/a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*! padding: 20px; */
+  /*! padding-left: 20p; */
+}
+div#title ul li+li a::before{
+
+  content: "";
+  width: 100%;
+  height: 330px;
+  display: block;
+  background-image: url(../img/b.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div#title ul li+li+li a::before{
+
+  content: "";
+  width: 100%;
+  height: 330px;
+  display: block;
+  background-image: url(../img/c.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div#title ul+li{
+
+}
+
+div#title ul>li>a>p{
+
+  font-weight: bold;
+  /*! line-height: 4; */
+  margin-top: 63px;
+}
+div#title ul>li>a>p+p{
+
+  font-weight: normal;
+  font-size: 15px;
+  position: absolute;
+  left: 29px;
+  top: -33px;
+  width: 87%;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  height: 330px;
+  line-height: 22;
+}
+div#title ul>li>a:hover>p+p{
+  display: block;
+}
+div#title ul>li>a>p+p.go{
+
+  
+}
+/* showroom */
+
+div#showroom{
+  position: relative;
+  width: 1500px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+div#showroom h2{
+ 
+  text-align: center;
+  line-height: 2;
+  font-size: 30px;
+  font-weight: bold;
+}
+div#showroom h2+p{
+  text-align: center;
+line-height: 2;
+  padding-bottom: 40px;
+}
+div#showroom ul{
+
+}
+/* 쇼룸 리스트 */
+div#showroom ul.list{
+ 
+  display: inline-block;
+  width: 11%;
+  vertical-align: top;
+  margin-top: -23px;
+}
+div#showroom ul.list li{
+  
+  /*! line-height: 5; */
+  width: 73%;
+  margin-top: -8px;
+}
+div#showroom ul.list li+li{
+  
+}
+div#showroom ul.list li a{
+  
+  display: inline-block;
+  line-height: 4;
+  font-weight: bold;
+  color: #5b5b5b;
+  /*! margin-right: -16px; */
+}
+
+div#showroom ul.list li a:hover{
+  color: #000;
+}
+/* 쇼룸 디테일 */
+#showroom ul.detail{
+  display: inline-block;
+  width: 88%;
+}
+#showroom ul.detail li{
+  
+}
+#showroom ul.detail li h3{
+ 
+}
+
+#showroom ul.detail li img{
+ 
+  width: 101%;
+  margin-left: -17px;
+}
+#showroom a.go{
+ 
+  position: absolute;
+  bottom: -3px;
+  left: 0px;
+  border: 1px solid;
+  padding: 6px;
+  font-size: 12px;
+}
+#showroom a:hover.go{
+  background-color: #cccbcb;
+ border: 2px solid #fff;
+ line-height: 15px;
+}
+
+#showroom a.go::after{
+ content: ">";
+ margin-left: 6px;
+font-size: 12px;
+transform: scaleY(2) translateY(-1px);
+display: inline-block;
+}
+div#showroom button.counsel{
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  z-index: 1;
+}
+div#showroom button.counsel i{
+  font-size: 25px;
+    margin-right: 10px;
+  vertical-align: -5px;
+}
+/* case study */
+#casestudy{
+
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  position: relative;
+}
+div#casestudy h2{
+  
+  /*! margin-top: 13px; */
+}
+div#casestudy h2+p{
+ 
+ margin-top: 10px;
+}
+div#casestudy h2+p+a{
+  
+  display: inline-block;
+  /*! margin-top: 64px; */
+  /*! padding-top: 2px; */
+  position: relative;
+  top: 112px;
+  border: 1px solid #353535;
+  padding: 7px;
+  font-size: 15px;
+  color: #555;
+}
+div#casestudy h2+p+a:hover{
+ background-color: #c8c8c8;
+ border: 2px solid #fff;
+ line-height: 14px;
+}
+div#casestudy h2+p+a::after{
+  content: ">";
+  margin-left: 7px;
+  font-size: 14px;
+  transform: scaleY(2) translateY(-1px);
+  display: inline-block;
+}
+div.case{
+  
+  width: 23%;
+  display: inline-block;
+  /*! margin-top: 52px; */
+  position: relative;
+  top: 115px;
+}
+div.case h2{
+  
+  font-size: 45px;
+}
+div.case h2+p{
+  
+  font-size: 19px;
+}
+div#casestudy ul{
+ 
+  display: inline-block;
+  width: 76%;
+}
+div#casestudy ul li{
+
+  display: inline-block;
+  width: 31%;
+  vertical-align: top;
+
+}
+div#casestudy ul li a{
+  
+/*! position: relative; */
+}
+div#casestudy ul li:first-child{
+  
+}
+div#casestudy ul li:last-child{
+ 
+}
+div#casestudy ul li h3{
+ 
+  text-align: center;
+  font-size: 20px;
+  margin: 25px;
+}
+div#casestudy ul li h3+p{
+  
+  font-size: 15px;
+  text-align: center;
+}
+div#casestudy ul li a::before{
+ content: "";
+  
+ background-image: url(https://www.fursys.com/fur_frt/images/main_renewal/210113/case_study_01.jpg);
+ width: 100%;
+ height: 264px;
+ display: inline-block;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+div#casestudy ul li+li a::before{
+  
+ content: "";
+ width: 100%;
+ display: block;
+ height: 264px;
+ background-image: url(https://www.fursys.com/fur_frt/images/main_renewal/0404/case_study_02.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+div#casestudy ul li+li+li a::before{
+
+
+  content: "";
+  width: 100%;
+  display: block;
+  height: 264px;
+  background-image: url(https://www.fursys.com/fur_frt/images/main_renewal/210113/case_study_03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div#casestudy ul li a h3{
+
+font-weight: bold;
+
+}
+div#casestudy ul li a:hover{
+  display: block;
+}
+div#casestudy ul li a{
+ display: block;
+ position: relative;
+}
+div#casestudy ul li a p.go{
+position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+  text-align: center;
+  color:#fff;
+  background-color: rgba(0,0,0,0.6);
+  display: none; 
+  height: 265px;
+  line-height: 20;
+  font-size: 14px;
+}
+
+div#casestudy ul li a:hover p.go{
+  display: block;
+}
+div#casestudy a.more{
+
+
+}
+/* send */
+div#send{
+
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+div#send h2{
+
+
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+div#send h2+p{
+
+
+  text-align: center;
+  padding-top: 35px;
+  color: #6a6a6a;
+  line-height: 2;
+}
+div#send ul{
+
+}
+div#send a::after{
+
+}
+div#send ul li a::before{
+
+  content: "";
+  width: 162%;
+  display: block;
+  height: 140px;
+  background-image: url(../img/a1.jpg);
+  background-repeat: no-repeat;
+  margin-left: -8px;
+  /*! text-align: left; */
+}
+
+
+
+div#send ul li + li a::before{
+
+  content: "";
+  width: 162%;
+  display: block;
+  height: 140px;
+  background-image: url(../img/a2.jpg);
+  background-repeat: no-repeat;
+}
+div#send ul li+li+li a::before{
+
+  content: "";
+  width: 90%;
+  display: block;
+  height: 140px;
+  background-image: url(../img/a3.jpg);
+  background-repeat: no-repeat;
+}
+div#send ul li+li+li+li a::before{
+
+  content: "";
+  width: 198%;
+  display: block;
+  height: 140px;
+  background-image: url(../img/a4.jpg);
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+div#send ul li+li+li+li+li a::before{
+
+  content: "";
+  width: 206%;
+  display: block;
+  height: 140px;
+  background-image: url(../img/a5.jpg);
+  background-repeat: no-repeat;
+}
+div#send h2+p+ul{
+
+
+  display: block;
+  width: 100%;
+  /*! height: 90%; */
+}
+div#send h2+p+ul>a{
+
+}
+div#send li{
+
+  display: inline-block;
+  margin: 59px;
+  vertical-align: top;
+  margin-top: 16px;
+}
+
+div#send ul li a p{
+
+  margin-top: 20px;
+  font-size: 16px;
+  /*! width: 129%; */
+}
+
+div#send h3{
+  
+}
+div#send p{
+
+}
+div#send p>a{
+
+ 
+}
+div#send p>a:hover{
+ color: :#ccc;
+ 
+}
+div#send a.more{
+
+}
+div#send h2+p+ul+p.and{
+
+}
+div#send p+a{
+
+  /*! margin: 0 auto; */
+  position: relative;
+  left: 461px;
+  padding: 10px;
+  border: 1px solid;
+  /*! color: #ffe28a; */
+  background-color: #dbdad5;
+  top: -2px;
+}
+div#send p+a:hover{
+  background-color: #fff;
+ border: 2px solid #fff;
+ line-height: 15px;
+}
+div#send li.and p{
+
+  width: 327%;
+  text-align: center;
+  margin-bottom: 38px;
+  margin-top: 21px;
+}
+div#send li.and+a{
+
+}
+div#send li.and{
+  
+  /*! text-align: center; */
+  /*! margin: 0 auto; */
+}
+div#send h2+p+ul+p{
+
+}
+div#send h2+p+ul+p>a{
+
+ 
+}
+footer{
+  padding: 40px 0;
+  margin-top: 40px;
+}
+footer .f1{
+  /*! background-color: #bbbbbb29; */
+  padding-bottom: 50px;
+  padding-top: 44px;
+  
+  font-size: 14px;
+  s: ;
+}
+footer .f1>a{
+ width: 200px;
+ height: 150px;
+ display: block;
+ background-image: url(https://www.fursys.com/fur_frt/images/icon/favicon-192x192.png);
+ background-repeat: no-repeat;
+ /*! text-indent: -190px; */
+ position: relative;
+  left: 840px;
+}
+footer .f1 .f1in{
+  width: 1200px;
+  margin: 0 auto;
+  font-weight: normal;
+  text-align: center;
+  padding: 24px;
+  background-color: #f9f9f9;
+  margin-top: 4px;
+}
+footer .f1 .f1in div{
+ color: #5c687d;
+}
+footer .f1 .f1in div>*{
+  
+}
+footer .f1 .f1in div:nth-child(1){
+ /*! padding-top: 80px; */
+}
+footer .f1 .f1in div:nth-child(1) h1{
+
+}
+footer .f1 .f1in div:nth-child(1) p{
+ 
+}
+footer .f1 .f1in div:nth-child(2) p:nth-child(2){
+  font-size: 12px;
+}
+ffooter .f1 .f1in div p:nth-child(1){
+  
+}
+footer .f1 .f1in div:nth-child(2){
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+footer .f1 .f1in div:nth-child(2) p{
+
+}
+footer .f1 .f1in div:nth-child(2) address{
+ 
+}
+footer .f1 .f1in div:nth-child(3){
+
+}
+footer .f1 .f1in div:nth-child(3) p{
+
+}
+footer .f1 .f1in div:nth-child(3) p:nth-child(1){
+ font-size: 11px;
+}
+footer .f1 .f1in div:nth-child(3) p:nth-child(2){
+  font-size: 12px;
+}
+footer .f1 .f1in div:nth-child(4){
+
+}
+footer .f1 .f1in div:nth-child(4) ul{
+
+}
+footer .f1 .f1in div:nth-child(4) ul li{
+
+}
+footer .f1 .f1in div:nth-child(4) ul li a{
+
+}
+footer .f1 .f1in div:nth-child(4) ul li:nth-child(1) a{
+
+}
+footer .f1 .f1in div ul li a{
+ font-size: 13px;
+ color: #5c687d;
+}
+footer .f2{
+width: 1200px;
+margin: 0 auto;
+padding-top: 60px;
+}
+footer .f2>*{
+  display: inline-block;
+  vertical-align: top;
+}
+footer .f2 .banner{
+width: 55%;
+}
+footer .f2 .banner li{
+ display: inline-block;
+}
+footer .f2 .banner li a{
+  display: block;
+  height: 100%;
+  line-height: 2;
+  padding: 0 6px;
+}
+}
+footer .f2 .banner li a img{
+
+}
+footer .f2 .sns{
+width: 30%;
+text-align: right;
+}
+footer .f2 .sns li{
+display: inline-block;
+
+vertical-align: top;
+}
+footer .f2 .sns li a{
+
+}
+footer .f2 .sns li a i{
+  width: 40px;
+  height: 40px;
+  background-color: #999;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 25px;
+    
+}
+footer .f2 .sns li:nth-child(1) a i{
+  font-size: 17px;
+}
+
+footer .f2 .sns li:nth-child(2) a i{
+ font-size: 27px;
+}
+
+
+footer .f2 select{
+float: right;
+}
+footer .f2 select option{
+
+}

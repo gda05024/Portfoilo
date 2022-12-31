@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@media screen and (max-width:1200px){
+  header nav .enb li:not(.ham){
+    display: none;
+  }
+  #popup h1{
+    
+  width: 23%;
+  display: inline-block;
+  padding-right: 0;
+  }
+  #popup ul.enb{
+  display: inline-block;
+  vertical-align: 24px;
+  }
+  #popup ul.enb li{
+    display: inline-block;
+  }
+  #popup ul.enb li a{
+    font-size: 12px;
+  }
+  #popup .gnb{
+  width: 70%;
+  }
+  #popup .gnbbg{
+  width: 20%;
+  }
+  #popup .gnb li h2{
+    font-size: 28px;
+    width: 130px;
+    /*! padding-left: 0; */
+  }
+  #popup .gnb li ul li a{
+  font-size: 14px;
+  }
+  header nav{
+  width: 77%;
+  }
+              
+}
+
+@media screen and (max-width:768px){
+  
+}

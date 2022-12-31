@@ -1,0 +1,803 @@
+@charset "UTF-8";
+/* 타이틀영역--------------------------------- */
+#title{
+
+  /*! width: 1400px; */
+  margin: 0 auto;
+  background-color: #fff5d6;
+  position: relative;
+  overflow: hidden;
+}
+#title .newborn_in{
+  width: 300%;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  /*! height: 500px; */
+  display: flex;
+  background-color: #fff5d6;
+  overflow: hidden;
+}
+#title .newborn{
+
+  width: 1200px;
+  margin: 0 auto;
+  height: 750px;
+  padding-top: 300px;
+  background-image: url(../img/banner_1.png);
+  background-repeat: no-repeat;
+  background-position-x: 532px;
+  background-size: 56%;
+  background-position-y: 200px;
+  position: relative;
+} 
+#title .newborn h2{
+    
+  font-size: 48px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #676d72;
+} 
+#title .newborn p{
+    
+  margin-top: 20px;
+  margin-bottom: 48px;
+  color: #676d72;
+} 
+#title .newborn a{
+    
+  color: #f9ce42 !important;
+  font-size: 20px;
+
+  display: inline-block;
+
+  display: flex;
+} 
+#title .newborn a::after{
+  content: "";
+  width: 50px;
+  height: 33px;
+  display: inline-block;
+  background-image: url(https://noelohills.com/web/upload/noelo/main/btn-more-visual.png);
+  background-repeat: no-repeat;
+  /*! line-height: 2; */
+}
+#title .newborn_1{
+    
+  /*! text-align: center; */
+  margin: 0 auto;
+  height: 750px;
+  padding-top: 300px;
+  background-image: url(../img/banner_2.png);
+  background-repeat: no-repeat;
+  background-position-x: 532px;
+  background-size: 56%;
+  background-position-y: 200px;
+  width: 1200px;
+} 
+#title .newborn_1 h2{
+    
+  font-size: 48px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #676d72;
+} 
+#title .newborn_1 p{
+    
+  margin-top: 20px;
+  margin-bottom: 48px;
+  color: #676d72;
+} 
+#title .newborn_1 a{
+    
+  color: #f9ce42 !important;
+  font-size: 20px;
+  display: inline-block;
+  display: flex;
+} 
+#title .newborn_1 a::after{
+  content: "";
+  width: 50px;
+  height: 33px;
+  display: inline-block;
+  background-image: url(https://noelohills.com/web/upload/noelo/main/btn-more-visual.png);
+  background-repeat: no-repeat;
+  /*! line-height: 2; */
+}
+#title .newborn_2{
+    
+  /*! text-align: center; */
+  width: 1200px;
+  margin: 0 auto;
+  height: 750px;
+  padding-top: 300px;
+  background-image: url(../img/banner_3.png);
+  background-repeat: no-repeat;
+  background-position-x: 532px;
+  background-size: 56%;
+  background-position-y: 200px;
+} 
+#title .newborn_2 h2{
+    
+  font-size: 48px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #676d72;
+} 
+#title .newborn_2 p{
+    
+  margin-top: 20px;
+  margin-bottom: 48px;
+  color: #676d72;
+} 
+#title .newborn_2 a{
+    
+  color: #f9ce42 !important;
+  font-size: 20px;
+
+  display: inline-block;
+
+  display: flex;
+} 
+#title .newborn_2 a::after{
+  content: "";
+  width: 50px;
+  height: 33px;
+  display: inline-block;
+  background-image: url(https://noelohills.com/web/upload/noelo/main/btn-more-visual.png);
+  background-repeat: no-repeat;
+  /*! line-height: 2; */
+}
+#title .control{
+  display: flex;
+  width: 5%;
+  justify-content: space-between;
+  padding-top: 50px;
+  position: absolute;
+  top: calc(100% - 30%);
+  z-index: 2;
+  left: calc(100% - 83%);
+}
+#title .control li{
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.current_c{
+  background-color: orange !important;
+}
+/* 내용영역----------------------------------- */
+/* safe-------------------------------- */
+section#safe{
+
+  height: 600px;
+}
+section#safe .safe{
+
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+section#safe h2{
+  
+}
+section#safe h2 span{ 
+  
+  display: block;
+  color: #f9ce42;
+  font-size: 15px;
+  padding-top: 100px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+section#safe h2 strong{ 
+  
+  font-size: 30px;
+  font-weight: bold;
+  color: #676d72;
+}
+section#safe ul{
+
+  display: flex;
+  justify-content: space-around;
+}
+section#safe ul li{
+
+  /*! margin-top: 50px; */
+  padding-top: 75px;
+}
+section#safe ul li::before{
+content: "";
+background-image: url(https://noelohills.com/web/upload/noelo/main/bg-promiss01.png);
+width: 166px;
+display: inline-block;
+height: 177px;
+}
+section#safe ul li:nth-child(2)::before{
+content: "";
+background-image: url(https://noelohills.com/web/upload/noelo/main/bg-promiss02.png);
+width: 166px;
+display: inline-block;
+height: 177px;
+}
+section#safe ul li:nth-child(3)::before{
+content: "";
+background-image: url(https://noelohills.com/web/upload/noelo/main/bg-promiss03.png);
+width: 166px;
+display: inline-block;
+height: 177px;
+}
+section#safe ul li:nth-child(4)::before{
+content: "";
+background-image: url(https://noelohills.com/web/upload/noelo/main/bg-promiss04.png);
+width: 166px;
+display: inline-block;
+height: 177px;
+}
+section#safe ul li h3{
+
+  margin-top: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #676d72;
+  font-weight: bold;
+}
+section#safe ul li p{
+
+  font-size: 13px;
+  color: #676d72;
+}
+/* meet-------------------------------- */
+section#meet{
+
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
+  /*! width: ; */
+  /*! flex-direction: column; */
+}
+section#meet .box1{
+
+  width: 465px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#meet .box1 h2{
+
+ 
+  width: 33%;
+}
+section#meet .box1 h2 span{
+
+  display: block;
+  color: #f9ce42;
+  font-size: 15px;
+
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+section#meet .box1 strong{
+ display: block;
+ font-size: 30px;
+ font-weight: bold;
+ color: #676d72;
+}
+section#meet .box2{
+
+  width: 435px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff5d6;
+  border: 1px solid #fff5d6;
+  border-radius: 20px;
+  background-image: url(https://noelohills.com/web/product/big/202104/8140e2ffe2e71f78e1c4f5e278208097.jpg);
+  background-size: 112%;
+  background-repeat: no-repeat;
+  background-position-x: -29px;
+  background-position-y: 40px;
+  line-height: 2;
+  margin-right: 20px;
+}
+section#meet .box2 h2{
+
+  color: #70767c;
+  letter-spacing: -0.45px;
+  font-size: 18px;
+  font-weight: bold;
+}
+section#meet .box2 p{
+
+  color: #676d72;
+  letter-spacing: -0.45px;
+  font-size: 13px;
+}
+section#meet .box2 strong{
+
+  color: #70767c;
+  letter-spacing: -0.45px;
+  font-size: 18px;
+  font-weight: bold;
+}
+section#meet .box2 a{
+
+  margin-bottom: 50px;
+  color: #f9ce42 !important;
+  font-size: 20px;
+  font-weight: bold;
+  /*! display: none; */
+}
+section#meet .box2 a::after{
+  content: "";
+  width: 50px;
+  height: 33px;
+  display: inline-block;
+  background-image: url(https://noelohills.com/web/upload/noelo/main/btn-more-visual.png);
+  background-repeat: no-repeat;
+  /*! line-height: 2; */
+  margin-bottom: -13px;
+}
+section#meet .box3{
+
+  width: 435px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff5d6;
+  border: 1px solid #fff5d6;
+  border-radius: 20px;
+  background-image: url(https://noelohills.com/web/product/big/202104/72141d279c9cb74d0c266fe76b17fa58.jpg);
+  background-size: 112%;
+  background-repeat: no-repeat;
+  background-position-x: -29px;
+  background-position-y: 40px;
+  line-height: 2;
+}
+section#meet .box3 h2{
+color: #70767c;
+letter-spacing: -0.45px;
+font-size: 18px;
+font-weight: bold;
+}
+section#meet .box3 p{
+
+  color: #676d72;
+  letter-spacing: -0.45px;
+  font-size: 13px;
+}
+section#meet .box3 strong{
+
+  color: #70767c;
+  letter-spacing: -0.45px;
+  font-size: 18px;
+  font-weight: bold;
+}
+section#meet .box3 a{
+
+  margin-bottom: 50px;
+  color: #f9ce42 !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+section#meet .box3 a::after{
+  content: "";
+  width: 50px;
+  height: 33px;
+  display: inline-block;
+  background-image: url(https://noelohills.com/web/upload/noelo/main/btn-more-visual.png);
+  background-repeat: no-repeat;
+  /*! line-height: 2; */
+  margin-bottom: -13px;
+}
+/* belief-------------------------------- */
+#belief{
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+}
+#belief .b0{
+
+}
+#belief .b0 img{
+
+  width: 700px;
+  height: 600px;
+  /*! border: 1px solid yellow; */
+}
+#belief .b1{
+
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+#belief .b1 h2{
+
+  display: block;
+  font-size: 27px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #70767c;
+}
+#belief .b1 h2::before{
+  content: "";
+  width: 157px;
+  height: 116px;
+  background-image: url(../img/safe.png);
+  display: block;
+}
+#belief .b1 p{
+
+  font-size: 13px;
+  padding: 17px 0px;
+  color: #70767c;
+  font-weight: bold;
+  line-height: 2;
+}
+#belief .b1 a{
+
+  color: #70767c;
+  font-weight: bold;
+}
+
+#belief .b1 a::after{
+content: "";
+width: 50px;
+height: 33px;
+display: inline-block;
+background-image: url(https://www.noelohills.com/web/upload/noelo/main/btn-read-more.png);
+background-repeat: no-repeat;
+line-height: 2;
+margin-bottom: -13px;
+}
+/* smart-------------------------------- */
+#smart{
+
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#smart .s0{
+
+}
+#smart .s0 img{
+
+  width: 700px;
+  height: 600px;
+}
+#smart .s1{
+
+ 
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+#smart .s1 h2{
+
+  display: block;
+  font-size: 27px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #70767c;
+}
+#smart .s1 h2::before{
+  content: "";
+  width: 157px;
+  height: 116px;
+  background-image: url(../img/smart.png);
+  display: block;
+}
+
+#smart .s1 p{
+
+  font-size: 13px;
+  padding: 17px 0px;
+  color: #70767c;
+  font-weight: bold;
+  line-height: 2;
+}
+#smart .s1 a{
+
+  color: #70767c;
+  font-weight: bold;
+}
+#smart .s1 a::after{
+content: "";
+width: 50px;
+height: 33px;
+display: inline-block;
+background-image: url(https://www.noelohills.com/web/upload/noelo/main/btn-read-more.png);
+background-repeat: no-repeat;
+line-height: 2;
+margin-bottom: -13px;
+}
+/* beginning-------------------------------- */
+#beginning{
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+}
+#beginning .e0{
+
+}
+#beginning .e0 img{
+
+  width: 700px;
+  height: 600px;
+  /*! border: 1px solid yellow; */
+}
+#beginning .e1{
+
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+#beginning .e1 h2{
+
+  display: block;
+  font-size: 27px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #70767c;
+}
+#beginning .e1 h2::before{
+  content: "";
+  width: 157px;
+  height: 116px;
+  background-image: url(../img/safe.png);
+  display: block;
+}
+#beginning .e1 p{
+
+  font-size: 13px;
+  padding: 17px 0px;
+  color: #70767c;
+  font-weight: bold;
+  line-height: 2;
+}
+#beginning .e1 a{
+
+  color: #70767c;
+  font-weight: bold;
+}
+
+#beginning .e1 a::after{
+content: "";
+width: 50px;
+height: 33px;
+display: inline-block;
+background-image: url(https://www.noelohills.com/web/upload/noelo/main/btn-read-more.png);
+background-repeat: no-repeat;
+line-height: 2;
+margin-bottom: -13px;
+}
+/* only-------------------------------- */
+#only{
+
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#only .o0{
+
+}
+#only .o0 img{
+
+  width: 668px;
+  height: 600px;
+}
+#only .o1{
+
+ 
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+#only .o1 h2{
+
+  display: block;
+  font-size: 27px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #70767c;
+}
+#only .o1 h2::before{
+  content: "";
+  width: 169px;
+  height: 140px;
+  background-image: url(../img/our.png);
+  display: block;
+}
+
+#only .o1 p{
+
+  font-size: 13px;
+  padding: 17px 0px;
+  color: #70767c;
+  font-weight: bold;
+  line-height: 2;
+}
+#only .o1 a{
+
+  color: #70767c;
+  font-weight: bold;
+}
+#only .o1 a::after{
+content: "";
+width: 50px;
+height: 33px;
+display: inline-block;
+background-image: url(https://www.noelohills.com/web/upload/noelo/main/btn-read-more.png);
+background-repeat: no-repeat;
+line-height: 2;
+margin-bottom: -13px;
+}
+/* instagram------------------------------------- */
+#instagram{
+
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+}
+#instagram h2{
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #70767c;
+  padding: 50px 0;
+}
+#instagram .i1{
+  display: flex;
+  justify-content: center;
+}
+#instagram .i1 p{
+  width: 40px;
+  height: 40px;
+  background-image: url(https://file.cafe24cos.com/instagram-widget/v2/images/defaultAccountAvatar.png);
+  display: block;
+}
+#instagram .i1 a{
+  
+  padding: 0px 17px;
+  border: 1px solid #ccc;
+  /*! border-radius: 10px; */
+  color: #70767c;
+  padding-top: 12px;
+  font-size: 14px;
+  margin-left: 35px;
+}
+
+#instagram ul{
+ display: flex;
+ /*! justify-content: space-between; */
+ padding-top: 50px;
+ justify-content: center;
+}
+#instagram ul li{
+ display: inline-block;
+ width: 11%; 
+  height: 150px;
+}
+#instagram ul li a{
+
+}
+#instagram ul li img{
+  width: 80%;
+}
+#instagram .control{
+  max-width: 1200px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top:80%;
+  margin-left: calc( 50% - 43% );
+
+  height: 31px;
+  display: none;
+}
+#instagram .control a{
+  
+}
+#instagram .control a:first-child{
+  float: left;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  transform: rotate(-45deg);
+}
+#instagram .control a:last-child{
+  float: right;
+ text-indent: -9999px;
+ width: 20px;
+ height: 20px;
+ border-right: 1px solid #ccc;
+ border-top: 1px solid #ccc;
+ transform: rotate(45deg);
+  
+}
+footer{
+ background-color: #f9f9f9;
+}
+#foot{
+ max-width: 1200px;
+ margin: 0 auto;
+ /*! overflow: hidden; */
+}
+#foot ul{
+ display: flex;
+  width: 55%;
+    
+ /*! line-height: 2; */
+ float: left;
+ padding: 45px 0;
+ justify-content: space-between;
+ font-size: 17px;
+}
+#foot ul li{
+ 
+}
+#foot ul li a{
+color: #555;
+}
+#foot ul li:nth-child(1) a{
+  color: #f9ce42;
+}
+#foot span{
+ display: inline-block;
+  float: right;
+ padding: 45px 0;
+}
+#foot span a{
+ color: #555;
+}
+#foot span a::before{
+ content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(https://www.noelohills.com/web/upload/noelo/common/ico_instagram.png);
+  display: inline-block;
+  background-repeat: no-repeat;
+  
+ vertical-align: middle;
+}
+footer p{
+ clear: both;
+ width: 1200px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding-bottom: 50px;
+ color: #555;
+}

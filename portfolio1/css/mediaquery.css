@@ -1,0 +1,218 @@
+@charset "UTF-8";
+@media screen and (max-width:1200px){
+  header{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  header h1{
+  width: 13%;
+  }
+  header > h1 + ul{
+    width: 78%;
+    float: right;
+    padding-top: 13px;
+  }
+  header > h1 + ul + ul{
+    position: absolute;
+    right: 15px;
+    width: auto;
+  }
+  ul.gnb li h2 a{
+  padding: 4px 15px;
+  }
+  header > h1 + ul + ul > li:last-child{
+    position: static;
+  }
+  header > h1 + ul + ul > li{
+    width:auto !important;
+  }
+  header > h1 + ul + ul > li a{
+    padding:0 10px;
+  }
+  div#title{
+  /*! padding-top: 16.6666vw; */
+  /*! padding-bottom: 16.6666vw; */
+  /*! padding-left: 16.6666vw; */
+  }
+  div#title ul{
+   /*! transform: scale(0.8); */ 
+  }
+  div#title h3{
+    font-size: 30px;
+  }
+/*  이슈  */
+  main #issues{
+    padding-top:8.333vw;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  main #issues h2 + p{
+  margin-top: 1.6666vw;
+  margin-bottom: 3.3333vw;
+  }
+  main #issues ul li a::before {
+    background-size: cover !important;
+    height: 25.8333333vw;
+  }
+  main #issues ul li a:hover::before {
+    background-size: cover !important;
+  }
+  main #issues ul li a p.go{
+    height: 25.8333333vw;
+    line-height:27.5vw;
+  }
+/* showroom   */
+  #showroom a.go{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #news ul{
+    margin-right: 20px;
+    margin-left: 20px;
+    }
+  #news ul li a{
+    width: 65%;
+    }
+  #news a.more{
+    right: 20px;
+  }
+  #casestudy ul{
+    margin-right:20px;
+    margin-left:20px;
+  }
+  footer .f1{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  footer .f1 .f1in div{
+    width: 49% !important;
+  }
+  footer .f2{
+    text-align: center;
+  }
+  footer .f2 .banner{
+    overflow: hidden;
+  }
+  footer .f2 select{
+    display: block;
+    margin: 0 auto;
+    float: none;
+    margin-top:20px;
+  }
+}
+@media screen and (max-width:768px){
+/*  상단영역   */
+  header ul.gnb,header ul.enb{
+    display: none;
+  }
+  header .ham{
+    display: block;
+  }
+  div#title h3{
+    font-size: 25px;
+  }
+/*  이슈  */
+  main #issues ul li{
+    float:none !important;
+    display: block;
+    width: auto;
+    margin-bottom: 30px;
+  }
+  main #issues ul li a{
+    text-align: center;
+  }
+  div#office{
+    text-align: center;
+    padding-left: initial;
+  }
+/*  쇼룸  */
+  #showroom h2 + p{
+    margin-bottom:20px;
+  }
+  #showroom ul.list{
+   display: inline-block;
+   width: 22%;
+   text-align: left;
+   vertical-align:top;
+   margin-top: initial;
+    border-left:1px solid #ccc;
+  }
+  #showroom ul.list li + li{
+    border:none;
+  }
+  #showroom ul.list li a{
+    
+  padding-left: 2px;
+  padding-right: 3px;
+  font-size: 15px;
+  font-weight: 300;
+  }
+  #showroom a.go{
+    position: absolute;
+    bottom:20px;
+  }
+  #showroom ul.detail{
+   display: inline-block;
+   width: 70%;
+   vertical-align:top; 
+   height: 52.0833333vw;
+  }
+  #showroom ul.detail li img{
+   height: 52.0833333vw;
+  }
+  #showroom button.counsel{
+   position: static;
+   margin-top: 20px;
+   }
+/*  공지사항  */
+  #news ul {
+   padding-right: 10px;
+   padding-left: 10px;
+   }
+  #news ul li h3{
+   width: 15%;
+   font-size: 13px;
+   font-weight:300;
+   }
+  #news ul li time{
+   font-size: 13px;
+   font-weight:300;
+   text-align: right;
+   float: right;
+   }
+  #news ul li a{
+    font-size: 14px;
+  }
+/*  케이스스터디  */
+  #casestudy ul li{
+  float: none !important;
+  width: auto;
+  margin-bottom: 15px;
+  display: block;
+  }
+/*  하단  */
+  footer .f1 .f1in div{
+  display: block;
+  width: auto !important;
+  }
+  footer .f2 > *{
+    display: block;
+    width: auto !important;
+  }
+  footer .f2 .banner li{
+  float: none;
+  }
+  footer .f2 .sns{
+    text-align: center;
+    margin-top:14px;
+  }
+}
+
+
+
+
+
+
+

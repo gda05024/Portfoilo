@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* footer ---------------------*/
+footer{
+  background-color: #e5e5e5;
+  margin-top: 1px;
+  height: 168px;
+  clear: both;
+  /*! margin-top: 90px; */
+}
+footer div.block_center{
+  width: 1200px;
+  font-size: 13px;
+}
+footer div.block_center ul{
+  float: left;
+  display: flex;
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+footer div.block_center ul li{
+  display: inline-block;
+  font-size: 16px;
+}
+footer div.block_center ul li a{
+  padding: 0 5px;
+  line-height: 2.2;
+  display: block;
+  /*! clear: ; */
+  color: #686868;
+}
+footer div.block_center ul li:nth-child(2) a{
+ color: #333;
+}
+footer div.block_center>span {
+  float: right;
+  display: flex;
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+footer div.block_center>span a{
+  line-height: 2.2;
+  display:inline-block;
+  margin: 0 3px;
+  border: 1px solid #999;
+  padding: 4px 14px;
+  font-size: 12px;
+  background-color: #fff;
+  color: #737373;
+}
+footer div.block_center>span a:nth-child(1){
+  
+  color: #242424;
+}
+footer div.block_center>span a+a{
+  padding-right: 25px;
+  position:relative;
+}
+footer div.block_center>span a:nth-of-type(2)::before,footer div.block_center>span a:nth-of-type(2)::after{
+  position: absolute;
+  right: 10px;
+}
+footer div.block_center>span a:nth-of-type(2)::before{
+  content: ">";
+  transform: rotate(-90deg) scaleY(2);
+  top: 1px;
+  right: 10px;
+
+}
+footer div.block_center>span a:nth-of-type(2)::after{
+  content: "I";
+  transform: scaleY(1.2);
+}
+footer div.block_center h1{
+  clear: both;
+  float: left;
+  width: 14%;
+}
+footer div.block_center h1 a{
+
+  width: 100%;
+  display: block;
+  background-image: url(https://cloud.eais.go.kr/images/common/molit_logo.svg);
+  text-indent: -9998px;
+  height: 41px;
+  background-repeat: no-repeat;
+  /*! background-color: #ccc; */
+}
+footer div.block_center address{
+  float: right;
+  width: 86%;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #757575;
+}
+footer div.block_center  address span{
+    
+  float: right;
+  text-align: right;
+}
+footer div.block_center  address span strong{
+  color: #187ec1;
+}
+footer div.block_center  p.Copyright{
+
+  clear: both;
+  margin-left: 14%;
+  position: relative;
+  top: -19px;
+  color: #757575;
+}
+footer div.block_center  p.Copyright strong{
+    
+}
+/* 뒤집기 */
+.card {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    -moz-transform-style: preserve-3d;
+    transition: 0.5s;
+    margin: 0 auto;
+  }
+  .card:hover{
+    transform: rotatex(180deg);
+  }
+  .face {
+     position: absolute;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    }
+  .front {
+      background: red;
+      z-index: 10;
+  }
+  .back {
+    -moz-transform: rotatey(180deg);
+    transform: rotatex(180deg);
+    background: green;
+    z-index: 10;
+  }

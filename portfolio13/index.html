@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widrh=device-width, intial-scale=1.0, maximum-scale=2.0">
+    <title>(주)한화그룹</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript">
+      $(document).ready(function(){
+        $('.center').slick({
+            centerMode: true,
+            autoplay:true,
+            dots:true,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            centerPadding: '60px',
+            slidesToShow: 4,
+            responsive: [
+              {
+                breakpoint: 1201,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '30px',
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 981,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '20px',
+                  slidesToShow: 2
+                }
+              },
+              {
+                breakpoint: 769,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '10px',
+                  slidesToShow: 1
+                }
+              }
+            ]
+          });
+        $('.fadeIn').slick({
+          dots: true,
+          autoplay:true,
+          autoplaySpeed: 5500,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });  
+
+        var bg = ["img/hb_1.jpg","img/hb_2.jpg"];
+        var n = 0;
+        function titleTextUp(){
+          $("#title li.slick-current h2").addClass("up");
+          if(n==0){
+            n = 1;
+            $("#title").css("background-image","url("+bg[n]+")");
+          }
+          else{
+            n = 0;
+            $("#title").css("background-image","url("+bg[n]+")");
+          }
+          
+          $("#title li:not(.slick-current) h2").removeClass("up");
+        }
+        setInterval(titleTextUp,5500);
+       });
+
+    </script>
+  </head>
+  <body>
+    <!-- 상단영역 -->
+    <header class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <h1><a href="index.html"  class="navbar-brand">(주)한화그룹</a></h1>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fulldown">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="fulldown">
+          <ul class="gnb nav navbar-nav col-md-7 col-sm-7 col-xs-7">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">한화소개 <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="introduce.html">기업소개</a></li>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">투자정보</a></li>
+              </ul>
+            </li>
+            <li class=""><a href="">사업분야</a></li>
+            <li class=""><a href="">미디어롬</a></li>
+            <li class=""><a href="">지속가능경영</a></li>
+            <li class=""><a href="">인재채용</a></li>
+          </ul>
+          <ul class="enb nav navbar-nav navbar-right col-md-3 col-sm-3 col-xs-3">
+            <li class=""><a href="#">뉴스레터</a></li>
+            <li class=""><a href="#">한국어</a></li>
+            <li class=""><a href="#">검색</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- 타이틀영역 -->
+    <div id="title" class="jumbotron">
+      <div class="container">
+        <ul class="fadeIn">
+          <li>
+            <h2>
+              <strong> 지속가능한 내일</strong>을 만들어갑니다.<span class="block"></span>
+              <strong>한화</strong>
+            </h2>
+            <a href="" class="btn btn-primary">지속가능성 캠페인보기</a>  
+          </li>
+          <li>
+            <h2>
+              <strong>지속가능한 내일</strong>을 만들어갑니다.<span class="block"></span>
+              <strong>한화</strong>
+            </h2>
+            <a href="" class="btn btn-primary">지속가능성 캠페인보기</a>  
+          </li>
+        </ul>
+        <!-- 그려지는 원 -->
+        <div class="arcAni">
+          <svg class="svg-progress" width="78" height="78" viewBox="0 0 75 76">
+            <circle class="progress__value white" cx="37" cy="38" r="36" fill="none" stroke="#fff" stroke-width="4" style="stroke-dasharray: 232px; stroke-dashoffset: 0px;"></circle>
+            <circle class="progress__value red" cx="37" cy="38" r="36" fill="none" stroke="#f77a52" stroke-width="4" style="stroke-dasharray: 232px; stroke-dashoffset: 232px;"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- 내용영역 -->
+    <main>
+       <section id="business" class="padding-80">
+         <div class="container">
+           <h2 class="sr-only">business</h2>
+           <ul class="container-fluid scene">
+             <li class="col-md-3 col-sm-6 col-xs-12 thumbnail card">
+                <div class="front face">
+                  <a href="" class="">
+                    <h3 class="thumbnail-label h5">제조/건설</h3>
+                    <p class="h6">인류의 미래를 이끌 성장동력을 지속 발굴하는 가운데 늘 고객의 삶을 위한 새로운 가치를 창출합니다.</p>
+                  </a>
+                </div>
+                <div class="back face">
+                  뒷면
+                </div>
+             </li>
+             <li class="col-md-3 col-sm-6 col-xs-12 thumbnail">
+               <a href="" class="caption">
+                 <h3 class="thumbnail-label h5">금융</h3>
+                 <p class="h6">보험부터 증권, 자산운용에 이르기까지 전문적인 토탈 금융서비스를 바탕으로 고객의 풍요로운 내일을 열어갑니다.</p>
+               </a>
+             </li>
+             <li class="col-md-3 col-sm-6 col-xs-12 thumbnail">
+               <a href="" class="caption">
+                <h3 class="thumbnail-label h5">서비스/레저</h3>
+                <p class="h6">고객에게 즐겁고 품격있는 삶의 에너지를 전하기 위해 고급화 및 차별화된 전략으로 생활레저문화를 선도합니다.</p>
+                </a>
+             </li>
+             <li class="col-md-3 col-sm-6 col-xs-12 thumbnail">
+              <a href="" class="caption">
+                <h3 class="thumbnail-label h5">글로벌 </h3>
+                <p class="h6">300여개의 해외 네트워크를 갖춘 한화는  급변하는 글로벌 비즈니스 환경에 앞서 대응하고 있습니다.</p>
+               </a>
+             </li>
+           </ul>
+         </div>
+       </section>
+       <section id="news" class="padding-80">
+         <div class="container">
+           <h2 class="h2">뉴스</h2>
+           <ul class="list">
+             <li class="col-md-9 col-sm-12 col-xs-12">
+               <a href="">
+                 <h3 class="h2">한화솔루션, 美 고압탱크 시장 공략 본격화… 3000억원 규모 계약 수주</h3>
+                 <p class="h4">▷ 지난해 말 인수한 한화시마론, 미국 선브리지와 첫 대규모 공급 계약 체결
+                    ▷ 미국 앨라배마에 600억원 투자… 2022년 운송용 고압탱크 공장 신설키로...</p>
+                 <time class="h5">2021.08.25</time><span>한화솔루션</span>
+               </a>
+               <ul class="sns list-inline">
+                 <li><a href="" target="_blank">링크</a></li>
+                 <li><a href="" target="_blank">이메일</a></li>
+                 <li><a href="" target="_blank">트위터</a></li>
+                 <li><a href="" target="_blank">페이스북</a></li>
+               </ul>
+             </li>
+             <li class="col-md-3 col-sm-6 col-xs-12">
+               <a href="">
+                 <h3 class="h5">우주인터넷 기업 원웹, 또 34기 띄웠다.. 한화 합류 후 첫 발사 성공</h3>
+                 <time class="h6">2021.08.25</time>
+               </a>
+             </li>
+             <li class="col-md-3 col-sm-6 col-xs-12">
+               <a href="">
+                 <h3 class="h5">우주인터넷 기업 원웹, 또 34기 띄웠다.. 한화 합류 후 첫 발사 성공</h3>
+                 <time class="h6">2021.08.25</time>
+               </a>
+             </li>
+           </ul>
+         </div>
+       </section>
+       <section id="stock" class="padding-80">
+         <div class="container">
+           <h2 class="h2">주가정보</h2>
+           <div class="table-responsive">
+             <table class="table table-striped table-bordered text-center table-responsive">
+               <caption class="h3 text-left">한화</caption>
+               <tr>
+                 <th>현재가</th>
+                 <td>33,300</td>
+                 <th>전일비/등락율</th>
+                 <td>시세상승750 / 2.30 %</td>
+                 <th>거래량</th>
+                 <td>1,160,491 주	</td>
+                 <td rowspan="2">차트보기</td>
+               </tr>
+               <tr>
+                 <th>1</th>
+                 <td>2</td>
+                 <th>3</th>
+                 <td>4</td>
+                 <th>5</th>
+                 <td>6</td>
+               </tr>
+               <tr>
+                 <th>현재가</th>
+                 <td>33,300</td>
+                 <th>전일비/등락율</th>
+                 <td>시세상승750 / 2.30 %</td>
+                 <th>거래량</th>
+                 <td>1,160,491 주	</td>
+                 <td rowspan="2">차트보기</td>
+               </tr>
+             </table>
+           </div>
+         </div>
+       </section>
+       <section id="socialmedia" class="padding-80">
+         <div class="container-fluid">
+           <h2 class="h2 container">한화소셜미디어</h2>
+           <ul class="center smlist">
+             <li class="sm1"><a href=""><img class="img-responsive" src="img/sm1.jpg" alt=""></a></li>
+             <li class="sm2"><a href=""><img class="img-responsive" src="img/sm2.jpg" alt=""></a></li>
+             <li class="sm3"><a href=""><img class="img-responsive" src="img/sm3.jpg" alt=""></a></li>
+             <li class="sm4"><a href=""><img class="img-responsive" src="img/sm4.jpg" alt=""></a></li>
+             <li class="sm5"><a href=""><img class="img-responsive" src="img/sm5.jpg" alt=""></a></li>
+             <li class="sm6"><a href=""><img class="img-responsive" src="img/sm6.jpg" alt=""></a></li>
+           </ul>
+         </div>
+       </section>
+       <section id="direct" class="padding-80">
+         <div class="container">
+           <h2 class="h2">바로가기</h2>
+           <ul class="flex flex-row-2 flex-sm-2 flex-xs-1">
+             <li class="img-thumbnail "><a href=""></a></li>
+             <li class="img-thumbnail"><a href=""></a></li>
+             <li class="img-thumbnail"><a href=""></a></li>
+             <li class="img-thumbnail"><a href=""></a></li>
+           </ul>
+         </div>
+       </section>
+       <section id="search" class="text-center padding-80">
+        <h2 class="h2">한화에 대해서 무엇이 궁금하신가요?</h2>
+        <form action="" class="form-inline">
+          <fieldset class="form-group">
+            <label for="" class="hide">검색</label>
+            <input class="form-control searchinput" type="text" placeholder="검색어를 입력해주세요">
+            <button type="submit" btn btn-default >검색하기<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+          </fieldset>
+        </form>
+        <span>
+          <a href="" class="btn btn-danger">#지속가능경영</a>
+          <a href="" class="btn btn-danger">#(주)한화</a>
+          <a href="" class="btn btn-danger">#태양광</a>
+          <a href="" class="btn btn-danger">#CI</a>
+          <a href="" class="btn btn-danger">#공시정보</a>
+        </span>
+       </section>
+    </main>
+    <!-- 하단영역 -->
+    <footer>
+      <div class="top">
+        <div class="container">
+          <div class="left col-md-5 col-sm-12">
+            <h2>한화그룹소개영상</h2>
+            <iframe width="100%" height="267" src="https://www.youtube.com/embed/6WqfuN3oNu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <nav class="right  col-md-7 col-sm-12">
+            <ul class="gnb container-fluid">
+              <li class="col-md-4 col-sm-4 col-xs-4">
+                <h3>고객지원</h3>
+                <ul>
+                  <li><a href="">계열사별 고객지원</a></li>
+                  <li><a href="">찾아오시는 길</a></li>
+                  <li><a href="">CEO에게 이메일 보내기</a></li>
+                  <li><a href="">뉴스레터</a></li>
+                </ul>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-4">
+                <h3>부가정보</h3>
+                <ul>
+                  <li><a href="">법적고지</a></li>
+                  <li><a href="">공지사항</a></li>
+                  <li><a href="">사이트맵</a></li>
+                </ul>
+              </li>
+              <li class="col-md-4 col-sm-4 col-xs-4">
+                <h3>바로가기</h3>
+                <ul>
+                  <li><a href="">채용정보</a></li>
+                  <li><a href="">한화기념관</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="snb list-inline text-right col-sm-12 ">
+              <li><a href="">페이스북</a></li>
+              <li><a href="">네이버블로그</a></li>
+              <li><a href="">인스타그램</a></li>
+              <li><a href="">트위터</a></li>
+              <li><a href="">유투브</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          <h1 class="h4 col-md-1">(주)한화</h1>
+          <p class="col-md-5">Copyright Hanwha Group.All rights reserved.</p>
+          <a class="col-md-2" href="">개인정보처리방침</a>
+          <div class="dropup">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dM" data-toggle="dropdown" aria-expanded="true">
+              계열사 전체보기
+              <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dM">
+              <h2 class="h5">계열사 바로가기</h2>
+              <ul class="main container-fluid">
+                <li class="col-md-6">
+                  <h3 class="h5">제조/건설</h3>
+                  <ul class="sub container-fluid">
+                    <li class="col-md-6"><a href="">(주)한화</a></li>
+                    <li class="col-md-6"><a href="">한화에어로스페이스</a></li>
+                    <li class="col-md-6"><a href="">한화디펜스</a></li>
+                    <li class="col-md-6"><a href="">한화시스템</a></li>
+                    <li class="col-md-6"><a href="">한화테크윈</a></li>
+                    <li class="col-md-6"><a href="">한화정밀기계</a></li>
+                    <li class="col-md-6"><a href="">한화파워시스템</a></li>
+                    <li class="col-md-6"><a href="">한화솔루션</a></li>
+                    <li class="col-md-6"><a href="">한화종합화학</a></li>
+                    <li class="col-md-6"><a href="">한화토탈</a></li>
+                    <li class="col-md-6"><a href="">여천NCC</a></li>
+                    <li class="col-md-6"><a href="">한화에너지</a></li>
+                    <li class="col-md-6"><a href="">한화건설</a></li>
+                  </ul>
+                </li>
+                <li class="col-md-3">
+                  <h3>금융</h3>
+                  <ul class="sub">
+                    <li><a href="">한화생명</a></li>
+                    <li><a href="">한화손해보험</a></li>
+                    <li><a href="">한화투자증권</a></li>
+                    <li><a href="">한화자산운용</a></li>
+                    <li><a href="">한화저축은행</a></li>
+                  </ul>
+                </li>
+                <li class="col-md-3">
+                  <h3>서비스/레저</h3>
+                  <ul class="sub">
+                    <li><a href="">한화호텔앤드리조트</a></li>
+                    <li><a href="">한화역사</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

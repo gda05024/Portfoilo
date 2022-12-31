@@ -1,0 +1,143 @@
+@charset "utf-8";
+footer{
+ clear: both;
+ border-top: 1px solid #dddddd82;
+ margin-top: 100px;
+ background-color: #00000005;
+}
+footer .w1200{
+ max-width: 1200px;
+  margin: 0 auto; 
+}
+footer .fot_t{
+   
+  padding-top: 30px;
+}
+footer .fot_t h1{
+  float: left;
+  width: 17%;
+}
+footer .fot_t h1 a{
+   width: 100%;
+  height: 80px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  display: block;
+  text-indent: -9999px;
+}
+footer .fot_t select{
+
+  width: 21%;
+  padding: 15px 0;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 5px 32px 8px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+footer .fot_t select option{ 
+
+}
+footer .fot_t .sns{
+ float: right;
+ width: 40%;
+}
+footer .fot_t .sns ul{ 
+  display: flex;
+  justify-content: space-between;
+}
+footer .fot_t .sns ul li{ 
+ text-indent: -9999px;
+ width: 50px;
+ height: 50px;
+ background-repeat: no-repeat;
+ background-position: center;
+ border-radius: 50%;
+ box-shadow: 0px 5px 32px 8px rgba(0, 0, 0, 0.03);
+ cursor: pointer;
+}
+footer .fot_t .sns ul li:nth-child(1){
+  background-image: url(../img/instagram.png);
+}
+footer .fot_t .sns ul li:nth-child(2){
+  background-image: url(../img/facebook.png);
+}
+footer .fot_t .sns ul li:nth-child(3){
+  background-image: url(../img/naver.png);
+}
+footer .fot_t .sns ul li:nth-child(4){
+   background-image: url(../img/youtube.png);
+}
+footer .fot_t .sns ul li:nth-child(5){
+   background-image: url(../img/map.png);
+}
+footer .fot_t .sns ul li:nth-child(6){
+   background-image: url(../img/kakao.png);
+}
+footer .fot_t .sns ul li a{ 
+    
+}
+footer .fot_b{
+
+  clear: both;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer .fot_b .fleft{
+    
+  width: 30%;
+}
+footer .fot_b .fleft ul{
+    
+  line-height: 2;
+}
+footer .fot_b .fleft ul li{
+    
+}
+footer .fot_b .fleft ul li a{
+    
+  font-weight: bold;
+  color: #000000bd;
+  font-size: 17px;
+}
+footer .fot_b .fcenter{
+    
+  width: 35%;
+}
+footer .fot_b .fcenter h2{
+    
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000bd;
+}
+footer .fot_b .fcenter p{
+    
+  line-height: 2;
+  font-size: 14px;
+  color: #000000bd;
+}
+footer .fot_b .fright{
+    
+  width: 35%;
+}
+footer .fot_b .fright h2{
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000bd;  
+}
+footer .fot_b .fright address{
+  line-height: 2;
+  font-size: 14px;
+}
+footer .fot_b .fright address strong{
+ font-weight: bold;
+}
+footer .w1200 + p{
+  
+  text-align: center;
+  line-height: 3;
+  background-color: #343434;
+  color: #ccccccab;
+}

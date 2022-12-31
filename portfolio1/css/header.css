@@ -1,0 +1,218 @@
+html{
+  font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6,li,a,span{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+p{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+header{
+  max-width: 1080px; /* 최대너비 */
+  margin: 0 auto; /* 중앙정렬 */
+  padding-top: 30px;
+  /*! overflow: hidden; */
+  padding-bottom: 30px;
+  height: 36px;
+  position: relative;
+}
+header h1{
+  float: left; /* 수평정렬 */
+  width: 15%;
+  /*! padding: 33px; */
+  /*! margin: 33px; */
+  /*! background-color: red; */
+}
+header h1 a{
+background-image: url(https://www.fursys.com/fur_frt/images/text/text_logo.png);
+width: 85px;
+height: 36px;
+display: block;
+text-indent: -1990px;
+}
+
+header>ul{ /* > 자식선택자 바로아래있는 태그를 가르킴 */
+  float: left;
+}
+header>h1+ul{ /* + 인접선택자 옆에 있는 태그를 가르킴 */
+  width: 70%;
+}
+ul.gnb{
+
+}
+ul.gnb>li{
+position: relative;
+padding-bottom: 20px;
+}
+ul.gnb li h2{
+
+}
+ul.gnb li h2 a:hover{
+color:red;
+}
+ul.gnb li h2 a{
+  padding: 13px 20px;
+  position: relative;
+  display: block;
+}
+ul.gnb li h2 a::before{
+ content: "";
+ border-top:1px solid red;
+ width: 100px;
+ display: block;
+ position: absolute;
+ left:0;
+ top:0;
+ display: none;
+}
+ul.gnb li:nth-child(1) a::before{
+ width: 60px;
+  left: 16px;
+}
+ul.gnb li:nth-child(2) a::before{
+ width: 40px;
+  left: 21px;
+}
+ul.gnb li h2 a:hover::before{
+  display: block;
+}
+/* 서브메뉴 */
+
+ul.gnb .submenu{
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px 12px;
+  width: 133px;
+  top: 49px;
+  display: none;
+  font-size: 13px;
+  letter-spacing:-1px;
+}
+ul.gnb li:first-child .submenu{
+  width: 363px;
+}
+ul.gnb .submenu::before{
+  content:"";
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-top:1px solid #ccc;
+  border-left:1px solid #ccc;
+  transform: rotate(45deg);
+  position: absolute;
+  top:-9px;
+  left: 32px;
+  background-color: #fff;
+}
+ul.gnb li:hover .submenu{
+  display: block;
+  z-index: 3;
+}
+ul.gnb .submenu .submenuin{
+  display: inline-block;
+  margin: 0 17px;
+  vertical-align: top;
+}
+ul.gnb .submenu h3{
+  font-weight: bold;
+  border-top:2px solid;
+  border-bottom:1px dotted;
+  padding:15px 0 20px;
+  margin-bottom:15px;
+}
+ul.gnb .submenu li a:hover{
+ background-color: #ffe5e5;
+ color: #ff0000;
+}
+ul.gnb .submenu li:first-child{
+  border-top:2px solid;
+  padding-top:15px;
+}
+ul.gnb .submenu li:last-child{
+  border-bottom:1px dotted #ccc;
+  padding-bottom:10px;
+}
+ul.gnb li:first-child .submenu li:first-child{
+ border:none;
+ padding: 0;
+}
+ul.gnb li:last-child .submenu li:last-child{
+ border:none;
+ padding: 0;
+}
+ul.gnb .submenu li a{
+ line-height:1.6;
+ display: block;
+ font-weight: lighter;
+}
+
+header>h1+ul>li{
+  float: left;
+  /*! width: 14%; */
+  font-size: 13px;
+}
+
+header>h1+ul+ul{
+  width: 15%;
+  position: relative;
+  top: 13px;
+  transition: all 1s;
+}
+ul.enb{
+
+}
+ul.enb li{
+
+}
+ul.enb li a{
+
+}
+header>h1+ul+ul>li{
+  float: left;
+  font-size: 12px;
+}
+header>h1+ul+ul>li a{
+  font-weight: 300;
+  color:#777;
+}
+header>h1+ul+ul>li:first-child{
+ width: 39%;
+}
+header>h1+ul+ul>li:nth-child(2){
+ width: 61%;
+ text-align: right;
+ border-left:1px solid;
+ box-sizing: border-box;
+}
+header>h1+ul+ul>li:last-child{ /*  */
+  position: absolute;
+  right: 0;
+  top: -43px;
+  background-color: red;
+  width: 100%;
+  text-align: right;
+ }
+header>h1+ul+ul>li:last-child a{
+  color: #fff;
+  display:block;
+  width:100%;
+  padding:5px;
+  padding-right:10px;
+  box-sizing: border-box;
+}
+header>h1+ul+ul>li:last-child a i{
+  font-size: 16px;
+  font-weight: bold;
+  margin-right:5px;
+  vertical-align:text-bottom;
+  color: black;
+}
+li{
+
+}
+
+hr{
+  display: none;
+}

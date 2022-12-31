@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Yeni portfolio</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+			<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="css/reset.css">
+			<link rel="stylesheet" href="css/common.css">
+			<link rel="stylesheet" href="css/header.css">
+			<link rel="stylesheet" href="css/footer.css">
+			<link rel="stylesheet" href="css/index.css">
+			<link rel="stylesheet" href="css/font.css">
+			<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+			<script src="js/jquery-3.6.0.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					if($(window).width()>767){
+								$("#title").prepend("<div class='header_in'></div>");
+								$(".header_in").prepend("<span class='ham'></div>");
+								
+								$(".ham").click(function(){
+									$("header").toggle({"display":"block","width":"50%"});
+								});
+							}else{
+								$("#title .header_in").css("display","none");
+								$("#title .header_in .ham").css("display","none");
+							}
+						// 대메뉴 클릭
+					
+						var po1=Math.floor($("#title").offset().top);
+						var po2=Math.floor($("#about").offset().top);
+						var po3=Math.floor($("#portfoilo").offset().top);
+						var po4=Math.floor($("#portfoilo2").offset().top);
+						var po5=Math.floor($("#portfoilo3").offset().top);
+						var po6=Math.floor($("#contact").offset().top);
+						var po=[po1,po2,po3,po4,po5,po6];
+						var n;
+						
+						$("header ul.up li:nth-child(1) a").addClass("dot");
+						$("header ul.up li a").click(function(){
+							// $(this).addClass("dot");
+							// $("header ul.up li a").not(this).removeClass("dot");
+
+							n=$(this).attr("data-n");
+							$("html,body").stop().animate({scrollTop:po[n]},1000);
+				
+							return false;
+							});
+
+							$(window).scroll(function(){
+								// 어바웃영역시에 대메뉴색상변경 addClass
+								if($(window).scrollTop()>=po1){
+									$("ul.up li:nth-child(1) a").addClass("dot");
+									$("ul.up li a").not("ul.up li:nth-child(1) a").removeClass("dot");
+								}
+								if($(window).scrollTop()>=po2){
+									$("ul.up li:nth-child(2) a").addClass("dot");
+									$("ul.up li a").not("ul.up li:nth-child(2) a").removeClass("dot");
+								}
+								if($(window).scrollTop()>=po3){
+									$("ul.up li:nth-child(3) a").addClass("dot");
+									$("ul.up li a").not("ul.up li:nth-child(3) a").removeClass("dot");
+								}
+								if($(window).scrollTop()>=po4){
+									$("ul.up li:nth-child(4) a").addClass("dot");
+									$("ul.up li a").not("ul.up li:nth-child(4) a").removeClass("dot");
+								}
+								if($(window).scrollTop()>=po5){
+									$("ul.up li:nth-child(5) a").addClass("dot");
+									$("ul.up li a").not("ul.up li:nth-child(5) a").removeClass("dot");
+								}
+								if($(window).scrollTop()>=po6){
+									$("ul.up li:nth-child(6) a").addClass("dot");
+									$("ul.up li a").not("ul.up li:nth-child(6) a").removeClass("dot");
+								}
+							});
+							//top버튼 클릭시 하단
+					 		$("#title p.down").click(function(){
+								$("html,body").animate({scrollTop:po2},1000);
+							});
+
+
+							//포트폴리오 팝업이미지
+							var cn=1;
+							$("#portfoilo2 .d_img").hide();
+							$("#portfoilo2 .d_img li").hide();
+							$("#portfoilo2 .skills_img ul li").click(function(){
+								$("#portfoilo2").append("<div class='popup_img'></div>");
+							  $("<div class='popup_img'></div>").hide();
+			
+								cn=$(this).attr("data-n");
+								$("#portfoilo2 .d_img").css({"display":"block"});
+								$("#portfoilo2 .d_img li:nth-child("+cn+")").css({"display":"block"});
+								$("#portfoilo2 .d_img li").not(".d_img li:nth-child("+cn+")").css({"display":"none"});
+      
+								
+								
+							});
+							//포트폴리오 팝업이미지 닫기 버튼 만들기
+							$(".d_img .close").remove();
+							$("#portfoilo2 .d_img").append("<button class='close'>x</button>");
+							$(".d_img .close").css({"top":"10px","right":"15px"});
+
+							//포트폴리오 팝업이미지 닫기 
+							$(".d_img .close").click(
+								function(){
+									$("#portfoilo2 .d_img").fadeOut();
+									$(".popup_img").fadeOut();
+								}
+							);
+							// 명언 전체 슬라이딩
+							var cn=1;
+								$(".control li").click(
+									function(){
+										$(this).addClass("current_c");
+										$(".control li").not(this).removeClass("current_c");
+										cn=$(this).attr("data-c");
+										$("ul.list").animate({"left":-100*cn+"%"},1500);
+									}
+								);
+							var cn1=1;
+      			    setInterval(function(){
+									if(cn<3){
+										if(cn==0){
+											cn1=cn1*-1;
+										}
+										$("ul.list").stop().animate({"left":-100*cn+"%"},1500);
+										$(".control li:eq("+cn+")").addClass("current_c");
+										$(".control li:eq("+cn+")").siblings().removeClass("current_c");
+										//cn++; //++증감연산자 값을 1씩 증가해라 cn-- 1씩 감소해//
+										// cn=cn+1;
+										// cn=cn+1;
+										// cn=cn+(-1)
+											cn=cn+cn1;
+									}else if(cn==3){
+										// cn=0;
+										cn=1;
+										cn1=cn1*-1;
+									}
+
+								},3000);
+							
+
+							
+							$("#portfoilo2 .skills4 li:first-child a").addClass("dot1");
+							$("#portfoilo2 .skills4 li a").click(function(){
+								$(this).addClass("dot1");
+								$("#portfoilo2 .skills4 li a").not(this).removeClass("dot1");
+							
+             		 return false;
+								
+							});
+					
+						});//
+
+			</script>
+	</head>
+	<body>
+		<!-- 상단영역--------------------------------- -->
+		<header>
+			<div class="logo">
+				<span>이미지</span>
+				<h1><a href="">Kim yee eun</a></h1>
+			</div>
+			<ul class="up">
+				<li><a href="#title" data-n="0">Home</a></li>
+				<li><a href="#about" data-n="1">About</a></li>
+				<li><a href="#portfoilo" data-n="2">Skills</a></li>
+				<li><a href="#portfoilo2" data-n="3">Portfolio</a></li>
+				<li><a href="#portfoilo3" data-n="4">Career</a></li>
+				<li><a href="#contact" data-n="5">Contact</a></li>
+			</ul>
+			<ul class="down">
+				<li>
+					<a href="https://www.instagram.com/yenniinnii/">
+						<ion-icon name="logo-instagram"></ion-icon>
+						<span class="hide">instagram</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/gda05024">
+						<ion-icon name="logo-github"></ion-icon>
+						<span class="hide">github</span>
+					</a>
+				</li>
+				<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+			</ul>
+		</header>
+		<hr class="hide">
+		<!-- 타이틀영역--------------------------------- -->
+		<div id="title">
+			<div class="title_warpper">
+				<h2><span class="block">Welcome</span><strong>Front-Delvelofer</strong></h2>
+				<p>Yee eun</p>
+				<p class="down"><i><ion-icon name="chevron-down-outline"></ion-icon></i><i><ion-icon name="chevron-down-outline"></ion-icon></i></p>
+			</div>
+		</div>
+		<!-- 내용영역--------------------------------- -->
+		<main>
+			<!-- about---------------------------- -->
+			<section id="about">	
+				<h2 class="h2">About Me</h2>
+				<div class="all">
+					<div class="left">
+						<img src="img/giphy.gif" alt="">
+					</div>
+					<div class="right">
+						<h3>Front-end Developer</h3>
+						<p>안녕하세요 프론트엔드 개발자 김예은입니다. </p>
+						<p>일관성이 있는 서비스, 테스트가 가능한 서비스를 만드려고 하는 개발자입니다.<br>
+							기존 프로젝트에서 일관성을 위해 디자인 시스템을 성공적으로 구축한 경험이 있습니다</p>
+						<p>개별적인 컴포넌트, 상황에 맞는 컴포넌트를 적절히 조합, 구현하여 <br> 전체적인 서비스의 디자인을 통일하고 같은 컴포넌트, 기능은 새로 구현하지않는 탄탄한 디자인 시스템을 구축했습니다.</p>
+						<p>또한 디자인시스템과 함께  react, testing 도구를 통해 버그를 최소화하는 개발을 지향하고 있습니다.</p>
+						<p>이러한 경험과 지식을 바탕으로 믿을 수있는 개발자가 되도록 하겠습니다. </p>
+					</div>
+					<div class="profile1">
+						<div class="icon">
+							<i><ion-icon name="people-circle-outline"></ion-icon></i>
+						</div>
+						<div class="profile2">
+							<h3>Profile</h3>
+							<ul>
+								<li><span>이름</span>:김예은</li>
+								<li><span>학력</span>:서경대학교 미용예술학과</li>
+								<li><span>생년월일</span>:1998.10.26</li>
+								<li><span>거주지</span>:서울시 동대문구</li>
+								<li><span>전화번호</span>:010 4048 6609</li>
+								<li><span>이메일</span>:gda05024@naver.com</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- portfoilo---------------------------- -->
+			<section id="portfoilo">
+				<h2 class="h2">Skills</h2>
+					<div class="skills">
+						<ul>
+							<li>
+								<p>- 웹 표준, 브라우저 호환성, 반응형 웹, 웹 접근성, SEO</p>
+							</li>
+							<li>
+								<p>- SPA, React, Vue, React-native</p>
+							</li>
+							<li>
+								<p>- JavaScript(ES6), TypeScript, Next.js </p>
+							</li>
+							<li>
+								<p>- Mobx-react, Vuex </p>
+							</li>
+							<li>
+								<p>- HTML5, CSS3, Sass</p>
+							</li>
+							<li>
+								<p>- Git, Github, npm, Chrome DevTools, VirtualBox, VScode,</p>
+							</li>
+							<!-- <li>
+								<p>- AWS(S3, Lambda)</p>
+							</li> -->
+							<li>
+								<p>- Bootstrap,jQuery</p>
+							</li>
+							<li>
+								<p>- cafe24 쇼핑몰 운영</p>
+							</li>
+						</ul>
+						<!-- <ul class="skills2">
+							<li>HTML</li>
+							<li>CSS3</li>
+							<li>jQuery</li>
+							<li>Javascript</li>
+							<li>Bootstrap</li>
+							<li>React.js</li>
+							<li>Php</li>
+						</ul>
+						<ul class="skills3">
+							<li><progress value="90" max="100">80%</progress>90%</li>
+							<li><progress value="80" max="100">80%</progress>80%</li>
+							<li><progress value="80" max="100">80%</progress>80%</li>
+							<li><progress value="70" max="100">70%</progress>70%</li>
+							<li><progress value="60" max="100">60%</progress>60%</li>
+							<li><progress value="60" max="100">60%</progress>60%</li>
+							<li><progress value="30" max="100">30%</progress>30%</li>
+						</ul> -->
+					</div>
+					<div class="wf">
+						<div class="web">
+							<i><ion-icon name="flag-outline"></ion-icon></i>
+							<h3>Web Publisher</h3>
+							<p>HTML 시멘틱 마크업 및 웹 접근성 마크업 규칙에 대해서 잘 
+								이해하고 있습니다. 디자인된 화면을 CSS로 표현 가능하며,
+								Animation등 동적인 소스를 활용하는것도 문제없습니다. 미 
+								디어 쿼리를 활용한 반응형 및 새로운 디바이스 환경에 맞는 퍼블리싱이 가능합니다. 
+								Javascript 및 Jquery의 기본 문법을 잘 이해하고 있으며, 
+								Jquery를 활용한 동적인 코드 작성에 능숙합니다.
+						</div>
+						<div class="front">
+							<i><ion-icon name="color-filter-outline"></ion-icon></i>
+							<h3>Front-end</h3>
+							<p>HTML 시멘틱 마크업 및 웹 접근성 마크업 규칙에 대해서 잘 
+								이해하고 있습니다. 디자인된 화면을 CSS로 표현 가능하며,
+								Animation등 동적인 소스를 활용하는 것도 문제없습니다. 미 
+								디어 쿼리를 활용한 반응형 및 새로운 디바이스 환경에 맞는 퍼블리싱이 가능합니다. 
+								Javascript 및 Jquery의 기본 문법을 잘 이해하고 있으며, 
+								Jquery를 활용한 동적인 코드 작성에 능숙합니다.</p>
+						</div>
+					</div>
+			</section>
+			<!-- portfoilo2---------------------------- -->
+			<section id="portfoilo2">
+				<h2 class="h2">Portfoilo</h2>
+				<div class="skills_img">
+					<ul>
+						<li class="renewal" data-n="1">
+							<a href="" >Fursys</a>
+							<p class="go hide">Fursys</p>
+						</li>
+						<li class="renewal"  data-n="2" >
+							<a href="" >parisbaguette</a>
+							<p class="go hide">parisbaguette</p>
+						</li>
+						<li class="renewal" data-n="3">
+							<a href="">liricos</a>
+							<p class="go hide">liricos</p>
+						</li>
+						<li class="renewal" data-n="4">
+							<a href="" >samhwa</a>
+							<p class="go hide">samhwa</p>
+						</li>
+						<li class="renewal" data-n="5">
+							<a href="" >state</a>
+							<p class="go hide">state</p>
+						</li>
+						<li class="renewal" data-n="6">
+							<a href="" > 아인스미디어</a>
+							<p class="go hide">아인스미디어</p>
+						</li>
+						<li class="renewal" data-n="7">
+							<a href="">노엘로힐스</a>
+							<p class="go hide">노엘로힐스</p>
+						</li>
+						<li class="renewal" data-n="8">
+							<a href="">yeni portfoilo</a>
+							<p class="go hide">yeni portfoilo</p>
+						</li>
+						<li class="renewal" data-n="9">
+							<a href="">세움터</a>
+							<p class="go hide">세움터</p>
+						</li>
+						<li class="renewal" data-n="10">
+							<a href="">karri portfoilo</a>
+							<p class="go hide">karri portfoilo</p>
+						</li>
+						<li class="renewal" data-n="11">
+							<a href="">It's skin</a>
+							<p class="go hide">It's skin</p>
+						</li>
+						<li class="renewal" data-n="12">
+							<a href="">경상북도 홈페이지</a>
+							<p class="go hide">경상북도 홈페이지</p>
+						</li>
+						<li class="renewal" data-n="13">
+							<a href="">Hanhwa</a>
+							<p class="go hide">Hanhwa</p>
+						</li>
+						<li class="game" data-n="14">
+							<a href=""> 기억력게임</a>
+							<p class="go hide">기억력게임</p>
+						</li>
+						<li class="game" data-n="15">
+							<a href="">테트리스</a>
+							<p class="go hide">테트리스</p>
+						</li>
+						<li class="renewal" data-n="16">
+							<a href="">To Do list</a>
+							<p class="go hide">To Do List</p>
+						</li>
+					</ul>
+				</div>
+				<ul class="d_img">
+					<li class="d_in">
+						<img src="img/showroom_4.jpg" alt="">
+						<h2>fursys</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page + 서브 2page</p>
+						<p>퍼블리싱 100% 참여</p>
+						<a href="../portfolio1/index.html">View</a>
+					</li >
+					<li  class="d_in">
+						<img src="img/bbk.png" alt="">
+						<h2>parisbaguette</h2>
+						<p>반응형 웹 제작 (Responsive) </p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio14/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/rbk.jpg" alt="">
+						<h2>liricos</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page + 서브 1page</p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio11/index.html">View</a>
+					</li >
+					<li  class="d_in">
+						<img src="img/paint.jpg" alt="">
+						<h2>samhwa</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page + 서브 1page</p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio13/index.html">View</a>
+					</li >
+					<li  class="d_in">
+						<img src="img/hero_1.jpg" alt="">
+						<h2>state</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page </p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio5/index.html">View</a>
+					</li >
+					<li  class="d_in">
+						<img src="img/abk.png" alt="">
+						<h2>아인스미디어</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page</p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio8/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/lbk.png" alt="">
+						<h2>노엘로힐스</h2>
+						<p> 메인 1page</p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio4/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/pobk.png" alt="">
+						<h2>yeni portfoilo</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page + 서브 1page</p>
+						<p>퍼블리싱 100% 참여</p>
+						<a href="../portfolio6/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/sbk.png" alt="">
+						<h2>세움터</h2>
+						<p> 메인 1page + 서브 2page</p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio3/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/kbk.png" alt="">
+						<h2>karri portfoilo</h2>
+						<p> 메인 1page </p>
+						<p>퍼블리싱 100% 참여</p>
+						<a href="../portfolio7/index-posi-final-scroll.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/itbk.png" alt="">
+						<h2>It's skin</h2>
+						<p>메인 1page </p>
+						<p>퍼블리싱 100% 참여</p>
+						<a href="../portfolio12/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/4.png" alt="">
+						<h2>경상북도 홈페이지</h2>
+						<p>메인 1page </p>
+						<p>퍼블리싱 100% 참여</p>
+						<a href="../portfolio10/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/14.png" alt="">
+						<h2>Hanhwa</h2>
+						<p>반응형 웹 제작 (Responsive) / 메인 1page + 서브 2page</p>
+						<p> 퍼블리싱 100% 참여</p>
+						<a href="../portfolio13/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/7.png" alt="">
+						<h2>기억력게임</h2>
+						<p> 메인 1page </p>
+						<p> 퍼블리싱 100% 참여, JS 로직 설계</p>
+						<a href="../portfolio16/index.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/8.png" alt="">
+						<h2> 테트리스</h2>
+						<p> 메인 1page </p>
+						<p>퍼블리싱 100% 참여, JS 로직 설계</p>
+						<a href="../portfolio15/tetris.html">View</a>
+					</li >
+					<li class="d_in">
+						<img src="img/todo.png" alt="">
+						<h2>To Do list</h2>
+						<p>  메인 1page</p>
+						<p>퍼블리싱 100% 참여, JS 로직 설계</p>
+						<a href="">View</a>
+					</li >
+				</ul>
+			</section>
+			<!-- portfoilo3---------------------------- -->
+			<section id="portfoilo3">
+				<h2 class="h2">Career</h2>
+				<div class="portfoilo_warpper">
+					<div class="career">
+						<h3>경력</h3>
+						<strong>보드에프엔씨 웹 퍼블리셔 & 프론트 개발자</strong>
+						<p class="work_period">2021년 10월 ~ 2022년 - 11월</p>
+						<ul class="carrer_introduce">
+							<li>
+								<p class="career_results">
+									성과
+								</p>
+								<p class="career_results ft12">┖ OneFabric 홈 페이지 제작 <a href="https://onefabric.kr/">(https://onefabric.kr/)</a></p>
+								<p class="career_results ft12">┕ OneFabric 입점파트너 admin 개발 <a href="https://my.onefabric.co.kr/">(https://my.onefabric.co.kr/)</a></p>
+								<p class="career_results ft12">┖ OneFabric신규파트너 입점신청서 개발 <a href="https://application.onefabric.co.kr/">(https://application.onefabric.co.kr/)</a> </p>
+								<p class="career_results ft12">┖ A-rider 퀵플러스 admin 개발</p>
+								<p class="career_results ft12">┖ BoardFnc 홈페이지 제작</p>		
+								<p class="career_results ft12">┖ OneFabric MarketFlatform 개발</p>									
+							</li>
+							<li><p>역할</p></li>
+							<li class="dot">React, ES6를 활용한 UI 개발</li>
+							<li class="dot">Redux-saga를 이용해 상태관리 및 서비스 분리</li>
+							<li class="dot">Vue, ES6를 활용한 UI 개발</li>
+							<li class="dot">Vuex를 이용해 상태관리 및 서비스 분리</li>
+							<li class="dot">REST API를 활용한 Web 개발 경험</li>
+						</ul>
+					
+					</div>
+					<div class="cooperation">
+						<h3>협업</h3>
+						<p>
+							프로젝트 목표를 제대로 이해하고 기획 및 디자인, 백엔드 개발자를 존중하며 여러 직군과 협업합니다. 
+						</p>
+						 <ul>
+							<li>Slack, Email</li>
+							<li>프로젝트 및 이슈 관리: Google Drive, GitHub, GitLab, Bitbucket, JIRA, Confluence</li>
+							<li>디자인: Figma</li>
+						 </ul>
+					</div>
+					<div class="project">
+						<h3>프로젝트</h3>
+						<div class="project_main_img">
+							<h4>프로젝트 구조</h4>
+							<img src="../portfolio6/img/structure.jpg" alt="">
+						</div>
+						<div class="project_information">
+							<h4>원 패브릭 서비스</h4>
+							<img src="../portfolio6/img/erp_img.png" alt="">
+							<img src="../portfolio6/img/erp_information.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--john---------------------------- -->
+			<section id="john">
+				<div>
+					<ul class="list">
+						<li>
+							<i><ion-icon name="sparkles-outline"></ion-icon></i>
+							<h2>Thomas A. Edison</h2>
+							<p>천재는 1퍼센트의 영감과 99퍼센트의 노력이다</p>
+						</li>
+						<li>
+							<i><ion-icon name="sparkles-outline"></ion-icon></i>
+							<h2>L. 론허바드</h2>
+							<p>절대 어제를 후회하지 마라. 인생은 오늘의 내 안에 있고 내일은 스스로 만드는것이다.</p>
+						</li>
+						<li>
+							<i><ion-icon name="sparkles-outline"></ion-icon></i>
+							<h2>진짜 문제는 사람들의 마음이다. 그것은 절대로 물리학이나 윤리학의 문제각 아니다.</h2>
+							<p>아인슈타인</p>
+						</li>
+					</ul>
+				</div>	
+				<ul class="control">
+					<li class="current_c" data-c="0"><a href=""></a></li>
+					<li data-c="1"><a href="" ></a></li>
+					<li data-c="2"><a href=""></a></li>
+				</ul>
+			</section>
+			<!--contateme---------------------------- -->
+			<section id="contact">
+				<h2 class="h2">Contact Me</h2>
+				<div class="con1">
+				<form action="">
+					<fieldset>
+						<label for="name"></label><input type="name" placeholder="name"> 
+						<label for="email"></label><input type="email" placeholder="E-mail">
+						<label for="message"></label><input type="message" placeholder="messages">
+					</fieldset>
+				</form>
+				<div class="phone">
+					<ul>
+						<li>
+							<h3>Phone</h3>
+							<p>(+82) 010 4048 6609</p>
+						</li>
+						<li>
+							<h3>Email</h3>
+							<p>gda05024@naver.com</p>
+						</li>
+						<li>
+							<h3>Instagram</h3>
+							<p>https://www.instagram.com/yenniinnii/</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<button>send message</button>
+			</section>
+		</main>
+		<hr class="hide">
+		<!-- 하단영역--------------------------------- -->
+		<footer>
+			<p>© 2022 kimyeeeun, All Rights Reserved.</p>
+			<p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</p>
+		</footer>
+	</body>
+</html>

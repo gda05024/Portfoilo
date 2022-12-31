@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* 하단영역 */
+
+/* footer */
+footer{
+  padding: 0 5%;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-color: #5a5a5a;
+  color: #fff;
+  background-image: url(../img/footer.svg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+footer a{
+  color: #fff;
+}
+footer div{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer div ul.left{
+width: 50%;
+display: flex;
+}
+footer div ul.left li{
+  
+}
+footer div ul.left li a{
+ padding: 4px 10px;
+ position: relative;
+}
+footer div ul.left li:not(:first-child) a{
+ padding-left: 14px; 
+}
+footer div ul.left li:not(:first-child) a::before{
+ content: "/";
+ position: absolute;
+ left:0; 
+ color: #bab6b6;
+}
+footer div ul.right{
+ width: 50%;
+ display: flex;
+ justify-content: right;
+ gap: 16px;
+ margin-bottom: 60px;
+}
+footer div ul.right li{
+
+}
+footer div ul.right li a{
+
+  border: 1px solid #8e8e8e;
+  text-indent: -9999px;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+footer div ul.right li:first-child a{
+  background-image: url(../img/facebook.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+footer div ul.right li:last-child a{ 
+  background-image: url(../img/instagram.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+}
+footer div ul.right::after{
+ content: ""; 
+ display: block;
+ width: 100%;
+ position: absolute;
+ bottom: 46%;
+ border-bottom: 1px solid #999;
+ left: 0;
+}
+footer div p{
+
+}
+footer div select{
+  display: none;
+}

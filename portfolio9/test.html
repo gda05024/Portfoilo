@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>삼화페인트-코딩작품</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/test.css">
+    <script  src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        var scrollT=$(window).scrollTop();//윈도우스크롤탑값을 변수처리
+        var skillTop=$("#skill").offset().top;
+            skillTop=skillTop-$(window).height();
+        var aboutT=skillTop+100;
+        $(window).scroll(function(){
+
+          scrollT=$(window).scrollTop(); //스콜할때마다 스크롤값을 저장
+          $("#about h2").css({"position":"fixed"});//스크롤시작시 바로 고정
+          if(scrollT>=skillTop) $("#about h2").css({"position":"absolute","top":aboutT});
+          if(scrollT<skillTop) $("#about h2").css({"position":"fixed","top":"100px"});
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+  <div id="about">
+    <h2>about</h2>
+    <div class="h900 a " style="text-align:left;">
+      1<br>
+      2<br>
+      3<br>
+      4<br>
+      5<br>
+      6<br>
+      7<br>
+      8<br>
+      9<br>
+      10<br>
+      11<br>
+      12<br>
+      13<br>
+      14<br>
+      15<br>
+      16
+
+    </div>
+  </div>
+  <div id="skill">
+    <h2>skill</h2>
+    <div class="h900 b"></div>
+  </div>
+  <div id="portfolio">
+    <h2>portfolio</h2>
+    <div class="h900 c"></div>
+  </div>
+  <div id="contact">
+    <h2>contact</h2>
+    <div class="h900 d"></div>
+  </div>
+  </body>
+</html>

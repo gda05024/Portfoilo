@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>kerry-portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script  src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(
+        function(){
+          // 대메뉴
+          $("ul.gnb li:nth-child(1) a").addClass("current_gnb");
+
+          $("ul.gnb li a").click(
+            function(){
+              // $(this).addClass("current_gnb");//this는 이벤트가 일어난 대(클릭한 a태그를 의미)
+              // $("ul.gnb li a").not(this).removeClass("current_gnb");
+              //removeClass(); 클래스를 없애라
+            }
+          );
+
+
+          // Works current
+          $("section#portfolio ul.list li:nth-child(1) a").addClass("works_current");
+          $("section#portfolio ul.list li a").click(
+            function(){
+              $(this).addClass("works_current");
+              $("section#portfolio ul.list li a").not(this).removeClass("works_current");
+              return false;
+            }
+          );
+          // work리스트 클릭시 분류
+          var po;
+          $("section#portfolio ul.list li a").click(function(){
+            po=$(this).parent().attr("class");
+            if(po!=null){
+              $("section#portfolio ul.list_img li."+po).show();
+              $("section#portfolio ul.list_img li").not("section#portfolio ul.list_img li."+po).hide();
+              //
+              return false;
+            }else{
+              $("section#portfolio ul.list_img li").show();
+            }
+
+
+          });
+          //work 이미지 each();
+          var i=0;
+          var pot=["작품1","작품2","작품3","작품4","작품5","작품6"];
+          $("section#portfolio ul.list_img li").each(function(){
+            $(this).addClass("s"+i);
+            $(this).attr("data-n",i);
+            $(this).append("<p>"+pot[i]+"</p>");
+            i+=1;
+          });
+
+          // work이미지 position으로 위치 지정
+          var portL;
+          var portT=0;
+          var ii=0;
+
+          var list_imgH=$("#portfolio ul.list_img li").height()*2+20*3;
+          $("#portfolio ul.list_img").css("height",list_imgH);
+
+          $("#portfolio ul.list_img li").each(function(){
+            portL=$(this).width()*ii+20*ii;
+            if(ii>2){
+              ii=ii%3;
+              portL=$(this).width()*ii+20*ii;
+              portT=$(this).height()+20;
+            }
+            $(this).css({"position":"absolute","left":portL,"top":portT});
+            ii++;
+          });
+
+          // work클릭시 위치 재배치
+          $("section#portfolio ul.list li a").click(function(){
+            ii=0;
+            $("#portfolio ul.list_img li").each(function(){
+              portL=$(this).width()*ii+20*ii;
+              if(ii>2){
+                ii=ii%3;
+                portL=$(this).width()*ii+20*ii;
+                portT=$(this).height()+20;
+              }
+              $(this).css({"position":"absolute","left":portL,"top":portT});
+              ii++;
+            });
+
+          });
+
+
+
+
+
+
+          //var po; //var 변수를 의미 variable 변수선언 변수명;
+          //po=700; // =은 대입연산자 넣어라
+          //var po=700;
+
+          var po1=$("#title").offset().top;
+          // offset().top;요소의 상단위치값을 가져와.
+
+          /*
+          소수점을 처리하는 방법
+          Math.ceil() : 소수점 올림, 정수 반환
+          Math.floor() : 소수점 버림, 정수 반환
+          Math.round() : 소수점 반올림, 정수 반환
+          */
+          // window.alert(Math.round(2.5));
+          var po2=Math.floor($("#about").offset().top);
+          var po3=Math.floor($("#service").offset().top);
+          var po4=Math.floor($("#client").offset().top);
+          var po5=Math.floor($("#portfolio").offset().top);
+          var po6=Math.floor($("#contact").offset().top);
+          var po=[po1,po2,po3,po4,po5,po6];
+          var n;
+
+          $(window).resize(
+            function(){
+              po2=Math.floor($("#about").offset().top);
+              po3=Math.floor($("#service").offset().top);
+              po4=Math.floor($("#client").offset().top);
+              po5=Math.floor($("#portfolio").offset().top);
+              po6=Math.floor($("#contact").offset().top);
+              po=[po1,po2,po3,po4,po5,po6];
+            }
+          );
+          // 데메뉴클릭 페이지스크롤링
+          $("ul.gnb li a").click(
+            function(){
+              n=$(this).attr("data-n");
+              // $(this).addClass("current_gnb");
+              // $("ul.gnb li a").not(this).removeClass("current_gnb");
+              //attr("속성명") 속성의 값을 가져와라 attribute
+              $("html,body").stop().animate({scrollTop:po[n]},1000);//애니메이션을 하시오
+              //animate({"속성":"값"},초); 1000ms = 1s
+              // 변수는 ""하지 않는, 숫자도 ""하지않는.
+              console.log("클릭시 section위치값:"+po[n]);
+              //console창 log()기록(표시)하시오
+              return false
+            }
+          );
+
+          // 아래보기 버튼
+          $("#title p.down").click(function(){
+            $("html,body").stop().animate({scrollTop:po2},1000);
+            // alert(po3);
+          });
+
+          // 새로고침시 페이지위치에 따라 헤더 스타일적용
+          if($(window).scrollTop()>=po2){
+            $("header").addClass("header_bg");
+          }
+
+          //사이드메뉴 높이값 계산 변수
+          var asT=$("#title").height()/2+$("aside button").height()/2;
+
+          po2=po2-$("header").height();
+
+          // 스트롤이벤트
+          $(window).scroll(function(){
+
+              if($(window).scrollTop()>=po2){
+                $("header").addClass("header_bg");
+              }else{
+                $("header").removeClass("header_bg");
+              }
+              // 어바웃영역시에 대메뉴색상변경 addClass
+              if($(window).scrollTop()>=po1){
+                $("ul.gnb li:nth-child(1) a").addClass("current_gnb");
+                $("ul.gnb li a").not("ul.gnb li:nth-child(1) a").removeClass("current_gnb");
+              }
+              if($(window).scrollTop()>=po2){
+                $("ul.gnb li:nth-child(2) a").addClass("current_gnb");
+                $("ul.gnb li a").not("ul.gnb li:nth-child(2) a").removeClass("current_gnb");
+                $(".top").addClass("ani_attach");
+              }
+              if($(window).scrollTop()<po2){
+                $(".top").removeClass("ani_attach");
+              }
+              if($(window).scrollTop()>=po3){
+                $("ul.gnb li:nth-child(3) a").addClass("current_gnb");
+                $("ul.gnb li a").not("ul.gnb li:nth-child(3) a").removeClass("current_gnb");
+              }
+              if($(window).scrollTop()>=po4){
+                $("ul.gnb li:nth-child(4) a").addClass("current_gnb");
+                $("ul.gnb li a").not("ul.gnb li:nth-child(4) a").removeClass("current_gnb");
+              }
+              if($(window).scrollTop()>=po5){
+                $("ul.gnb li:nth-child(5) a").addClass("current_gnb");
+                $("ul.gnb li a").not("ul.gnb li:nth-child(5) a").removeClass("current_gnb");
+              }
+              if($(window).scrollTop()>=po6){
+                $("ul.gnb li:nth-child(6) a").addClass("current_gnb");
+                $("ul.gnb li a").not("ul.gnb li:nth-child(6) a").removeClass("current_gnb");
+              }
+
+              //스크롤시 사이드메뉴 슬라이딩
+              if($(window).scrollTop()>=asT){
+                $("aside").addClass("slide");
+              }
+              if($(window).scrollTop()<asT){
+                $("aside").removeClass("slide");
+              }
+
+          });
+          //  top버튼
+          $("button.top").click(
+            function(){
+              $("html,body").animate({scrollTop:0},2000);
+            }
+          );
+
+          // woks 팝업이미지
+          // 스크롤바의 너비 구하기
+          var winw=window.innerWidth; // 창전체 너비(스크롤바포함)
+          var docw=document.documentElement.clientWidth;//문서의 너비
+          var scrw=winw-docw;
+
+          $("#portfolio").append("<div class='popup_img'></div>");
+          $("#portfolio .popup_img").hide();
+          var current_popup_img;
+          var closeT;
+          var closeR;
+          //
+
+          $("section#portfolio ul.list_img li").click(
+            function(){
+              $(this).fadeTo(100,0.2);
+
+              // 스크롤너비만큼 패딩주기
+              $("html").css({"overflow-y":"hidden","padding-right":scrw});
+              $("header div").css({"padding-right":scrw});
+              $(".ani_attach").css({"right":20+scrw});
+
+              $("#portfolio .popup_img").fadeIn();
+              current_popup_img=$(this).children("img").attr("src");
+              $("#portfolio .popup_img img").remove();
+              $("#portfolio .popup_img").append("<img src='' alt='' />");
+              $("#portfolio .popup_img img").attr("src",current_popup_img);
+
+              // 팝업이미지 닫기
+              closeT=$(window).height()-$("#portfolio .popup_img img").height();
+              console.log("top값:"+closeT);
+              closeT=closeT/2-25;
+              closeR=$(window).width()-$("#portfolio .popup_img img").width();
+              console.log("right값:"+closeR);
+              closeR=closeR/2-25;
+
+              $(".popup_img button.close").remove();
+              $(".popup_img").append("<button class='close'>x</button>");
+              $(".popup_img button.close").css({"top":closeT,"right":closeR});
+
+              //닫기 버튼에 이벤트 붙이기
+              $(".popup_img button.close").bind("click",function(){
+
+                // 스크롤너비만큼 여백빼기
+                $("html").css({"overflow-y":"auto","padding-right":0});
+                $("header div").css({"padding-right":0});
+                $(".ani_attach").css({"right":"20px"});
+
+                $(".popup_img").fadeOut();
+
+
+              });
+            }
+          );
+
+          // $(".popup_img").click(
+          //   function(){
+          //     $(this).fadeOut();
+          //   }
+          // );
+
+          //  $(".popup_img button.close").click(
+          //   function(){
+          //     $(".popup_img").fadeOut();
+          //   }
+          // );
+
+          //사이트 메뉴 슬라이딩
+          var bu=0;
+          $("aside button").click(
+            function(){
+              $("aside").toggleClass("slide");
+              if(bu==0){
+                $(this).children("span").text(">");
+                bu=1;
+              }else{
+                $(this).children("span").text("<");
+                bu=0;
+              }
+
+
+            }
+          );
+
+          // client 애니메이션
+          var cn=1;
+          $("#client ul.control li").click(
+            function(){
+              $(this).addClass("current_c");
+              $(this).siblings().removeClass("current_c");
+              cn=$(this).attr("data-cn");
+              $("#client ul.list").stop().animate({"left":-100*cn+"%"},1500);
+            }
+          );
+
+          // client 자동플레이
+          var cn1=1;
+          setInterval(function(){
+            if(cn<3){
+              if(cn==0){
+               cn1=cn1*-1;
+              }
+              $("#client ul.list").stop().animate({"left":-100*cn+"%"},1500);
+              $("#client ul.control li:eq("+cn+")").addClass("current_c");
+              $("#client ul.control li:eq("+cn+")").siblings().removeClass("current_c");
+              //cn++; //++증감연산자 값을 1씩 증가해라 cn-- 1씩 감소해//
+              // cn=cn+1;
+              // cn=cn+1;
+              // cn=cn+(-1)
+               cn=cn+cn1;
+            }else if(cn==3){
+              // cn=0;
+              cn=1;
+              cn1=cn1*-1;
+            }
+
+          },3000);
+
+        } //
+      );
+
+    </script>
+    <script type="text/javascript">
+     window.open("b.html", "PopupWin", "width=500,height=600");
+    </script>
+  </head>
+  <body>
+
+    <!-- ===========상단영역  ============= -->
+    <header>
+      <div class="block_center flex-between">
+        <h1 class="logo"><a href="">Kerry</a></h1>
+        <nav>
+          <ul class="gnb flex-between">
+            <li><a href="#title" data-n="0">Home</a></li>
+            <li><a href="#about" data-n="1">About</a></li>
+            <li><a href="#service" data-n="2">Services</a></li>
+            <li><a href="#client" data-n="3">Client</a></li>
+            <li><a href="#portfolio" data-n="4">Portfolio</a></li>
+            <li><a href="#contact" data-n="5">Contact</a></li>
+          </ul>
+          <span class="ham"></span>
+        </nav>
+      </div>
+    </header>
+    <!-- ===========타이틀영역============= -->
+    <div id="title">
+      <!-- <h2>welcome <strong>Designer</strong></h2> -->
+       <h2><span class="block">welcome</span> <strong>I'M Graphic Designer</strong></h2>
+      <p>It is a long established fact that a reader will be of a page when
+        <span> established fact looking at its layout.</span>
+      </p>
+      <button>DOWNLOAD CV</button>
+      <div>
+        <p class="down"><span>아래보기</span></p>
+      </div>
+    </div>
+    <!-- ===========내용영역  ============= -->
+    <main>
+      <!-- ===== about     ===== -->
+      <section id="about">
+        <div class="block_center about_in flex-between">
+          <figure><img src="img/about.jpg" alt="케리앞모습"></figure>
+          <div class="right">
+            <h2>About Me</h2>
+            <h3>Hello! <span>I'M Kerri Deo.</span></h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <ul class="sns">
+              <li>
+                <a href="">
+                  <ion-icon name="logo-dribbble"></ion-icon>
+                  <span class="hide">dribbble</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                  <span class="hide">facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                  <span class="hide">linkedin</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                  <span class="hide">twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ===== service    ==== -->
+      <section id="service">
+        <h2 class="h2">Our Services</h2>
+        <p>It is a long established fact that a reader will be of a page when <span class="block">established fact looking at its layout.<span></p>
+        <ul class="flex-center">
+          <li>
+            <h3 class="h3">Graphic Design</h3>
+            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+          </li>
+          <li>
+            <h3 class="h3">Unlimited Color</h3>
+            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+          </li>
+          <li>
+            <h3 class="h3">Media Marketing</h3>
+            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+          </li>
+          <li>
+            <h3 class="h3">Unlimited Wifi</h3>
+            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+          </li>
+          <li>
+            <h3 class="h3">Responsive Design</h3>
+            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+          </li>
+          <li>
+            <h3 class="h3">Easy to customize</h3>
+            <p>There are many variations of passages of but the majority have suffered alteration in some form.</p>
+          </li>
+        </ul>
+      </section>
+      <!-- ===== Freelancer    ===== -->
+      <section id="freelancer">
+        <h2 class="h2">I Am Available For Freelancer.</h2>
+        <button type="button" name="button">hire me!</button>
+      </section>
+      <!-- ===== client    ===== -->
+      <section id="client">
+        <h2 class="h2">Our Client</h2>
+        <p>It is a long established fact that a reader will be of a page when <span class="block">established fact looking at its layout.</span></p>
+        <div>
+          <ul class="list">
+            <li>
+              <img src="img/testi-1.jpg" alt="">
+              <p>" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here."</p>
+              <p class="name">- Ebony verty,<span>Envato</span> </p>
+            </li>
+            <li>
+              <img src="img/testi-2.jpg" alt="">
+              <p>" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here."</p>
+              <p class="name">- Ebony verty,<span>Envato</span> </p>
+            </li>
+            <li>
+              <img src="img/testi-3.jpg" alt="">
+              <p>" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here."</p>
+              <p class="name">- Ebony verty,<span>Envato</span> </p>
+            </li>
+          </ul>
+        </div>
+        <ul class="control">
+          <li class="current_c" data-cn="0"></li>
+          <li data-cn="1"></li>
+          <li data-cn="2"></li>
+        </ul>
+      </section>
+      <!-- ===== portfolio ===== -->
+      <section id="portfolio">
+        <h2 class="h2">Our Works</h2>
+        <p>It is a long established fact that a reader will be of a page when <span class="block">established fact looking at its layout.</span></p>
+        <ul class="list">
+          <li><a href="">all</a></li>
+          <li class="seo"><a href="">seo</a></li>
+          <li class="webdesign"><a href="">webdesign</a></li>
+          <li class="work"><a href="">work</a></li>
+          <li class="wordpress"><a href="">wordpress</a></li>
+        </ul>
+        <ul class="list_img">
+          <li class="webdesign wordpress">
+            <h3 class="hide">Category <strong class="block">Project Title</strong></h3>
+            <img src="img/1.jpg" alt="">
+          </li>
+          <li class="seo webdesign work">
+            <h3 class="hide">Category <strong class="block">Project Title</strong></h3>
+            <img src="img/2.jpg" alt="">
+          </li>
+          <li class="seo wordpress">
+            <h3 class="hide">Category <strong class="block">Project Title</strong></h3>
+            <img src="img/3.jpg" alt="">
+          </li>
+          <li class="webdesign work wordpress">
+            <h3 class="hide">Category <strong class="block">Project Title</strong></h3>
+            <img src="img/4.jpg" alt="">
+          </li>
+          <li class="seo webdesign">
+            <h3 class="hide">Category <strong class="block">Project Title</strong></h3>
+            <img src="img/5.jpg" alt="">
+          </li>
+          <li class="webdesign">
+            <h3 class="hide">Category <strong class="block">Project Title</strong></h3>
+            <img src="img/6.jpg" alt="">
+          </li>
+        </ul>
+      </section>
+      <!-- ===== contact   ===== -->
+      <section id="contact">
+        <h2 class="h2">Contact Us</h2>
+        <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+        <ul class="info">
+          <li>
+            <h3>Call Us On</h3>
+            <p>+985 123 7856</p>
+          </li>
+          <li>
+            <h3>Email Us At</h3>
+            <p>Website.Kerri@gmail.com</p>
+          </li>
+          <li>
+            <h3>Visit Office</h3>
+            <p>202, Grasselli Street , Conway.</p>
+          </li>
+        </ul>
+        <form action="">
+          <fieldset>
+            <label for="" class="hide">name</label>
+            <input type="text" placeholder="Your Name*">
+            <label for="" class="hide">email</label>
+            <input type="text" placeholder="Your Email*">
+            <label for="" class="hide">subject</label>
+            <input type="text" placeholder="Your Subject..">
+            <label for="" class="hide">message</label>
+            <input type="text" placeholder="Your message...">
+            <button type="submit">Send Message</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <aside class="sideMenu">
+      <button class="slide"><span><</span></button>
+    </aside>
+    <!-- ===========하단영역============= -->
+    <footer>
+      <ul class="sns">
+        <li>
+          <a href="">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <span class="hide">facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <span class="hide">linkedin</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <ion-icon name="logo-pinterest"></ion-icon>
+            <span class="hide">pinterest</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <span class="hide">twitter</span>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright">2018 - 2020 © Kerri. Design by SRBThemes.</p>
+    </footer>
+    <button type="button" name="button" class="top"><span>Top</sapn></button>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>

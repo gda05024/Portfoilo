@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* 로그인 스타일 ---------------------*/
+#join{
+
+  width: 1200px;
+  margin: 0 auto;
+  clear: both;
+}
+#join .block_center{
+    
+}
+#join .block_center h1{
+    
+  font-size: 25px;
+  display: block;
+  text-align: center;
+}
+#join .block_center p:nth-of-type(1){
+  color: #393939;  
+  text-align: left;
+  width: 64%;
+  margin: 20px auto 21px;
+}
+#join .block_center p:nth-of-type(2){
+  color: #999;  
+  text-align: left;
+  width: 64%;
+  margin: 20px auto 5px;
+}
+#join .block_center p:nth-of-type(3){
+    
+  text-align: left;
+  width: 64%;
+  margin: 20px auto 5px;
+}
+#join .block_center p:nth-of-type(4){
+    
+  text-align: left;
+  width: 64%;
+  margin: 30px auto 5px;
+  font-size: 12px;
+  color: #999;
+}
+#join .block_center p:nth-of-type(5){
+    font-size: 12px;
+  text-align: left;
+  width: 64%;
+  margin: 10px auto 5px;
+  color: #999;
+}
+#join .block_center p:nth-of-type(6){
+    font-size: 12px;
+  text-align: left;
+  width: 64%;
+  margin: 10px auto 100px;
+  color: #999;
+}
+#join .block_center p strong{
+    
+}
+#join .block_center form{
+    
+}
+#join .block_center form fieldset{
+    
+  margin: 0 auto;
+}
+#join .block_center form fieldset:nth-of-type(2) span:nth-of-type(1){
+  
+  border-top: 1px solid;
+}
+#join .block_center form fieldset:nth-of-type(2) span:nth-of-type(8){
+  
+  border-bottom:  1px solid;
+}
+#join .block_center form fieldset span{
+    
+  display: block;
+  width: 64%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 4;
+  /*! border-top: 1px solid; */
+}
+#join .block_center form fieldset span select{
+  /*! line-height: 1; */
+ margin-top: 19px;
+ display: inline-block;
+ width: 33.5%;
+ margin-left: 50px;
+ border: 1px solid #999;
+  padding: 8px 9px;
+}
+#join .block_center form fieldset span button{
+  
+  padding: 8.3px 7px;
+  vertical-align: middle;
+  margin-left: 11px;
+  border: 1px solid #e0e0e0;
+  /*! color: #888; */
+  background-color: #c4c4c4;
+}
+#join .block_center form fieldset label{   
+  display: inline-block;
+}
+#join .block_center form fieldset:nth-of-type(2) span label{
+  /*! display: block; */
+  width: 16%;
+  font-size: 15px;
+}
+#join .block_center form fieldset span input{
+    
+  
+  line-height: 2;
+  margin-top: 19px;
+  display: inline-block;
+  width: 33%;
+  margin-left: 50px;
+  border: 1px solid #999;
+}
+#join .block_center form fieldset>div:first-child{
+ width: 62%;
+margin: 0 auto;
+line-height: 5;
+padding-left: 20px;
+font-size: 15px;
+ border: 1px solid #4aabe1;
+ background-color: #f8fafd;
+}
+#join .block_center form fieldset>div:last-child{
+ 
+ 
+  width: 62%;
+  margin: 0 auto;
+  margin-top: 28px;
+  padding: 12px;
+  margin-left: 216px;
+  background-color: #f5f5f5;
+  height: 284px;
+}
+#join .block_center form fieldset>div:last-child label{
+  
+  font-size: 17px;
+ 
+  line-height: 3.1;
+  margin-left: 51px;
+}
+#join .block_center form fieldset div input{
+    
+}
+#join .block_center form fieldset div input strong{
+    
+}
+#join .block_center form fieldset div label{ 
+    
+}
+#join .block_center form fieldset div label strong{ 
+    
+  color: red;
+  font-weight: bold;
+}
+#join .block_center form fieldset div textarea{ 
+    
+  width: 614px;
+  white-space: pre-line;
+  padding: 15px;
+  
+  margin-left: 51px;
+  font-size: 13px;
+}
+#join .block_center form fieldset div input label{
+    
+}
+#join .block_center form p:nth-of-type(2){
+     text-align: left;
+    width: 64%;
+    margin: 8px auto 20px;
+}
+#join .block_center form p:nth-of-type(3){
+     text-align: left;
+    width: 64%;
+    margin: 8px auto 20px;
+  font-size: 18px;
+}
+#join .block_center form p:nth-of-type(3) strong{
+    
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+}
+#join .block_center form p{
+    
+  margin: 0 auto;
+}
+/* 회원가입 스타일--------------------- */
+#join .block_center form fieldset+fieldset{
+    
+}
+#join .block_center form fieldset+fieldset legend{
+    
+}
+#join .block_center form fieldset+fieldset span{
+    
+}
+#join .block_center form fieldset+fieldset span label{
+    
+}
+#join .block_center form fieldset+fieldset span input{
+    
+}
+#join .block_center form fieldset+fieldset span input button{
+    
+}
+#join .block_center form fieldset+fieldset span label{
+    
+}
+#join .block_center form fieldset+fieldset span select{
+    
+}
+#join .block_center form fieldset+fieldset span select option{
+    
+}

@@ -1,0 +1,17 @@
+@charset "utf-8";
+.hide{
+    display: none;
+}
+.block{
+    display: block;
+}
+.down1{
+    background-color: rgba(0,0,0,.8);
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease;
+    box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    z-index: 2;    
+    display: none;
+}

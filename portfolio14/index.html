@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>파리바게트</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/font.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/ham.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/title.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/ham.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/header.js"></script>
+		<!-- slick -->
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				if($(window).width()>767){
+						$('.lazy').slick({
+						lazyLoad: 'ondemand',
+						slidesToShow: 4,
+						slidesToScroll: 1
+					});
+				}else if($(window).width()<767){
+					$('.lazy').slick({
+						lazyLoad: 'ondemand',
+						slidesToShow: 1,
+						slidesToScroll: 1
+					});
+				}
+				if($(window).width()>767){
+						$('.autoplay').slick({
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						autoplay: true,
+						autoplaySpeed: 2000,
+					});
+				}else if($(window).width()<767){
+					$('.autoplay').slick({
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						autoplay: true,
+						autoplaySpeed: 2000,
+					});
+				}
+			});//
+		</script>
+	</head>
+	<body>
+		<!-- ------------------상단영역------------------ -->
+		<header>
+			<span class="ham"></span>
+			<h1><a href="">PARIS BAGUETTE</a></h1>
+			<nav>
+				<div class="gnb_left">
+					<ul>
+						<li><a href="">PB MAGAZINE</a></li>
+						<li>
+							<a href="">PB STORY</a>
+							<div class="submenuin">
+								<div class="submenu">
+									<ul>
+										<li><a href="">전체</a></li>
+										<li><a href="">브레드</a></li>
+										<li><a href="">케이크</a></li>
+										<li><a href="">샌드위치/샐러드</a></li>
+									</ul>
+									<ul>
+										<li><a href="">선물</a></li>
+										<li><a href="">디저트/스낵</a></li>
+										<li><a href="">음료/아이스</a></li>
+										<li><a href="">간편식</a></li>
+									</ul>
+									<a href=""><img src="img/submenu.jpeg" alt=""></a>
+								</div>
+							</div>
+						</li>
+						<li><a href="">PRODUCTS</a></li>
+					</ul>
+				</div>
+				<div class="gnb_right">
+					<ul>
+						<li><a href="">STORE</a></li>
+						<li><a href="">DELIVERY</a></li>
+						<li><a href="">PROMOTION</a></li>
+						<li><a href="">검색하기</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- ------------------타이틀영역------------------ -->
+		<div id="title">
+			<div class="w1200">
+				<div class="title_1">
+					<a href=""><img src="img/title_1.jpg" alt="가평맛남샌드"></a>
+				</div>
+				<div class="title_2">
+					<a href=""><img src="img/title_2.jpg" alt="비비빅"></a>
+				</div>
+				<div class="title_3">
+					<a href=""><img src="img/title_3.jpg" alt="팔도비빔장"></a>
+				</div>
+			</div>
+		</div>
+		<!-- ------------------메인영역------------------ -->
+		<section id="section1" class='page-start'>
+			<h2><strong>PB MAGAZINE</strong></h2>
+			<ul>
+				<li>
+					<div class="s1_in">
+						<a href="">
+							<h3><strong>논산 딸기</strong></h3>
+							<p>논산딸기와 함께한 우리 모두가 행복한 상생 프로젝트</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="s1_in">
+						<a href="">
+							<h3><strong>제주도 구좌당근</strong></h3>
+							<p>구좌당근과 함께한 우리 모두가 행복한 상생 프로젝트</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="s1_in">
+						<a href="">
+							<h3><strong>강원도 감자빵</strong></h3>
+							<p>지역농가와 우리 모두가 행복한 상생 프로젝트</p>
+						</a>
+					</div>
+				</li>
+			</ul>
+			<a href="">SHOW MENU</a>
+		</section>
+		<section id="section2">
+			<h2><strong>PB STORY</strong></h2>
+			<ul>
+				<li>
+					<div class="left_1">
+						<a href="">
+							<img src="img/s1_2.jpg" alt="요리용디쿨민초컬렉션">
+						</a>
+					</div>
+					<div class="right_2">
+						<a href="">
+							<p>BREAD VIDEO</p>
+							<h3>요리용디X쿨민초컬렉션</h3>
+							<p>파리바게뜨 X 요리용디 네번째 만남! 민초단이여 모여라! <span class="block"></span> 쿨민초컬렉션!</p>
+							<p>2021-08-12</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="left_1">
+						<a href="">
+							<img src="img/s1_1.jpg" alt="요리용디팔도비빔빵">
+						</a>
+					</div>
+					<div class="right_2">
+						<a href="">
+							<p>BREAD VIDEO</p>
+							<h3>요리용디X팔도비빔빵</h3>
+							<p>파리바게뜨 X 요리용디 세번째 만남! 팔도비빔빵 출시!</p>
+							<p>2021-08-12</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="left_1">
+						<a href="">
+							<img src="img/s1_3.jpg" alt="델리셔스 핼로그 3편">
+						</a>
+					</div>
+					<div class="right_2">
+						<a href="">
+							<p>BREAD VIDEO</p>
+							<h3>델리셔스 X 핼로그 3편</h3>
+							<p>건강한 한끼 식단 실천하기 3주차! 앞으로도 파바 <span class="block"></span> 델리셔스로 건강하게 식사를 챙겨볼까요?</p>
+							<p>2021-07-23</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="left_1">
+						<a href="">
+							<img src="img/s1_4.jpg" alt="델리셔스 핼로그 2편">
+						</a>
+					</div>
+					<div class="right_2">
+						<a href="">
+							<p>BREAD VIDEO</p>
+							<h3>델리셔스 X 핼로그 2편</h3>
+							<p>건강한 한끼 식단 실천하기 2주차! 건강한데 맛있기까지 한 <span class="block"></span> 파리바게뜨 델리셔스와 오늘 하루도 든든한 한끼를<span class="block"></span>  먹어볼까요?</p>
+							<p>2021-07-23</p>
+						</a>
+					</div>
+				</li>
+			</ul>
+			<a href="">SHOW MENU</a>
+		</section>
+		<section id="section3">
+			<h2><strong>PROMOTION</strong></h2>
+			<ul class="lazy">
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/s3_1.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p> 2021-08-19 ~ 2021-08-31 </p>
+						<p><a href=""><strong>네이버페이로 결제하면 5천원 혜택!</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/s3_2.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-08-09 ~ 2021-12-31</p>
+						<p><a href=""><strong>오직 가평 파바에서만 만날 수 있는 <span class="block"></span> 가평맛남샌드!</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/s3_3.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-07-29 ~ 2021-12-31</p>
+						<p><a href=""><strong>파바에 놀러온 비비빅</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/s3_4.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-07-22 ~ 2021-12-31</p>
+						<p><a href=""><strong>팔도 비빔빵</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/3_p.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-07-22 ~ 2021-12-31</p>
+						<p><a href=""><strong>8월 파리바게뜨 X 요기요 첫 주문 1만원 혜택!</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/3_p1.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-07-22 ~ 2021-12-31</p>
+						<p><a href=""><strong>비비빅</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/3p_3.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-07-22 ~ 2021-12-31</p>
+						<p><a href=""><strong>팔도 비빔빵</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_3">
+						<a href=""><img src="img/3p_4.jpg" alt=""></a>
+					</div>
+					<div class="bottom_3">
+						<p>2021-09-01 ~ 2021-12-31</p>
+						<p><a href=""><strong>9월 1일은 파바데이</strong></a></p>
+						<a href="">READ MORE</a>
+					</div>
+				</li>
+			</ul>
+			<a href="">SHOW MENU</a>
+		</section>
+		<section id="section4">
+			<h2><strong>PRODUCTS</strong></h2>
+			<ul class="autoplay">
+				<li>
+					<div class="top_4">
+						<a href=""><img src="img/s4_1.png" alt=""></a>
+					</div>
+					<div class="bottom_4">
+						<a href="">
+							<h2>플로럴 캐모마일</h2>
+							<p>향긋한 향의 카모마일에 오렌지꽃과 허브가 <span class="block"></span> 블렌딩되어 가볍게 마실 수 있는 티트라<span class="block"></span>  플로럴 캐모마일티</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_4">
+						<a href=""><img src="img/s4_2.png" alt=""></a>
+					</div>
+					<div class="bottom_4">
+						<a href="">
+							<h2>오렌지 루이보스</h2>
+							<p>루이보스에  달콤한 초콜릿향과 오렌지향이 <span class="block"></span> 블렌딩되어 가볍게 마실 수 있는 티트라 <span class="block"></span> 오렌지 루이보스티</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_4">
+						<a href=""><img src="img/s4_3.jpg" alt=""></a>
+					</div>
+					<div class="bottom_4">
+						<a href="">
+							<h2>토마토가 방울방울</h2>
+							<p></p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_4">
+						<a href=""><img src="img/s4_4.png" alt=""></a>
+					</div>
+					<div class="bottom_4">
+						<a href="">
+							<h2>로스트 치킨 브레스트</h2>
+							<p></p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="top_4">
+						<a href=""><img src="img/s4_5.png" alt=""></a>
+					</div>
+					<div class="bottom_4">
+						<a href="">
+							<h2>델리셔스 불고기 크리스피오트 샐러드</h2>
+							<p></p>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section id="section5">
+			<hgroup>
+				<h2><a href=""><strong>@parisbaguette_kr</strong> </a> </h2>
+				<h3><a href="">Instagram</a></h3>
+			</hgroup>
+				<ul>
+					<li>
+						<a href="">
+							<h2>고객센터</h2>
+							<p><strong>고객의 소리를 적극 경청하고 고객만족 향상 <span class="block"></span> 활동을 지속적으로 실천합니다.</strong></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h2>제휴카드안내</h2>
+							<p><strong>해피포인트와 제휴카드 정보를 확인하세요.</strong></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h2>공지사항</h2>
+							<p><strong>파리바게뜨 공지내용을 확인하세요.</strong></p>
+						</a>
+					</li>
+				</ul>
+		</section>
+		<!-- ------------------하단영역------------------ -->
+		<footer>
+			<div class="footer">
+				<div class="f_1"> 
+					<h2><strong>Info</strong></h2>
+					<ul>
+						<li><a href="">브랜드소개</a></li>
+						<li><a href="">창업안내</a></li>
+						<li><a href="">거래희망사전등록</a></li>
+						<li><a href="">윤리신고센터</a></li>
+						<li><a href="">채용</a></li>
+					</ul>
+				</div>
+				<div class="f_2">
+					<h2><strong>Contact Us</strong></h2>
+					<p><a href="">고객센터</a></p>
+					<p><a href="">tel:080-731-2027</a></p>
+					<p><a href="">평일 09:00 - 17:00(점심 12:00 - 13:00)</a></p>
+					<p><a href="">고객칭찬</a></p>
+				</div>
+				<div class="f_3">
+					<span>
+						<a href=""><img src="img/f_1.png" alt="SPC그룹"></a>
+						<a href=""><img src="img/f_2.png" alt="NCSI"></a>
+						<a href=""><img src="img/f_3.png" alt="KCSI"></a>
+						<a href=""><img src="img/f_4.png" alt="KSSQI"></a>
+						<a href=""><img src="img/f_5.png" alt="NBCI"></a>
+					</span>
+				</div>
+				<div class="f_4">
+					<h2><strong>Follow Us</strong></h2>
+					<ul>
+						<li><a href="">페이스북</a></li>
+						<li><a href="">인스타그램</a></li>
+						<li><a href="">유튜브</a></li>
+					</ul>
+					<select>
+						<option value="">SPC그룹</option>
+						<option value="">NCSI</option>
+						<option value="">KCSI</option>
+						<option value="">KSSQI</option>
+						<option value="">파리바게트</option>
+					</select>
+				</div>
+			</div>
+			<ul>
+				<li><a href="">이용약관</a></li>
+				<li><a href="">개인정보처리방침</a></li>
+				<li><a href="">이메일무단수집거부</a></li>
+				<li><a href="">영상정보처리기기운영관리방침</a></li>
+			</ul>
+			<p>All Rights Reserved © PARIS BAGUETTE, PARIS CROISSANT CO., LTD.경기도 성남시 중원구 상대원동 사기막골로 31번길 18 (주) 파리크라상</p>
+		</footer>
+	</body>
+</html>

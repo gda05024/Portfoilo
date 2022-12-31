@@ -1,0 +1,603 @@
+@charset "utf-8";
+/*  건축행정시스템 소개 */
+html{
+  
+}
+#introduce{
+
+  border-top: 1px solid #ccc;
+}
+/* 페이지경로 */
+#introduce .history{
+  height: 60px;
+  line-height: 3.5;
+  border-bottom: 1px solid;
+}
+#introduce .history p{
+
+  float: left;
+  display: block;
+  width: 33%;
+  text-align: right;
+  color: #202020;
+}
+#introduce .history p a{
+ background-image: url(../img/home.svg);
+ width: 17px;
+ height: 16px;
+ display: inline-block;
+ vertical-align: sub;
+
+}
+#introduce .history p strong{
+ font-weight: bold;
+ color: #000;
+}
+#introduce .history span{
+
+  float: right;
+}
+#introduce .history span button{
+ width: 25px;
+  height: 25px;
+  padding: 0;
+}
+#introduce .history span button.indent{
+  
+  background-color: #fff;
+  /*! border: #000; */
+  border: 1px solid #acacac;
+}
+#introduce .history span button:first-child{
+
+  background-image: url(../img/print.svg);
+  background-color: transparent;
+  text-indent: -9999px;
+  border: navajowhite;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+#introduce .history span button::before{
+
+}
+#introduce .history span button:nth-child(2)::before{
+  content: "가+";
+
+}
+#introduce .history span button:nth-child(3)::before{
+  content: "가";
+
+}
+#introduce .history span button span{
+  margin: 0;
+}
+/* 컨텐츠 */
+#introduce .contents{
+
+ 
+  width: 1200px;
+  margin: 0 auto;
+}
+#introduce .contents h2{
+
+  clear: both;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 30px;
+}
+#introduce .contents ul.list{
+
+  display: flex;
+  width: 100%;
+  margin-top: 45px;
+  font-size: 0.875em;
+}
+#introduce .contents ul.list li{
+
+  flex-basis: 29%;
+}
+#introduce .contents ul.list li a{
+
+  display: block;
+  text-align: center;
+  line-height: 3.2;
+  border: 1px solid #ccccccd1;
+  font-size: 15px;
+  color: #686868;
+}
+#introduce .contents ul.list li:nth-child(1) a{
+  border-right: none; 
+  background-color: #0e5cad;
+  color: #fff;
+}
+#introduce .contents ul.list li:nth-child(2) a{
+  border-right: none; 
+}
+#introduce .contents ul.list li:nth-child(3) a{
+  border-right: none; 
+}
+/* 요약 */
+#introduce .contents .summary{
+
+}
+#introduce .contents .summary h3{
+
+  font-size: 2em;
+  margin-top: 50px;
+  color: #00aeef;
+  margin-bottom: 33px;
+  font-weight: bold;
+}
+#introduce .contents .summary>p{
+
+  font-size: 18.6px;
+  margin-bottom: 30px;
+  /*! font-weight: bold; */
+}
+#introduce .contents .summary>p>strong{
+
+  font-weight: bold;
+}
+#introduce .contents .summary ul{
+
+  height: 530px;
+  background-image: url(https://cloud.eais.go.kr/images/contents/intro_bg01.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#introduce .contents .summary ul li{
+
+  display: inline-block;
+  width: 45%;
+}
+#introduce .contents .summary ul li:nth-child(1){
+  
+  margin-bottom: 31px;
+  margin-left: 44px;
+}
+#introduce .contents .summary ul li:nth-child(2){
+  
+}
+#introduce .contents .summary ul li:nth-child(3){
+  
+  margin-left: 37px;
+  width: 58%;
+}
+#introduce .contents .summary ul li h4{
+ 
+  display: inline-block;
+  width: 134px;
+  height: 90px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: #00aeef;
+  text-align: center;
+
+  padding-top: 50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 21px;
+}
+#introduce .contents .summary ul li p{
+
+  display: inline-block;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  /*! border: top; */
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-right: 16px;
+  line-height: 1.2;
+}
+#introduce .contents .summary ul li:nth-child(3) p{
+  
+  padding-right: 100px;
+}
+#introduce .contents .summary ul li p strong{
+
+
+  font-weight: bold;
+  color: #0066cc;
+}
+/* 내용 */
+#introduce .contents .saeumter{
+
+}
+#introduce .contents .saeumter .system{
+  background-color: #f5f8fa;
+  padding-right: calc((100% - 800px) / 2);
+  padding-left: calc((100% - 800px) / 2);
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#introduce .contents .saeumter .system h3{
+  width: 360px;
+  position: absolute;
+  left: calc(50% - 180px);
+  top: calc(50% - 49.5px);
+  text-indent: -9999px;
+  background-image: url(../img/intro_vision_logo.png);
+  height: 99px;
+}
+#introduce .contents .saeumter .system h4{
+  margin: 20px 0;
+  position:relative;
+}
+/* 수직 */
+#introduce .contents .saeumter .system h4::after{
+ content: "";
+  width:65%;
+  height: 1px;
+  display: block;
+  background-color: #999;
+  position: absolute;
+  right: 0;
+  top: calc(50%);
+}
+/* 원형 */
+#introduce .contents .saeumter .system div h4::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  left: 24%;
+  top:calc(50% - 5px);
+  z-index:2;
+}
+/* 수직라인 */
+#introduce .contents .saeumter .system div h4::after{
+  content: "";
+  width: 75%;
+  height: 1px;
+  display: block;
+  background-color: #999;
+  position: absolute;
+  right: 0;
+  top:calc(50%);
+}
+/* 원형 */
+#introduce .contents .saeumter .system div.right h4{
+  
+  text-align: right;
+}
+#introduce .contents .saeumter .system div.right h4::before{
+  left: initial;
+  right: 22%;
+}
+/* 수직라인 */
+#introduce .contents .saeumter .system div.right h4::after{
+   right: initial;
+   left: 0;
+}
+#introduce .contents .saeumter .system p{
+  line-height: 1.6;
+  font-size: 22px;
+}
+#introduce .contents .saeumter .system .left p:nth-child(2){
+  line-height: 1.6;
+  font-size: 22px;
+  font-weight: bold;
+  color: #009900;
+}
+#introduce .contents .saeumter .system .right p:nth-child(2){
+  line-height: 1.6;
+  font-size: 22px;
+  font-weight: bold;
+  color: #003366;
+}
+#introduce .contents .saeumter .system div.right h4{
+  position: relative;
+  top: 70px;
+}
+#introduce .contents .saeumter .system div.right p{
+  position: relative;
+  top: -54px;
+}
+/*  -------리스트----------- */
+#introduce .contents .saeumter ul.list1{
+
+  display: flex;
+  width: 81%;
+  margin: auto;
+  /*! width: ; */
+  height: 205px;
+  margin-top: 46px;
+}
+#introduce .contents .saeumter ul.list1 li{
+
+  width: 25%;
+  text-align: center;
+  background-image: url(https://cloud.eais.go.kr/images/contents/intro_vision_vv01.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  border-right: 1px solid #cccccc8f;
+}
+#introduce .contents .saeumter ul.list1 li+li{
+
+  width: 25%;
+  text-align: center;
+  background-image: url(https://cloud.eais.go.kr/images/contents/intro_vision_vv02.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  border-right: 1px solid #cccccc8f;
+}
+#introduce .contents .saeumter ul.list1 li+li+li{
+
+  width: 25%;
+  text-align: center;
+  background-image: url(https://cloud.eais.go.kr/images/contents/intro_vision_vv03.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  border-right: 1px solid #cccccc8f;
+}
+#introduce .contents .saeumter ul.list1 li+li+li+li{
+
+  width: 25%;
+  text-align: center;
+  background-image: url(https://cloud.eais.go.kr/images/contents/intro_vision_vv04.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  border: none
+}
+#introduce .contents .saeumter ul.list1 li h3{
+
+  margin-top: 139px;
+  font-size: 18px;
+  line-height: 2.2;
+  font-weight: bold;
+  color: #003366;
+}
+#introduce .contents .saeumter ul.list1 li p{
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#introduce .contents .saeumter ul.list1+h3{
+  
+  display: inline-block;
+  font-size: 26px;
+  margin-top: 56px;
+  margin-bottom: 23px;
+  font-weight: bold;
+}
+#introduce .contents .saeumter ul.primary + h3{
+  display: inline-block;
+font-size: 26px;
+margin-top: 56px;
+margin-bottom: 23px;
+}
+#introduce .contents .saeumter ul.primary{
+
+}
+#introduce .contents .saeumter ul.primary li{
+
+  display: inline-flex;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(2){
+  
+}
+#introduce .contents .saeumter ul.primary li hgroup{
+  height: 231px;
+
+  width: 221px;
+  /*! text-align: center; */
+  /*! padding-left: 25px; */
+  border-top: 1px solid #00aeef;
+}
+#introduce .contents .saeumter ul.primary li hgroup h4{
+
+  margin-top: 62px;
+  font-size: 23px;
+  color: #00aeef;
+  font-weight: bold;
+}
+#introduce .contents .saeumter ul.primary li hgroup h5{
+
+  font-size: 15px;
+  color: #003366;
+  font-weight: bold;
+  margin-top: 8px;
+}
+#introduce .contents .saeumter ul.primary li div{
+  display: inline-grid;
+  margin-left: 75px;
+}
+#introduce .contents .saeumter ul.primary li div p{
+
+}
+#introduce .contents .saeumter ul.primary li:nth-child(1) div p{
+
+  margin-top: 0px;
+  /*! margin-bottom: 26px; */
+}
+#introduce .contents .saeumter ul.primary li:nth-child(1) div  p:nth-of-type(1){
+  
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(2) div  p:nth-of-type(1){
+  
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(3) div  p:nth-of-type(1){
+  
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(4) div  p:nth-of-type(1){
+  
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(5) div  p:nth-of-type(1){
+  
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(1) div  p:nth-of-type(2){
+  
+  color: #f54948;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -23px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(5) div  p:nth-of-type(2){
+  
+  color: #f54948;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -23px;
+}
+#introduce .contents .saeumter ul.primary li div pre{
+  white-space: pre-line;
+  width: 852px;
+  line-height: 1.4;
+  padding: 0px 22px;
+  background-color: #eee;
+  font-size: 17px;
+  /*! margin-top: 4px; */
+  padding-top: 17px;
+  height: 99px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(1) div pre{
+  margin-top: -13px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(2) div pre{
+  height: 63px;
+  margin-top: -83px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(3) div pre{
+  height: 63px;
+  margin-top: -83px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(4) div pre{
+  height: 63px;
+  margin-top: -83px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(5) div pre{
+  height: 42px;
+  margin-top: -40px;
+}
+#introduce .contents .saeumter ul.primary li:nth-child(5) div  p:nth-of-type(3){
+  
+
+}
+#introduce .contents .saeumter ul.primary li div pre span{
+  
+  color: #003366;
+  font-weight: bold;
+}
+#introduce .contents .saeumter ul.tesk{
+
+  margin-bottom: 51px;
+  color: #6a6a6a;
+}
+#introduce .contents .saeumter ul.tesk li{
+
+  display: flex;
+}
+#introduce .contents .saeumter ul.tesk li h4{
+ background-color: #eeeeeeb3;
+  display: inline-block;
+  width: 23%;
+  font-size: 16px;
+  line-height: 3;
+ border-bottom: 1px solid #cccccc70;
+ border-right: 1px solid #cccccc70;
+ padding-left: 20px;
+}
+#introduce .contents .saeumter ul.tesk li:nth-child(1) h4{
+  
+  border-top: 1px solid;
+}
+#introduce .contents .saeumter ul.tesk li p{
+
+  line-height: 3;
+  display: block;
+  width: 74%;
+  border-bottom: 1px solid #cccccc70;
+  padding-left: 21px;
+}
+#introduce .contents .saeumter ul.tesk li:nth-child(1) p{
+
+
+  border-top: 1px solid;
+}
+
+/* 사이드메뉴 */
+aside{
+
+  position: fixed;
+  right: 38px;
+  top: 313px;
+  width: 68px;
+}
+aside span{
+
+  /*! display: inline-flex; */
+}
+aside span:nth-child(1) a:nth-child(1){
+  
+
+  padding-top: 63px;
+  padding-bottom: 20px;
+  /*! border-top: 1px solid; */
+  border-bottom: 1px solid #c4e3f4;
+  background-image: url(https://cloud.eais.go.kr/images/main/main_icn_local02_2.png);
+  background-repeat: no-repeat;
+
+  border-top: 1px solid #c4e3f4;
+}
+aside span:nth-child(1) a:nth-child(1)+a{
+
+  padding-top: 63px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c4e3f4;
+  background-image: url(https://cloud.eais.go.kr/images/main/main_icn_local03_2.png);
+  background-repeat: no-repeat;
+}
+aside span a{
+
+  display: inline-block;
+}
+aside a.top{
+width: 40px;
+display: inline-block;
+height: 40px;
+ border: 1px solid;
+border-radius: 50%;
+text-align: center;
+line-height: 2;
+margin-top: 10px;
+ font-size: 13px;
+background-color: #1f446a;
+margin-left: 9px;
+  color: #fff;
+}
+aside a.top::before{
+content: "";
+display: block;
+width: 0;
+height: 0;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 4px solid #fff;
+margin-top: 8px;
+margin-left: 14px;  
+ 
+}

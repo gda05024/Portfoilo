@@ -1,0 +1,132 @@
+@charset "utf-8";
+footer{
+  width: 100%;
+  max-width: 1900px;
+  margin:0 auto;
+}
+footer .w1200{
+    
+}
+footer .w1200 .tabmenu_{
+  background: #3b434f;
+  min-height: 60px;
+  overflow: hidden;
+}
+footer .w1200 .tabmenu_ .left1{
+  float: left;
+}
+footer .w1200 .tabmenu_ .left1 li{
+
+  display: inline-block;
+}
+footer .w1200 .tabmenu_ .left1 li:first-child{
+  background-color: #323943;
+}
+footer .w1200 .tabmenu_ .left1 li a{
+    
+  color: #fff;
+  padding: 21px 111px;
+  line-height: 4;
+  background-image: url(../img/site.png);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+}
+footer .w1200 .tabmenu_ .right2{
+    
+  float: right;
+  width: 21%;
+  margin-right: 100px;
+}
+footer .w1200 .tabmenu_ .right2 li{
+  height: 30px;
+  width: 30px;
+  background-image: url(../img/all_S.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+footer .w1200 .tabmenu_ .right2 li:nth-child(1){
+  background-position-x: -10px;
+}
+footer .w1200 .tabmenu_ .right2 li:nth-child(2){
+  background-position-x: -50px;
+}
+footer .w1200 .tabmenu_ .right2 li:nth-child(3){
+  background-position-x: -90px;
+}
+footer .w1200 .tabmenu_ .right2 li:nth-child(4){
+  background-position-x: -130px;
+}
+footer .w1200 .tabmenu_ .right2 li:nth-child(5){
+  background-position-x: -170px;
+}
+footer .w1200 .tabmenu_ .right2 li:nth-child(6){
+  background-position-x: -210px;
+}
+footer .w1200 .tabmenu_ .right2 li a{
+  color: #fff;
+  padding: 21px 5px;
+  line-height: 4;
+}
+footer .w1200  .info{
+    
+  clear: both;
+}
+footer .w1200 .info ul{
+    
+  display: flex;
+  border-bottom: 1px solid #ccccccb8;
+  padding-left: 61px;
+}
+footer .w1200  .info ul li{
+    
+  padding: 20px 30px;
+}
+footer .w1200  .info ul li a{
+  color: #000000b5;
+  padding: 20px 20px;
+}
+footer .w1200  .info ul li a:hover{
+  color: #222;
+}
+footer .w1200 .fot {
+    
+  padding: 20px 111px;
+  overflow: hidden;
+}
+footer .w1200 .fot .left3{
+    
+  float: left;
+}
+footer .w1200 .fot .left3 address{
+    
+  line-height: 1.6;
+}
+footer .w1200 .fot .left3 address strong{
+    
+  font-weight: bold;
+}
+footer .w1200 .fot .left3 address p{
+    
+}
+footer .w1200 .fot .left3 address p:nth-of-type(2){
+  color: #ccc;
+}
+footer .w1200 .fot .left3 address p strong{
+    
+}
+footer .w1200 .fot .mark{
+    
+  width: 20%;
+  float: right;
+}
+footer .w1200  .mark a{
+    
+  margin-left: 20px;
+}
+footer .w1200 .mark a img{
+    
+}

@@ -1,0 +1,1283 @@
+@charset "utf-8";
+/* 팝업창----------------------------- */
+
+/* 오른쪽 */
+#popup div.right{
+display: flex; flex-direction: column; align-items: center; justify-content: center; width: 106px;
+  position: absolute;
+  /*! background-color: #fff; */
+  z-index: 2;
+height: 142px;
+right: 552px;
+top: 216px;
+position: fixed;
+}
+#popup div.right a{
+  
+  color: #fff;
+  display: block;
+  width: 63px;
+  height: 78px;
+  text-align: center;
+  justify-content: center;
+  line-height: 0;
+  border-bottom: 1px solid #cccccc82;
+  text-decoration: none;
+  font-weight: lighter;
+}
+#popup div.right a::before{
+   content: "X";
+  width:50px;
+  
+  display: block;
+  height: 33px;
+  font-size: 32px;
+  transform: scalex(1.4);
+  margin-right: -12px;
+  margin-left: 5px; 
+}
+#popup div.right p{
+  
+  color: #fff;
+  padding-top: 42px;
+}
+#popup div.right p span{
+  display: block;
+}
+/* 메인영역 ---------------------------*/
+main{
+    height: 100%;
+}
+section{
+height: 100%;
+    box-sizing: border-box;
+}
+/* 고정메뉴 */
+.tab{
+  line-height: 1.6;
+  display: inline-block;
+  width: 69%;
+  font-size:16px;
+  background-color: #ccc;
+  /*! padding-left: 23px; */
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #fff;
+}
+.tab2{
+     content: "- 01";
+    font-size: 13px;
+    /*! background-color: transparent; */
+    width: 25px;
+    height: 25px;
+    margin-left: -2px;
+}
+div#aside{
+  position: fixed;
+  right: 38px;
+  top:238px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+
+  width: 10%;
+}
+div#aside .qlist{
+ margin-bottom: 20px;
+ color: #808c97;
+}
+div#aside .qlist li{
+margin-bottom: 14px;
+
+/*! display: block; */
+/*! width: 109%; */
+}
+div#aside .qlist li::before{
+ content: "●";
+ display: inline-block;
+ font-size: 11px;
+ line-height: 2;
+ vertical-align: 3px;
+ margin-right: 10px;
+  width: 27px;
+ text-align: right;
+ margin-left: 6px;
+}
+
+div#aside .qlist li.current:nth-child(1)::before{
+    content: "- 01";
+    font-size: 13px;
+    /*! background-color: transparent; */
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+div#aside .qlist li.current:nth-child(2)::before{
+    content: "- 02";
+    font-size: 13px;
+    /*! background-color: transparent; */
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+div#aside .qlist li.current:nth-child(3)::before{
+    content: "- 03";
+    font-size: 13px;
+    /*! background-color: transparent; */
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+div#aside .qlist li.current:nth-child(4)::before{
+    content: "- 04";
+    font-size: 13px;
+    /*! background-color: transparent; */
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+div#aside .qlist  li:nth-child(1) a{
+  
+}
+div#aside .qlist  li a{
+   color: #808c97;
+   padding-left: 11px;
+}
+div#aside .qlist2{
+    
+}
+div#aside .qlist2 li{
+    line-height: 1.6;
+   padding-top: 8px;        
+   padding-bottom: 8px;
+    text-align: right;
+}
+div#aside .qlist2 li:first-child {
+ background-image: url(https://cloud.eais.go.kr/images/main/main_icn_local01.png);
+ background-repeat: no-repeat;
+ background-size: 35% auto;
+ background-position: left center;
+ padding-right: 11px;
+ border-bottom: 1px solid#addbf1;
+
+}
+
+div#aside .qlist2 li a{
+     color: #476888;
+     font-weight: bold;
+}
+div#aside .qlist2 li a:hover{
+    color: #48c6f7;
+}
+div#aside .qlist2 li:nth-child(2){
+ background-image: url(https://cloud.eais.go.kr/images/main/main_icn_local02.png);
+ background-repeat: no-repeat;
+ background-size: 35% auto;
+ background-position: left center;
+ padding-right: 11px;
+ border-bottom: 1px solid #addbf1;
+}
+div#aside .qlist2 li:nth-child(3){
+ background-image: url(https://cloud.eais.go.kr/images/main/main_icn_local03.png);
+ background-repeat: no-repeat;
+ background-size: 35% auto;
+ background-position: left center;
+ padding-right: 11px;
+ padding-top: 20px;   
+ padding-bottom: 20px;
+ border-bottom: 1px solid #addbf1;
+}
+div#aside .qlist2 li:nth-child(4){
+ background-image: url(https://cloud.eais.go.kr/images/main/main_icn_local04.png);
+ background-repeat: no-repeat;
+ background-size: 35% auto;
+ background-position: left center;
+ padding-right: 11px;
+ padding-top: 15px;   
+ padding-bottom: 15px;
+    background-color: #9be2ffa3;
+}
+div#aside .qlist2 li a span{
+    display: block;
+}
+/* 민원신청 */
+section#apply{
+    height: 100%;
+    /*! margin-bottom: 220px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section#apply.mb80{
+ /*! margin-bottom: 238px; */
+}
+section#apply div{
+    max-width: 1200px;
+    /*! margin: 0 auto; */
+    padding-top: 70px;
+    text-align: center;
+}
+section#apply div h2{
+
+}
+section#apply div h2+p{
+    text-align: center;
+    font-size: 35px;
+    line-height: 3;
+}
+section#apply div h2+p strong{
+    color: #2e3754;
+    font-weight: bold;
+}
+section#apply div fieldset{
+    display: inline-block;
+    background-color: #ccc;
+    margin-bottom: 21px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: #48c6f7;
+}
+
+section#apply div fieldset input{
+    width: 670px;
+    height: 53px;
+    display: inline-block;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+section#apply div fieldset input:focus{
+    box-shadow: 0 0 9px blue;
+    border:1px solid #000;
+
+}
+section#apply div fieldset input[type="text"]{
+    font-size: 25px;
+    padding-left: 20px;
+
+    color: #3da2dc;
+    border-radius: 3px;
+}
+section#apply div fieldset button{
+    font-size: 24px;
+    vertical-align: 1px;
+    border: navajowhite;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px 11px;
+}
+section#apply div fieldset+p{
+    margin-bottom: 40px;
+    color: #555;
+}
+section#apply div fieldset+p strong{
+    border-radius: 19px;
+    padding: 0px 14px;
+    background-color: #999;
+    display: inline-block;
+    line-height: 1.7;
+    color: #fff;
+    border: 1px solid #999;
+    margin-right: 18px;
+}
+section#apply div ul{
+
+    margin-bottom: 20px;
+    /*! perspective: 400px; */
+}
+
+section#apply div ul li{
+
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+    height: 200px;
+    background-color: rgba(255,255,255,0.8);
+    /*! perspective: 1200px; */
+    padding: 22px 3px;
+    /*! box-shadow: 1px 0px 7px #555; */
+    /*! box-shadow: 0px 10px 10px 10px #000; */
+
+
+}
+section#apply div ul li:hover{
+    box-shadow: 0px 0 15px #4f4f4f;
+    border:1px solid blue;
+
+}
+section#apply div ul li:nth-child(6){
+  
+}
+section#apply div ul li::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    background-image: url(https://cloud.eais.go.kr/images/main/main01_micn_01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+}
+section#apply div ul li:nth-child(2)::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    background-image: url(https://cloud.eais.go.kr/images/main/main01_micn_02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+}
+section#apply div ul li:nth-child(3)::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    background-image: url(https://cloud.eais.go.kr/images/main/main01_micn_03.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+}
+section#apply div ul li:nth-child(4)::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    background-image: url(https://cloud.eais.go.kr/images/main/main01_micn_04.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+}
+section#apply div ul li:nth-child(5)::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    background-image: url(https://cloud.eais.go.kr/images/main/main01_micn_05.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+}
+section#apply div ul li:nth-child(6)::before{
+    content: "+";
+    background-image: none;
+    background-color: #999;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 58px;
+    margin-top: 34px;
+    transform: rotatey(0deg);
+    transition: all 0.5s;
+    color: #ffff;
+    /*! z-index: 1; */
+}
+section#apply div ul li:nth-child(6):hover::before{
+   transform: rotatey(180deg);
+}
+section#apply div ul li p {
+
+    margin-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+section#apply div ul li a{
+
+}
+section#apply div ul li a:nth-of-type(1){
+
+    display: inline-block;
+    padding: 6px 3PX;
+    /*! background-color: #ff4f4f; */
+    width: 41px;
+    color: #FFF;
+    background-color: #f54a47;
+}
+section#apply div ul li a:nth-of-type(2){
+    display: inline-block;
+    padding: 6px 3PX;
+    background-color: #5959ff;
+    width: 41px;
+    color: #FFF;
+    background-color: #006cc7;
+}
+section#apply div ul li:nth-child(5) a:nth-of-type(2){
+    display: inline-block;
+    padding: 5px 3PX;
+    background-color: #58aa55;
+    width: 41px;
+    color: #FFF;
+}
+section#apply div ul li:nth-child(6) a{
+    background-color: #ccc0;
+    display: block;
+    width: 100%;
+    color: #5d5d5d;
+}
+section#apply div p.call{
+
+    /*! margin-top: 19px; */
+    padding-top: 22px;
+    font-size: 19px;
+    color: red;
+}
+section#apply div p.call strong{
+
+    font-size: 19px;
+    color: #000;
+    margin-right: 4px;
+}
+section#apply div p.time{
+
+    font-size: 15px;
+    color: #535353;
+    padding-bottom: 56px;
+}
+section#apply div span.go{
+
+    /*! margin-bottom: -50px; */
+    padding: 31px;
+}
+section#apply div span.go a{
+
+    padding: 11px;
+    display: inline-block;
+    font-size: 24px;
+    /*! color: ; */
+}
+section#apply div span.go a:nth-of-type(1){
+     /*! background-color: #0f12cfb0; */
+     color: #fff;
+     padding: 10px 49px;
+     background: linear-gradient(150deg,#3da2dc,#48c6f7 70%);
+}
+section#apply div span.go a:nth-of-type(2){
+         background-color: #fff;
+    color: #5a5a5a;
+         padding: 9px 49px;
+}
+section#apply div span.go a+a{
+
+}
+/* 건축물대장 ---------------------*/
+section#architecture{
+	background-color: #dde4ec;
+
+	/*! padding-bottom: 155px; */
+	height: 100%;
+ }
+
+ section#architecture div{
+  max-width: 1200px;
+  text-align: center;
+  padding-top: 142px;
+  /*! margin-top: 20px; */
+ }
+ 
+ section#architecture div h2{ 
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+ }
+ section#architecture div h2+p{
+ font-size: 13px;
+ line-height: 1.6;
+ color: #4d4d4d;
+ margin-bottom: 24px;
+ }
+section#architecture div p:nth-of-type(2){
+    font-size: 13px;
+    color: #7b7b7b;
+}
+ section#architecture div ul:nth-of-type(2){
+ margin-top: 115px;
+ /*! display: block; */
+ /*! width: 71%; */
+ margin-bottom: 35px;
+ }
+
+section#architecture div ul:nth-of-type(2) li:nth-of-type(1) a{
+    background-image: url(https://cloud.eais.go.kr/images/icon/icn_download.png);
+    background-repeat: no-repeat;
+    background-position-x: 275px;
+    background-position-y: 12px;
+    
+}
+section#architecture div ul:nth-of-type(2) li:nth-of-type(2) a{
+    background-image: url(https://cloud.eais.go.kr/images/icon/icn_pdf.png);
+    background-repeat: no-repeat;
+    background-position-x: 275px;
+    background-position-y: 11px;
+    
+}
+ section#architecture div ul:nth-of-type(1){
+  
+  overflow: hidden;
+  display: inline-block;
+  width: 1134px;
+  padding-top: 50px;
+}
+section#architecture div ul:nth-of-type(1) li{
+  float: left;
+  width: calc((100% / 3) - 10px );
+  background-color: #eee;
+  height: 346px;
+  margin: 0 5px;
+  background: -moz-linear-gradient(top,#99dbec 70%, #fff 70%);
+  box-shadow: 0 10px 20px -6px #ccc;
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(2){
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(3){
+  height: 168px;
+  margin-bottom:10px;
+  background-color: #fff;
+  /*! background: none; */
+  /*! margin-top: 1px; */
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(3) a{
+    
+    background: #fff;
+    text-align: left;
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(4) a{
+    
+    background: #fff;
+    text-align: left;
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(4){
+  height: 168px;
+  
+  background-color: #fff;
+}
+section#architecture div ul:nth-of-type(1) li a{
+   display: block;
+    height: 98%;
+    padding-top: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(1) a{
+   background-image: url(https://cloud.eais.go.kr/images/main/main02_ricn_01.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 41%;
+}
+section#architecture div ul:nth-of-type(1) li:nth-child(2) a{
+   background-image: url(https://cloud.eais.go.kr/images/main/main02_ricn_02.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 40%;
+}
+
+section#architecture div ul:nth-of-type(1) li a p{
+  
+    padding-top: 216px;
+    line-height: 1.2;
+    font-size: 13px;
+    color: #424242;
+}
+
+section#architecture div ul:nth-of-type(1) li a+a{
+  
+}
+section#architecture div ul p{
+    
+}
+section#architecture div ul:nth-of-type(2) li{
+    display: inline-block;
+  
+}
+
+section#architecture div ul:nth-of-type(2) li a{
+  padding: 11px 72px;
+  padding-top: 13px;
+  display: block;
+  border: 1px solid;
+  /*! border-radius: 8px 13px; */
+  border-radius: 24px;
+  font-size: 17px;
+  color: #333;
+  /*! background-image: url(https://cloud.eais.go.kr/images/icon/icn_download.png); */
+  /*! background-position: 85% 50%; */
+}
+section#architecture div ul li a h3{
+ font-weight: bold; 
+ /*! font-size: 15px; */
+ /*! background-image: url(/images/icon/icn_download.png); */
+ /*! background-position: 85% 50%; */
+}
+section#architecture div ul li a h3 strong{
+ font-weight: bold; 
+}
+section#architecture div ul li:nth-child(3) a h3{
+ background-image: url(https://cloud.eais.go.kr/images/main/main02_ricn_03.png);
+ background-repeat: no-repeat;
+ background-position: right;
+ display: block;
+ /*! height: 106px; */
+ padding: 42px 5px;
+ margin-top: -10px;
+}
+section#architecture div ul li:nth-child(4) a h3{
+ background-image: url(https://cloud.eais.go.kr/images/main/main02_ricn_04.png);
+ background-repeat: no-repeat;
+ background-position: right;
+ display: block;
+ /*! height: 106px; */
+ padding: 36px 5px;
+ margin-top: -10px;
+}
+section#architecture div ul li a p{
+
+    font-size: 14px;
+}
+section#architecture div ul li a p:last-child{
+
+}
+/* 협의, 공모외 --------------------------*/
+section#collusion{
+ /*! padding: 0; */
+ padding-bottom: 54px;
+ height: 100%;
+ background-color: #2d78de;
+ z-index: -1;
+ position: relative;
+ overflow: hidden;
+}
+#collusion .block_center{
+  
+    /*! background-color: #2d78de; */
+    /*! padding: 100px 0; */
+    /*! position: relative; */
+    /*! overflow: hidden; */
+    position: relative;
+    height: 815px;
+    /*! padding-bottom: 56px; */
+    padding-bottom: 65px;
+}
+/* 슬라이드요소 */
+#collusion .block_center .slide{
+    overflow: hidden;
+    width: 300%;
+    position: absolute;
+    left: 0%;
+    top: 0;
+}
+#collusion .block_center .slideitem{
+    margin: 0 auto;
+    color: #fff;
+    background-image: url(https://cloud.eais.go.kr/images/main/main03_vis_cloud.jpg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding: 257px 0 500px;
+    padding-left: calc((33.3333% - 1000px) / 2 );
+    padding-right: calc((33.3333% - 1000px) /2);
+    background-origin: content-box;
+    background-size: 46%;
+    float: left;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    background-color: #b53999;
+    position: relative;
+    padding-top: 308px;
+    z-index: -1;
+}
+#collusion .block_center .slide .slide1{
+    background-image: url(https://cloud.eais.go.kr/images/main/main03_vis_cloud.jpg);
+    background-color: #b53999;
+}
+#collusion .block_center .slide .slide2{
+    background-image: url(https://cloud.eais.go.kr/images/main/main03_vis_cybersys.jpg);
+    background-color: #2d78de;
+}
+#collusion .block_center .slide .slide3{
+    background-image: url( https://cloud.eais.go.kr/images/main/main03_vis_exh.jpg);
+    background-color: #5861da;
+}
+#collusion .block_center .slideitem::before{
+    /*! content: ""; */
+    display: block;
+    width: 800px;
+    height: 202px;
+    position: absolute;
+    left: 252px;
+    top:217px;
+    background-color: #333;
+    transform: perspective(800px) rotateY(60deg);
+    perspective-origin: 100% 50%;
+		background: -moz-linear-gradient(left, #000000 0%, #e6e6e6 100%);
+}
+#collusion .block_center .slideitem h2{
+  
+    font-size: 20px;
+    color: #FFF;
+    margin-bottom: 49px;
+    position: relative;   
+}
+#collusion .block_center .slideitem h2 strong{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top: 20px;
+    display: block;
+}
+#collusion .block_center .slideitem p{
+  
+    font-size: 13px;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    position: relative;
+}
+#collusion .block_center .slideitem a{
+  
+    color: #fff;
+    border: 1px solid;
+    font-size: 14px;
+    padding: 14px 24px;
+    display: inline-block;
+    font-weight: bold;
+}
+#collusion .block_center span.control{
+  
+    max-width: 1200px;
+    display: block;
+    position: absolute;
+    top: 39%;
+    width: 100%;
+    left: calc(50% - 600px);
+}
+#collusion .block_center span.control a{
+ text-indent: -9999px;
+ display: inline-block;
+ width: 35px;
+ height: 35px;
+ border: 2px solid #fff;
+ transform: rotate(45deg);
+
+ margin-top: 96px;
+}
+#collusion .block_center span.control a:first-child{
+    float: left;
+    /*! border: 2px solid #fff; */
+   border-top: tan;
+   border-right: tan; 
+}
+#collusion .block_center span.control a:last-child{
+    float: right;
+    border-bottom: transparent;
+    border-left:  tan;
+}
+#collusion .block_center ul.list{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; 
+    width: 600px;
+    margin: 0 auto;
+    /*! justify-content: space-between; */
+    justify-content: space-around;
+    position: absolute;
+    bottom: 80px;
+    /*! width: 100%; */
+    left: calc(50% - 300px);
+}
+#collusion .block_center ul.list li{
+  
+    /*! display: inline-block; */
+    margin-top: 50px;
+    border-top: 1px solid #fff;
+}
+#collusion .block_center ul.list li:not(:first-child){
+/*     opacity: 0.5; */
+    
+}
+#collusion .block_center ul.list li a{
+    color: #fff;
+    padding: 10px 10px;
+    display: block;
+}
+.blue_color{
+   border-top: 5px solid #00aeef;
+    color: #00aeef !important;
+   font-weight: bold;
+}
+/* 유용한서비스------------------------------- */
+section#service{
+ background-color: #fdfdfd;
+ margin-top: 51px;
+ padding-bottom: 120px;
+ padding-top: 64px;
+}
+#service .block_center{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+#service .block_center h2{
+ font-size: 32px;
+ font-weight: bold;
+ margin-top: 37px;
+ margin-bottom: 54px;
+}
+/* 유용한 서비스 목록 */
+#service .block_center ul.ulist{
+  padding-bottom: 38px;
+}
+#service .block_center ul.ulist li{
+   display: inline-block;
+   width: 16%;
+   height: 168px;
+   vertical-align: top;
+   border-right: 1px dotted #999;
+}
+#service .block_center ul.ulist li:nth-child(6){
+    border: none;
+}
+#service .block_center ul.ulist li a{
+  display: block;
+   width: 100%;
+   height: 168px;
+  vertical-align: bottom;
+}
+#service .block_center ul.ulist li a::before{
+  content: "";
+  width: 100%;
+  height: 133px;
+  background-image: url(https://cloud.eais.go.kr/images/main/main04_sev_icn_01.png);
+  background-repeat: no-repeat;
+  background-position: 50%;  
+  display: inline-block;
+}
+#service .block_center ul.ulist li:nth-child(2) a::before{
+  content: "";
+  width: 100%;
+  height: 133px;
+  background-image: url(https://cloud.eais.go.kr/images/main/main04_sev_icn_02.png);
+  background-repeat: no-repeat;
+  background-position: 50%;  
+  display: inline-block;
+}
+#service .block_center ul.ulist li:nth-child(3) a::before{
+  content: "";
+  width: 100%;
+  height: 133px;
+  background-image: url(https://cloud.eais.go.kr/images/main/main04_sev_icn_03.png);
+  background-repeat: no-repeat;
+  background-position: 50%;  
+  display: inline-block;
+}
+#service .block_center ul.ulist li:nth-child(4) a::before{
+  content: "";
+  width: 100%;
+  height: 133px;
+  background-image: url(https://cloud.eais.go.kr/images/main/main04_sev_icn_04.png);
+  background-repeat: no-repeat;
+  background-position: 50%;  
+  display: inline-block;
+}
+#service .block_center ul.ulist li:nth-child(5) a::before{
+  content: "";
+  width: 100%;
+  height: 133px;
+  background-image: url(https://cloud.eais.go.kr/images/main/main04_sev_icn_05.png);
+  background-repeat: no-repeat;
+  background-position: 50%;  
+  display: inline-block;
+}
+#service .block_center ul.ulist li:nth-child(6) a::before{
+  content: "";
+  width: 100%;
+  height: 133px;
+  background-image: url(https://cloud.eais.go.kr/images/main/main04_sev_icn_06.png);
+  background-repeat: no-repeat;
+  background-position: 50%;  
+  display: inline-block;
+}
+/* 건축통계서비스/공지사항/장애현황 */
+#service .block_center div.div3{
+  display: inline-block;
+  height: 300px;
+  vertical-align: top;
+}
+/* 슬라이드 */
+#service .block_center div.div3 .slide{
+  display: inline-block;
+  width: 380px;
+  height: 307px;
+}
+#service .block_center div.div3 .slide ul.number{
+  
+}
+#service .block_center div.div3 .slide ul.number ul{
+  
+}
+#service .block_center div.div3 .slide ul.number ul li{
+  
+}
+#service .block_center div.div3 .slide ul.number ul li a{
+  
+}
+#service .block_center div.div3 .slide div.slide1{
+  display: inline-block;
+  width: 360px;
+  height: 307px;
+ background: -moz-linear-gradient(-45deg, #ffd6db 5%, #fa3584 86%);
+ 
+}
+#service .block_center div.div3 .slide div.slide1 a.go{
+ display: inline-block;
+ padding: 5px 15px;
+ border: 1px solid #000;
+ border-radius: 20px;   
+ background-color: #000;
+ color: #fff;
+ margin-left: 225px;   
+ margin-top: 60px;
+}
+#service .block_center div.div3 .slide div.slide1 a h3{
+  padding-top: 52px;
+  font-size: 34px;
+  text-align: right;
+  padding-right: 17px;
+  margin-bottom:25px;
+  color: #fff;
+}
+#service .block_center div.div3 .slide div.slide1 a p{
+  text-align: right;
+ padding-right: 17px;
+  font-size: 19px;
+  color: #fff;
+}
+#service .block_center div.div3 .slide div.slide1 a span{
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+/* 공지 사항 */
+#service .block_center div.div3 div.notice{
+ display: inline-block;
+ width: 360px;
+ height: 307px;
+ vertical-align: top;
+ text-align: left;
+ background-color: #f2f6fb;
+ /*! position: relative; */
+ margin-right: 19px;
+ margin-left: 9px;
+ z-index: -1;
+}
+#service .block_center div.div3 div.notice h3{
+  margin-top: 36px;
+  margin-left:24px;
+  font-size: 22px;
+}
+#service .block_center div.div3 div.notice h3::after{
+    content: "";
+    border-top:2px solid red;
+    width: 35px;
+    height: 1px;
+    display: block;
+    margin-top: 10px;
+}
+#service .block_center div.div3 div.notice ul{
+  margin-left:24px;
+}
+#service .block_center div.div3 div.notice ul li{
+ margin-top: 28px;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+
+}
+#service .block_center div.div3 div.notice ul time{
+    font-size: 14px;
+    margin-top: 6px;    
+    display: inline-block;
+    color: #999;
+}
+/* #service .block_center div.div3 div.notice ul+a{
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    font-size: 28px;
+} */
+#service .block_center div.div3 div.notice ul li a{
+
+}
+#service .block_center div.div3 div.notice a.more{
+  
+}
+/* 에러 사항 */
+#service .block_center div.div3 div.error{
+ display: inline-block;
+ width: 360px;
+ height: 307px;
+ vertical-align: top;
+ background-color: #cccccc59;
+ text-align: left;
+}
+#service .block_center div.div3 div.error h3{
+    margin-top: 36px;
+    margin-left: 24px;
+    font-size: 22px;
+}
+#service .block_center div.div3 div.error h3::after{
+    content: "";
+    border-top:2px solid red;
+    width: 35px;
+    height: 1px;
+    display: block;
+    margin-top: 10px;
+}
+#service .block_center div.div3 div.error ul{
+  margin-left: 24px;
+  margin-top: 20px;
+  line-height: 2.5;
+
+}
+#service .block_center div.div3 div.error ul+a{
+   position: relative;
+   top: -217px;
+   left:  328px;
+   font-size: 28px;
+   /*! z-index: 26; */
+}
+#service .block_center div.div3 div.error ul li{
+  
+}
+#service .block_center div.div3 div.error ul li a{
+  
+}
+#service .block_center div.div3 div.error ul li a mark{
+  margin-left: 65px;
+
+}
+#service .block_center div.div3 div.error ul li:first-child a mark{
+  margin-left: 66px;
+  display: inline-block;
+  line-height: 1.4;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 0px 7px;
+  background-color: red;
+  color: #fff;
+}
+#service .block_center div.div3 div.error ul li:nth-child(2) a mark{
+  display: inline-block;
+  line-height: 1.4;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 0 7px;
+  background-color: red;
+  color: #fff;
+    margin-left: 51px;
+}
+#service .block_center div.div3 div.error ul li:nth-child(3) a mark{
+    margin-left: 77px;
+  display: inline-block;
+  line-height: 1.4;
+  border: 1px solid #5e9d41;
+  border-radius: 20px;
+  padding: 0 7px;
+  background-color: #5e9d41;
+  color: #fff;
+    margin-left: 83px;
+}
+#service .block_center div.div3 div.error ul li:nth-child(4) a mark{
+  margin-left: 77px;
+  display: inline-block;
+  line-height: 1.4;
+  border: 1px solid #5e9d41;
+  border-radius: 20px;
+  padding: 0 7px;
+  background-color: #5e9d41;
+  color: #fff;  
+  margin-left: 84px;
+}
+#service .block_center div.div3 div.error a.more{
+  
+}
+/* 기타항목3개 */
+#service .block_center div.etc{
+ max-width: 1200px; 
+ margin: 30px auto;
+
+
+ /*! display: inline-block; */
+ /*! float: left; */
+ /*! width: 103%; */
+ /*! box-sizing: border-box; */
+}
+#service .block_center div.etc fiedset{
+  float: left;
+  margin-left: 61px;
+  width: 59%;
+  margin-top: 49px;
+}
+#service .block_center div.etc fiedset legend{
+  display: inline-block;
+  line-height: 2;
+  display: inline-block;
+  /*! margin-top: 17px; */
+  font-size: 20px;
+  margin-right: 12px;
+  /*! float: left; */
+}
+#service .block_center div.etc fiedset input{
+ font-size: 17px;
+ width: 77%;
+ display: inline-block;
+ padding: 11px;
+ box-sizing: border-box;
+ border: 2px solid;
+ padding-left: 15px;
+}
+#service .block_center div.etc fiedset input+a{
+   position: relative;
+   left: 311px;
+   top: -40px;
+   font-size: 32px;
+   display: inline-block;
+   width: 55px;
+   border-left: 1px solid; 
+    /*! margin-left: 9px; */
+    /*! padding-left: 8px; */
+   font-weight: bold;
+    
+}
+#service .block_center div.etc fiedset input+a i{
+    
+}
+#service .block_center div.etc fiedset button{
+  
+}
+#service .block_center div.etc ul{
+  display: inline-block;
+  margin-top: 46px;
+  margin-left: -63px;
+}
+#service .block_center div.etc ul li{
+
+ display: inline-block;   
+  border: 1px solid #ccccccf0;
+}
+#service .block_center div.etc ul li:nth-child(1){
+
+    margin-right: 5px;
+}
+#service .block_center div.etc ul li:nth-child(2){
+
+}
+#service .block_center div.etc ul li a{
+  
+}
+#service .block_center div.etc ul li:nth-child(1) a{
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 10px;
+    color: #999;
+}
+#service .block_center div.etc ul li:nth-child(2) a{
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 10px;
+    color: #13bceb;
+    font-weight: bold; 
+}
+#service .block_center div.etc ul li a strong{
+  font-size: 20px;
+  font-weight: bold;
+  color: #000075;
+  line-height: 1.2;
+}
+/* 배너 */
+#banner{
+ background-color: #dbdbdbb8;
+    position: relative;
+    height: 76px;
+ padding-top: 11px;
+ margin-top: 65px;
+ clear: both;
+ top: 31px;
+}
+#banner ul{
+    /*! text-align: center; */
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+#banner ul li{
+   display: inline-block;
+  width: 160px;
+  margin-top: 11px;
+  text-align: center; 
+
+}
+#banner ul li a{
+    display: inline-block;
+text-align: center;
+}
+#banner ul li a img{
+        /*! height: 50px; */
+        width: 70%;
+}
+#banner span{
+ position: absolute;
+    width: calc(100% - (100% - 1000px)) ;
+   left: calc(50% - 500px);
+    top: 20px;
+}
+#banner span a{
+     
+}
+#banner span a.slove{
+   float: left;
+   position: relative;
+    right: 30px;
+   top: 14px;
+   text-indent: -9999px;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #999;
+   transform: rotate(45deg);
+   border-right: tan;
+   border-top: tan;
+}
+#banner span a.slave{
+  float: right;
+  position: relative;
+  right: -14px;
+  top: 15px;
+  text-indent: -9999px;
+width: 20px;
+height: 20px;
+border: 1px solid #999;
+    border-top-color: rgb(153, 153, 153);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(153, 153, 153);
+    border-right-style: solid;
+    border-right-width: 1px;
+transform: rotate(45deg);
+border-left:  tan;
+border-bottom:  tan;
+}

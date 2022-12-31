@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* 헤더 부분---------------- */
+/* 상단영역----------------------------------- */
+
+header{
+
+  background-color: #fff5d6;
+  position: fixed;
+  /*! left: calc(100% - 1640px); */
+  width: 100%;
+  z-index: 3;
+}
+header .headerin{
+
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 130px;
+}
+header h1{
+
+  
+  display: inline-block;
+  /*! display: ; */
+  width: 15%;
+  margin-top: 34px;
+}
+header h1 a{
+    
+  display: block;
+  padding: 21px;
+  text-indent: -999999px;
+  background-image: url(https://www.noelohills.com/web/upload/noelo/common/logo.png);
+  background-repeat: no-repeat;
+  width: 154px;
+  height: 47px;
+}
+ul.gnb{
+
+  width: 63%;
+
+  display: inline-block;
+}
+ul.gnb li{
+
+  display: inline-block;
+}
+ul.gnb li a{
+    
+  margin-left: 39px;
+  font-size: 16px;
+  color: #70767c;
+  font-weight: bold;
+}
+ul.gnb li a:hover{
+  font-size: 20px;
+  color: #fdd445;
+}
+ul.enb{
+
+  display: inline-block;
+  
+  width: 20%;
+  text-align: right;
+}
+ul.enb li{
+
+  display: inline-block;
+}
+ul.enb li a{
+
+}
+ul.enb li a i{
+
+  width: 22.7px;
+  display: inline-block;
+  height: 20px;
+  margin-left: 50px;
+}
+ul.enb li:nth-child(1) a i{
+
+  background-image: url(https://noelohills.com/web/upload/noelo/common/ico-cart.png);
+}
+ul.enb li:nth-child(2) a i{
+
+  background-image: url(https://noelohills.com/web/upload/noelo/common/ico-user.png);
+}
+ul.enb li:nth-child(3) a i{
+
+  background-image: url(https://noelohills.com/web/upload/noelo/common/ico-login.png);
+}
+/* 타이틀영역--------------------------------- */
+/* 내용영역----------------------------------- */

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* 공통클래스 스타일 */
+@font-face {
+  font-family: 'Arita-dotum-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hide{
+  display: none !important;
+}
+.block_center{
+  margin: 0 auto;
+}
+.h1{
+  font-size: 34px;
+}
+.h2{
+  font-size: 28px;
+}
+.h3{
+  font-size: 22px;
+}
+.h4{
+  font-size: 19px;
+}
+.p{
+  font-size: 15px;
+}
+.block{
+  display: block;
+}
+.w1200{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* discover more */
+a.Dmore{
+  position: relative;
+}
+a.Dmore span.more{
+  
+  font-size: 20px;
+  color: #999;
+}
+a.Dmore span.arrow{
+  position: absolute;
+  top:calc(50% - 8px);
+  left: 140px;
+  z-index: 1;
+}
+a.Dmore::after{
+ content: "";
+ width: 40px;
+ height: 40px;
+ display: block;
+ background-color: #333;
+ position: absolute;
+ top:calc(50% - 20px);
+ left: 220px;
+  border-radius: 50%;
+ color: #999;
+ text-align: center;
+ line-height: 35px;
+ font-size: 26px;
+}
+.sum{
+  letter-spacing: 5px;
+  font-size: 24px;
+}

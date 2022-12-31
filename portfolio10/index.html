@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경상북도-홈페이지입니다.</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/title.css">
+		<link rel="stylesheet" href="css/commen.css">
+		<script  src="js/jquery-3.6.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.lazy').slick({
+						lazyLoad: 'ondemand',
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						autoplay: true,
+  					autoplaySpeed: 2000,	
+				});
+			$(".play").on("click",function(){
+					$(".lazy").slick("slickPlay");
+				});
+			$(".pause").on("click",function(){
+				$(".lazy").slick("slickPause");
+			});
+			$('.lazy1').slick({
+						lazyLoad: 'ondemand',
+						slidesToShow: 6,
+						slidesToScroll: 1,
+						autoplay: true,
+  					autoplaySpeed: 2000,	
+				});
+		});
+		</script>
+    <script src="js/jquery-syaku.rolling.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//헤더부분 베경색 
+				$("header .w1200 .gnb ul.left > li").hover(
+					function(){
+						$("header").addClass("changebg");
+						$("header .w1200 .gnb ul.left > li > a").addClass("changebg1");
+						$("header .w1200 h1").addClass("changebg2");
+					},
+					function(){
+						$("header").removeClass("changebg");
+						$("header .w1200 .gnb ul.left > li > a").removeClass("changebg1");
+						$("header .w1200 h1").removeClass("changebg2");
+					}
+				);
+				//버튼클릭시 어사이드 움직임
+				$("#title .w1200 .wrap_1 button").click(function(){
+					$("#title .w1200 .wrap_1").toggleClass("asideMove");
+					$(this).toggleClass("button");
+				});
+				$("#title .w1200 .wrap_2 button").click(function(){
+					$("#title .w1200 .wrap_1 ,#title .w1200 .wrap_2").toggleClass("asideMove1");
+					$(this).toggleClass("button");
+				});
+				//날씨 
+				jQuery(function() {
+				jQuery("#srolling").srolling({
+						data : $("#aaa > div"),  // 노출될 아이템
+						auto : true,                    //자동 롤링 true , false
+						width : 600,                 // 노출될 아이템 크기
+						height : 40,                    // 노출될 아이템 크기
+						item_count : 1,         // 이동 될 아이템 수
+						cache_count : 1,            // 임시로 불러올 아이템 수
+						delay : 1000,               // 이동 아이템 딜레이
+						delay_frame : 1000,      // 아이템 흐르는 속도
+						move : 'top',               // 이동 방향 left , right , top , down
+						prev : '#p_click',          // < 이동 버튼
+						next : '#n_click'           // > 이동 버튼
+					});
+				});
+				
+				//경북 탭메뉴
+				$(".tab_content").hide();
+   			$(".tab_content:first").show();
+				$("#information .w1200 .infoleft .infoleft_t li:first-child a").addClass("current");
+				$("#information .w1200 .infoleft .infoleft_t li a").click(function(){
+					$(this).addClass("current");
+					$("#information .w1200 .infoleft .infoleft_t li a").not(this).removeClass("current");
+					$("#information .w1200 .infoleft .infoleft_b li").hide();
+					$(".tab_content").hide()
+        	var activeTab = $(this).attr("rel");
+        	$("#" + activeTab).show()
+				
+					return false;
+				});
+				//탭메뉴시 애드클래스
+				$("#keyword .w1200 .lengthtab .tab_in li:first-child").addClass("current_k");
+				$("#keyword .w1200 .lengthtab .tab_in li").click(function(){
+					$(this).addClass("current_k");
+					$("#keyword .w1200 .lengthtab .tab_in li").not(this).removeClass("current_k");
+					return false;
+				});
+				$(".tab_title li").click(function() {
+						var idx = $(this).index();
+						$(".tab_title li").removeClass("on");
+						$(".tab_title li").eq(idx).addClass("on");
+						$(".tab_cont > div.tabarea").hide();
+						$(".tab_cont > div.tabarea").eq(idx).show();
+					});
+			});//
+		</script>
+</head>
+<body>
+    <!-- --------------------------------상단영역---------------------------------------- -->
+		<header>
+			<div class="w1200">
+				<h1><a href="">새바람 행복 경북! 경상북도</a></h1>
+				<div class="gnb">
+					<h2 class="hide">메뉴 네비게이션</h2>
+					<ul class="left">
+						<li>
+							<a href="">전자민원</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>전자민원</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li>
+												<h3><a href="">민원안내</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">이용안내</a></li>
+													<li><a href="">시책안내</a></li>
+													<li><a href="">인터넷 민원신청</a></li>
+													<li><a href="">자격증교부안내</a></li>
+													<li><a href="">자주하는질문</a></li>
+													<li><a href="">민원관련법령</a></li>
+													<li><a href="">시군민원실</a></li>
+													<li><a href="">무인민원발급</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">여권안내</a></h3>
+											</li>
+											<li>
+												<h3><a href="">민원편람</a></h3>
+											</li>
+											<li>
+												<h3><a href="">민원상담</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">민원상담</a></li>
+													<li><a href="">도지사와의 대화</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">민원신고</a></h3>
+												<li><h3><a href="">민원안내</a></h3>
+													<ul class="frsubmenu">
+														<li><a href="">복지신문고</a></li>
+														<li><a href="">규제개혁신문고</a></li>
+														<li><a href="">부정부패신고</a></li>
+														<li><a href="">화송운성불법신고</a></li>
+														<li><a href="">재난위험신고</a></li>
+														<li><a href="">부동산불법거래신고센터</a></li>
+														<li><a href="">민원제도개선</a></li>
+													</ul>
+											</li>
+											<li>
+												<h3><a href="">청렴신고센터</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">공익신고 </a></li>
+													<li><a href="">익명공직자투기제보 </a></li>
+													<li><a href="">소극행정신고 </a></li>
+													<li><a href="">클린신고센터 </a></li>
+													<li><a href="">공직자비리신고  </a></li>
+													<li><a href="">불친절공무원신고 </a></li>
+													<li><a href="">민원부조리신고 </a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">민원공개</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">유관기관민원신청  </a></li>
+													<li><a href="">민원처리공개  </a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="">정보공개</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>정보공개</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li>
+												<h3><a href="">정보공개제도</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">제도안내</a></li>
+													<li><a href="">청구및업무처리절차</a></li>
+													<li><a href="">비공개대상정보 인터넷 </a></li>
+													<li><a href="">수수료 </a></li>
+													<li><a href="">불복구제절차 </a></li>
+													<li><a href="">관련법령 </a></li>
+													<li><a href="">설문조사 </a></li>
+													<li><a href="">정보(문서)목록 </a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">사전정보공개</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">공개목록</a></li>
+													<li><a href="">정보(문서)목록 </a></li>
+													<li><a href="">관심정보(업무추진비 등)   </a></li>
+													<li><a href="">주민참여방  </a></li>
+													<li><a href="">구 정보(문서)목록  </a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">비공개세부기준</a></h3>
+											</li>
+											<li>
+												<h3><a href="">공공데이터개방</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">정부공공데이터포털</a></li>
+													<li><a href="">지방행정데이터개방</a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">현황 및 통계</a></h3></li>
+											<li><h3><a href="">업무추진비</a></h3></li>
+											<li><h3><a href="">정책용역사업</a></h3></li>
+											<li><h3><a href="">행정구역</a></h3></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="">행정정보</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>행정정보</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li>
+												<h3><a href="">주요시책</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">도청기본현황 </a></li>
+													<li><a href="">도 종합계획 </a></li>
+													<li><a href="">관광개발계획   </a></li>
+													<li><a href="">주요업무정보  </a></li>
+													<li><a href="">2021주요업무계획  </a></li>
+													<li><a href="">대구 경북통합신공항  </a></li>
+													<li><a href="">이웃사촌 시범마을  </a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">행정서비스현장</a></h3></li>
+											<li><h3><a href="">행정정보공개</a></h3></li>
+											<li><h3><a href="">자치법규</a></h3></li>
+											<li><h3><a href="">지방분권</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">지방분권한마당</a></li>
+													<li><a href="">법령정보</a></li>
+													<li><a href="">자치경찰제</a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">정책실명제</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">정책실명제</a></li>
+													<li><a href="">국민신청실명제</a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">도정시책영상</a></h3></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="">소통참여</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>소통참여</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li>
+												<h3><a href="">도민의 소리</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">자유계시판</a></li>
+													<li><a href="">옥에 티를 찾아라</a></li>
+													<li><a href="">도민공고</a></li>
+													<li><a href="">칭찬합시다</a></li>
+													<li><a href="">사랑의PC보내기</a></li>
+													<li><a href="">적극행정</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">무료법률상담</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">운영안내</a></li>
+													<li><a href="">방문및대면상담</a></li>
+													<li><a href="">서면상담</a></li>
+													<li><a href="">사이버상담</a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">고문변호사</a></h3></li>
+											<li><h3><a href="">토론참여</a></h3></li>
+											<li><h3><a href="">여론조사</a></h3></li>
+											<li>
+												<h3><a href="">민간단체/NGO</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">공지사항</a></li>
+													<li><a href="">비영리민간단체등록</a></li>
+													<li><a href="">자료실</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">도민행복제안</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">운영안내</a></li>
+													<li><a href="">도민행복제안</a></li>
+													<li><a href="">공모제안하기</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="">도정소식</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>도정소식</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li>
+												<h3><a href="">경북소식</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">알림마당 </a></li>
+													<li><a href="">시군소식 </a></li>
+													<li><a href="">고시공고 </a></li>
+													<li><a href="">인사정보 </a></li>
+													<li><a href="">경북도보</a></li>
+													<li><a href="">보도자료</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">새사람행복경복(도정홍보지)</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">E-book</a></li>
+													<li><a href="">이전자료</a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">공개자료</a></h3></li>
+											<li><h3><a href="">주월간행사</a></h3></li>
+											<li><h3><a href="">희망농촌 길라잡이</a></h3></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li >
+							<a href="">경북소개</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>경북소개</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li>
+												<h3><a href="">경북소개</a></h3>
+												<ul class="frsubmenu">
+													<li><a href=""> 경북현황</a></li>
+													<li><a href="">경북의 역사</a></li>
+													<li><a href=""> 도정슬로건목표</a></li>
+													<li><a href=""> 경북의상징</a></li>
+													<li><a href=""> 치매결연도시</a></li>
+													<li><a href="">경상북도 독립운동가</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">경북의통계</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">경상북도 통계포털 </a></li>
+													<li><a href="">경상북도 통계시각화 </a></li>
+												</ul>
+											</li>
+											<li><h3><a href="">열린도지사실</a></h3></li>
+											<li>
+												<h3><a href="">도청안내</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">임무와설립목적</a></li>
+													<li><a href="">조직도 경북</a></li>
+													<li><a href="">행정전화번호</a></li>
+													<li><a href="">부서 전화번호/팩스번호</a></li>
+													<li><a href="">경북가족</a></li>
+													<li><a href="">청사약도</a></li>
+													<li><a href="">오시는 길</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">비전경북</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">민선7기 도정전략</a></li>
+													<li><a href="">민선7기 도정운영 4개년 </a></li>
+													<li><a href="">세계속의 경북 </a></li>
+													<li><a href="">경북의 투자환경</a></li>
+												</ul>
+											</li>
+											<li>
+												<h3><a href="">도정홍보</a></h3>
+												<ul class="frsubmenu">
+													<li><a href="">도정백서 임무와설립목적</a></li>
+													<li><a href="">도정이전백서 조직도 경북</a></li>
+												</ul></li>
+											<li><h3><a href="">경상북고 새마을운동</a></h3></li>
+											<li><h3><a href="">경북한옥지원센터</a></h3></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="">분야별정보</a>
+							<div class="fulldown">
+								<div class="f1menu">
+									<div class="fleft">
+										<h2>분야별정보</h2>
+									</div>
+									<div class="fright">
+										<ul class="frmain">
+											<li><h3><a href="">예산/재정/게약</a></h3></li>
+											<li><h3><a href="">농업/축산</a></h3></li>
+											<li><h3><a href="">산림</a></h3></li>
+											<li><h3><a href="">해양/수산</a></h3></li>
+											<li><h3><a href="">여성/장애인/복지</a></h3></li>
+											<li><h3><a href="">문화/관광/음식</a></h3></li>
+											<li><h3><a href="">재난/안전/재해</a></h3></li>
+											<li><h3><a href="">산업토지/주택</a></h3></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="right">
+						<li><a href="">로그인</a></li>
+						<li><a href="">KOR</a></li>
+						<li><a href="">전체메뉴</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!-- --------------------------------타이틀영역--------------------------------------- -->
+		<div id="title">
+			<div class="w1200">
+				<div class="wrap_1">
+					<button>
+						<img src="img/arr.png" alt="">
+					</button>
+					<div class="wrap_1in">
+						<p>대구경북통합신공항</p>
+						<dl>
+							<dt>대구·
+								<span>경북</span>
+								<span>통합신공항</span>
+							</dt>
+							<dd>제대로 빨리 잘 만들어 가겠습니다.</dd>
+							<dd><a href="">자세히보기</a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="wrap_2">
+					<button>
+						<img src="img/arr.png" alt="">
+					</button>
+					<div class="wrap_2in">
+						<p>제102회 전국체육대회</p>
+						<dl>
+							<dt>
+								<span>경상북도가</span>
+								<span>뜁니다.</span>
+							</dt>
+							<dd>새로운 100년, 하나된 대한민국!</dd>
+							<dd><a href="">자세히보기</a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="video_box">
+					<iframe src="https://www.youtube.com/embed/vg4CJ3Rp-oA?autoplay=1&playlist=vg4CJ3Rp-oA&mute=1&loop=1&controls=0&vq=hd1080" frameborder="0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+				</div>
+				<div class="fulls"></div>
+			</div>
+			<div class="w_in">
+				<div id="srolling" class="weather_in" ></div>
+				<div id="aaa" style="display: none;">
+					<div>
+						<p>성주군 <strong>20℃</strong> 흐림 <img src="img/w_1.png" alt="구름"><span>미세먼저 좋음</span></p>
+					</div>
+					<div>
+						<p>홍천군 <strong>20℃</strong> 비 <img src="img/w_2.png" alt="구름"><span>미세먼저 최악</span></p>
+					</div>
+					<div>
+						<p>남성군 <strong>20℃</strong> 흐림 <img src="img/w_1.png" alt="구름"><span>미세먼저 보통</span></p>
+					</div>
+					<div>
+						<p>보성군 <strong>20℃</strong> 비  <img src="img/w_2.png" alt="구름"><span>미세먼저 보통</span></p>
+					</div>
+					<div>
+						<p>하동군 <strong>20℃</strong> 흐림 <img src="img/w_1.png" alt="구름"><span>미세먼저 최악</span></p>
+					</div>
+					<div>
+						<p>진해군 <strong>20℃</strong> 비  <img src="img/w_2.png" alt="구름"><span>미세먼저 보통</span></p>
+					</div>
+					<div>
+						<p>담양군 <strong>20℃</strong> 흐림 <img src="img/w_1.png" alt="구름"><span>미세먼저 좋음</span></p>
+					</div>
+					</div>			
+			</div>
+			<span class="btn_w">
+				<button id="p_click">이전</button>
+				<button id="n_click">다음</button>
+			</span>	
+				<div class="search">
+					<h2 class="hide">검색영역</h2>
+					<form action="">
+						<div class="form_grop">
+							<label for="" class="hide">통합검색</label>
+							<input type="text" placeholder="검색어를 입력하세요.">
+							<button class="btn_srch" title="검색 바로가기 새창">
+								<span>검색</span>
+							</button>
+							<dl>
+								<dt>인기검색어</dt>
+								<dd>
+									<a href="">독도</a>
+									<a href="">전국체전</a>
+									<a href="">대구경북통합신공항</a>
+								</dd>
+							</dl>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- --------------------------------메인영역---------------------------------------- -->
+		<main>
+			<!-- 경북 안내 -->
+			<div id="information">
+				<div class="w1200">
+					<h2>Gyeongbuk information</h2>
+					<div class="infoleft">
+						<ul class="infoleft_t">
+							<li><a href="" rel="tab1">알림마당</a></li>
+							<li><a href="" rel="tab2">고시공고</a></li>
+							<li><a href="" rel="tab3">시험정보</a></li>
+							<li><a href="" rel="tab4">경북도보</a></li>
+							<li><a href="" rel="tab5">도정사진</a></li>
+							<li><a href="" rel="tab6">도정영상</a></li>
+						</ul>
+						<ul class="infoleft_b">
+							<li id="tab1" class="tab_content">
+								<a href="#">
+									<ul class="infoleft_on">
+											<li>
+												<h3>안동시 아이돌보미 모집 공고</h3>
+												<p>안동시건강가정다문화가족지원센터에서는 맞벌이 부부 및 자녀 돌봄이 필요한 가정에 돌봄 전문가를 파견하는 아이돌봄지원사업에 참여할 아이돌보미를 모집하오니 많은 지원바랍니다. </p>
+												<p>2021-08-12</p>
+											</li>
+											<li> 
+												<h3>2021년 8월 반상회 홍보자료 게시</h3>
+												<p>2021년 8월 반상회 홍보자료를 붙임과 같이 게시하오니 참고하시기 바라며,   
+													각 시군에서는 반상회 및 홈페이지 등을 통해 널리 홍보하여 주시기 바랍니다.        
+														
+													* 필수홍보사항은 꼭 홍보 바랍니다  
+													
+													붙임  1. 8월 반상회 홍보자료 목록(최종) 1부. 
+																	2. 8월 반상회 홍보자료(경상북도) 1부. 
+																	3. 8월 반상회 홍보자료(중앙부처) 1부.   끝  </p>
+												<p>2021-08-12</p>
+											</li>
+											<li>
+												<h3>더 트루엘 포항 장애인 특별공급 신청 연기 안내</h3>
+												<p>시행사(일성건설주식회사)의 사정으로 인하여 더 트루엘 포항 장애인 특별공급 신청 접수일정(당초 2021. 8. 12.(목)까지)이 연기가 되었으니  
+													추후 별도의 안내가 있을때까지 참고하시기 바랍니다. </p>
+												<p>2021-08-12</p>
+											</li>
+									</ul>
+								</a>
+							</li>
+							<li id="tab2" class="tab_content">
+								<a href="#">
+									<ul class="infoleft_on">
+										<li>
+											<h3>경상북도 신재생에너지 원스톱 컨설팅 사업 참여기업 모집 공고</h3>
+											<p>경상북도 신재생에너지 원스톱 컨설팅 사업 참여기업 모집 공고  
+													2021. 9. 6.  
+													한국에너지공단 대구경북지역본부장  
+													○ 사 업 명 : 2021 경상북도 태양광발전 원스톱컨설팅  
+													○ 사업내용 : 농·어업인, 기업인 대상 태양광발전소 맞춤형 컨설팅  
+													○ 사업기간 : 협약일로부터~12.31일(금), 약 5개월  
+													○ 대상규모 : 현장컨설팅 100건, 유선상담 상시  
+													○ 선정업체 수 : 1개 컨소시엄(주관기업*+협력기업 2개소 이상)  
+													* 경상북도에 소재지를 둔 2021년도 신재생에너지 보급사업 참여기업  
+													붙임 공고파일 참고  
+											</p>
+											<p>2021-09-06</p>
+										</li>
+										<li> 
+											<h3>건설업 등록 공고</h3>
+											<p>건설산업기본법 제9조의 규정에 따른 건설업 등록 공고 사항을 같은 법 시행령 제11조 및 시행규칙 제8조의 규정에 따라 다음과 같이 공고합니다.   </p>
+											<p>2021-09-12</p>
+										</li>
+										<li>
+											<h3>인천 남동구 소곡천, 음실천 정비사업 토지출입 공고</h3>
+											<p>인천 남동구 소곡천, 음실천 정비사업 관련 토지출입에 대하여 붙임과 같이 공고합니다. </p>
+											<p>2021-09-12</p>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li id="tab3" class="tab_content"> 
+								<a href="#">
+									<ul class="infoleft_on">
+										<li>
+											<h3>2021년도 하반기 경상북도 공공기관 직원 통합채용시험 계획 안내</h3>
+											<p>2021년도 하반기 경상북도 공공기관 직원 통합채용시험 계획을 다음과 같이 안내합니다.   
+												응시 희망자께서는 개별 기관 공고문을 반드시 확인하시기 바랍니다.
+											</p>
+											<p>2021-09-06</p>
+										</li>
+										<li> 
+											<h3>2021년도 제6회 경상북도 일반임기제공무원 임용시험(재공고) 서류전형 합격자 및 면접시험 계획 공고</h3>
+											<p>경상북도인사위원회 공고 제2021-66호                    
+												2021년도 제6회 경상북도 일반임기제공무원 임용시험(재공고) 서류전형 합격자 및 면접시험 계획을 붙임과 같이 공고합니다.              
+												2021년  9월  3일                 
+											  경상북도인사위원회위원장  </p>
+											<p>2021-09-12</p>
+										</li>
+										<li>
+											<h3>2021년 전국(경북) 소방공무원 신규채용시험 최종합격자 공고</h3>
+											<p>『2021년 전국 소방공무원 신규채용시험』 최종합격자를 아래와 같이 공고합니다. 
+												2021년 8월 31일 
+												소방청장</p>
+											<p>2021-09-31</p>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li id="tab4" class="tab_content">
+								<a href="#">
+									<ul class="infoleft_on">
+										<li>
+											<h3>경상북도보 제6567호(2021년 9월 6일자)</h3>
+											<p>2021년도 하반기 경상북도 공공기관 직원 통합채용시험 계획을 다음과 같이 안내합니다.   
+												응시 희망자께서는 개별 기관 공고문을 반드시 확인하시기 바랍니다.
+											</p>
+											<p>2021-09-06</p>
+										</li>
+										<li> 
+											<h3>경상북도보 제6566호(2021년 9월 2일자)</h3>
+											<p>                
+												2021년도 제6회 경상북도 일반임기제공무원 임용시험(재공고) 서류전형 합격자 및 면접시험 계획을 붙임과 같이 공고합니다.              
+												2021년  9월  3일                 
+											  경상북도인사위원회위원장  </p>
+											<p>2021-09-12</p>
+										</li>
+										<li>
+											<h3>경상북도보 제6565호(2021년 8월 30일자)</h3>
+											<p>『2021년 전국 소방공무원 신규채용시험』 최종합격자를 아래와 같이 공고합니다. 
+												2021년 8월 31일 
+												소방청장</p>
+											<p>2021-09-31</p>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li id="tab5" class="tab_content">
+								<a href="#">
+									<ul class="infoleft_p">
+										<li>
+											<h3>9.5 직원만남의날</h3>
+										</li>
+										<li> 
+											<h3>9.8 중대본회의</h3>
+										</li>
+										<li>
+											<h3>9.4 영덕공설시장 화재방문</h3>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li id="tab6" class="tab_content">
+								<a href="#">
+									<ul class="infoleft_p">
+										<li>
+											<h3>경상북도 직원만남의날</h3>
+										</li>
+										<li> 
+											<h3>경상북도 중대본회의</h3>
+										</li>
+										<li>
+											<h3>9.4 영덕공설시장 화재방문</h3>
+										</li>
+									</ul>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="inforight">
+						<div class="inforight_l">
+							<h3>경상북도 열린도지사실</h3>
+							<img src="img/change.png" alt="변해야산다">
+							<span>
+								<a href="">공약/매니페스토</a>
+								<a href="">도지사에게 바란다</a>
+								<a href="">도지사의 말과 글</a>
+								<a href="">도지사 일정</a>
+							</span>
+							<p>경북도지사#이철우</p>
+						</div>
+						<div class="inforight_r">
+							<ul>
+								<li><a href="">조직도</a></li>
+								<li><a href="">도민행복제안</a></li>
+								<li><a href="">키워드로 보는#이철우</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 경북 뱅커 -->
+			<section id= "bank">
+				<div class="w1200">
+					<h2>gyeongbuk banner</h2>
+					<div class="popup">
+						<h3 class="hide">pr팝업</h3>
+						<ul class="popup_1 lazy">
+							<li>
+								<a href="">
+									<img src="img/banner_1.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/banner_2.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/banner_3.gif" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/banner_4.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/banner_5.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/banner_6.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/banner_7.jpg" alt="">
+								</a>
+							</li>
+						</ul>
+							<button class="play button_1" type="button"><span class="hide">pause</span></button>
+							<button class="pause button_1" type="button"><span class="hide">play</span></button>
+						<ul class="popup_2">
+							<li><a href="">
+								<h4>세계로 열린 관광경북!</h4>
+								<img src="img/tour.png" alt="">
+							</a></li>
+							<li><a href="">
+								<h4>대한민국의 영토, 독도</h4>
+								<p>사이버독도</p>
+							</a></li>
+							<li><a href="">
+								<h4>일터넘치는 부자경북!</h4>
+								<p>일자리/채용</p>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- 경북 키워드 -->
+			<section id="keyword">
+				<div class="w1200">
+					<h2>Gyeongbuk keyword</h2>
+					<div class="lengthtab container">
+						<ul class="tab_in tab_title">
+							<li class="on"><a href="">전체검색</a></li>
+							<li><a href="">민원·안내</a></li>
+							<li><a href="">행정·공개</a></li>
+							<li><a href="">의료·복지</a></li>
+							<li><a href="">토지·주택</a></li>
+							<li><a href="">경제·투자</a></li>
+							<li><a href="">문화·관광</a></li>
+						</ul>
+						<div class="tab_cont">
+							<div class="tabarea on">
+								<ul>
+									<li>
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #전체검색</strong></p>
+												</div>
+												<div class="tabIndex_search">
+													<h2 class="hide">경북 키워드 빠른메뉴찾기 검색 영역</h2>
+													<div class="form_group1">
+														<label for="">빠른 키워드 찾기</label>
+														<input type="text" placeholder="검색어를 입력하세요" onkeyup="enterkey();">
+														<span><a href="">검색</a></span>
+													</div>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공약지도</a>
+																	<a href="">개별주택공시가격</a>
+																	<a href="">귀농귀촌종합지원센터</a>
+																	<a href="">계약정보공개</a>
+																</div>
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+																<div class="active">
+																	<a href="">경북여행책자신청</a>
+																	<a href="">경북e맛(음식정보)</a>
+																	<a href="">경상북도 대기정보</a>
+																	<a href="">경상북도 지정문화재</a>
+																</div>
+																<div class="active">
+																	<a href="">경북여행책자신청</a>
+																	<a href="">경북e맛(음식정보)</a>
+																	<a href="">경상북도 대기정보</a>
+																	<a href="">경상북도 지정문화재</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabarea">
+								<ul>
+									<li>
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #행정·공개</strong></p>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+																<div class="active">
+																	<a href="">경북여행책자신청</a>
+																	<a href="">경북e맛(음식정보)</a>
+																	<a href="">경상북도 대기정보</a>
+																	<a href="">경상북도 지정문화재</a>
+																</div>
+																<div class="active">
+																	<a href="">경북여행책자신청</a>
+																	<a href="">경북e맛(음식정보)</a>
+																	<a href="">경상북도 대기정보</a>
+																	<a href="">경상북도 지정문화재</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabarea">
+								<ul >
+									<li>
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #의료·복지</strong></p>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공약지도</a>
+																	<a href="">개별주택공시가격</a>
+																	<a href="">귀농귀촌종합지원센터</a>
+																	<a href="">계약정보공개</a>
+																</div>
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+																<div class="active">
+																	<a href="">경북여행책자신청</a>
+																	<a href="">경북e맛(음식정보)</a>
+																	<a href="">경상북도 대기정보</a>
+																	<a href="">경상북도 지정문화재</a>
+																</div>
+																<div class="active">
+																	<a href="">경북여행책자신청</a>
+																	<a href="">경북e맛(음식정보)</a>
+																	<a href="">경상북도 대기정보</a>
+																	<a href="">경상북도 지정문화재</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabarea">
+								<ul >
+									<li >
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #토지·주택</strong></p>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공약지도</a>
+																	<a href="">개별주택공시가격</a>
+																	<a href="">귀농귀촌종합지원센터</a>
+																	<a href="">계약정보공개</a>
+																</div>
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabarea">
+								<ul >
+									<li >
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #경제·투자</strong></p>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabarea">
+								<ul >
+									<li >
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #문화·관광</strong></p>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공약지도</a>
+																	<a href="">개별주택공시가격</a>
+																	<a href="">귀농귀촌종합지원센터</a>
+																	<a href="">계약정보공개</a>
+																</div>
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabarea">
+								<ul >
+									<li >
+											<div class="tabarea_in">
+												<div class="title_in">
+													<p>경상북도 키워드 <strong>경북 #전체검색</strong></p>
+												</div>
+												<div class="tabIndex_menu">
+													<ul>
+														<li><a href="">ㄱ</a></li>
+														<li><a href="">ㄴ</a></li>
+														<li><a href="">ㄷ</a></li>
+														<li><a href="">ㄹ</a></li>
+														<li><a href="">ㅁ</a></li>
+														<li><a href="">ㅂ</a></li>
+														<li><a href="">ㅅ</a></li>
+														<li><a href="">ㅇ</a></li>
+														<li><a href="">ㅈ</a></li>
+														<li><a href="">ㅊ</a></li>
+														<li><a href="">ㅋ</a></li>
+														<li><a href="">ㅌ</a></li>
+														<li><a href="">ㅍ</a></li>
+														<li><a href="">ㅎ</a></li>
+														<li><a href="">전체검색</a></li>
+													</ul>
+												</div>
+												<div class="tabIndex_data">
+													<div class="allList_tab">
+														<div class="allList_tab_in">
+															<div class="activein">
+																<div class="active">
+																	<a href="">공직비리익명신고</a>
+																	<a href="">국민신문고</a>
+																	<a href="">고액·상습 체납자 명단</a>
+																	<a href="">기업애로 신청</a>
+																</div>
+																<div class="active">
+																	<a href="">경북지역산업동향</a>
+																	<a href="">국내 투자인센티브</a>
+																	<a href="">경북 이달의 축제행사</a>
+																	<a href="">경북나드리</a>
+																</div>
+															</div>
+															<div class="allList_tab_in">
+																<div class="activein hide">
+																	<div class="active">
+																		<a href="">경상북도 수목원</a>
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																	<div class="active">
+																	</div>
+																</div>
+														</div>
+													</div>
+													<div class="tablink">
+														<a href=""><span>경상북도의회</span></a>
+														<a href=""><span>디지털 <span class="block"></span>아카이브</span></a>
+														<a href=""><span>경북 이달의  <span class="block"></span>축제 행사</span></a>
+													</div>
+												</div>
+												</div>
+											</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 경북 sns -->
+			<section id=sns>
+				<div class="w1200">
+					<h2>GYEONGBUK SNS</h2>
+					<ul class="sns1">
+						<li><a href="">유튜브</a></li>
+						<li><a href="">인스타그램</a></li>
+						<li><a href="">페이스북</a></li>
+						<li><a href="">네이버블로그</a></li>
+						<li><a href="">트위터</a></li>
+						<li><a href="">카카오스토리</a></li>
+					</ul>
+					<ul class="sns2">
+						<li>
+							<a href="">
+								<img src="https://i.ytimg.com/vi/SNjhwYea7Vs/hqdefault.jpg" alt="영덕에서 서핑을?!  #shorts">
+								<p>영덕에서 서핑을?!  #shorts</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="https://i.ytimg.com/vi/Jc-rbD2dS7I/maxresdefault.jpg" alt="경북대신GIRL l 폭염따위 던져버리는 스릴만점 액티비티 영천 체험 맛집">
+								<p>경북대신GIRL l 폭염따위 던져버리는 스릴만점 액티비티 영천 체험 맛집</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="https://i.ytimg.com/vi/zASDnL3J4Es/hqdefault.jpg" alt="고모와 풍기인삼 삼계탕 vs 레몬그라스 닭전골 만들어 이열치열 몸보신해 봤어요!">
+								<p>"고모와 풍기인삼 삼계탕 vs 레몬그라스 닭전골 만들어 이열치열 몸보신해 봤어요!"</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="https://i.ytimg.com/vi/W3OllRCNAA4/maxresdefault.jpg" alt="우리동네 마을카페 I 만 원은 내가 줄게 카페는 누가 갈래?">
+								<p>우리동네 마을카페 I 만 원은 내가 줄게 카페는 누가 갈래?</p>
+							</a>
+						</li>
+						<li >
+							<a href="">
+								<img src="https://i.ytimg.com/vi/6iAgFKPQhd0/sddefault.jpg" alt="경상북도에 활주로가 있다?? ｜대구경북통합신공항">
+								<p>경상북도에 활주로가 있다?? ｜대구경북통합신공항</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- 경북 배너 -->
+			<section id=banner>
+				<div class="w1200">
+					<ul class="lazy1">
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210408/01E9D164DD1A496F989A81A6F70CC160.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210408/32D931B89F7C485F8C22FBD02EF3813E.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210408/21BD4BE3824D49C285C37E8DC590A029.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210809/1BEA2C9DA3BC4166B83AE626F6BA4C12.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210729/618CA8C0057F45CDB3BB58BDC19C12C8.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210803/4D6E240F968048718A3AED1139854B41.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210721/CD7F1AFE5BFA4EF486A29033C1405EB8.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210709/91B310059DAA4D75B4B5E00D804BA22E.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210709/7592A721FC5A4088A307CF399BD41E99.jpg" alt=""></a></li>
+						<li><a href=""><img src="https://gb.go.kr/Main/data/link/20210616/135CBC0652ED4765A949BFACAB455948.jpg" alt=""></a></li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<!-- --------------------------------하단영역---------------------------------------- -->
+		<footer>
+			<div class="w1200">
+				<div class="tabmenu_">
+					<ul class="left1">
+						<li><a href="">관련기관바로가기</a></li>
+						<li><a href="">부서별</a></li>
+						<li><a href="">시군형</a></li>
+						<li><a href="">유간기관</a></li>
+					</ul>
+					<ul class="right2">
+						<li><a href="">유튜브</a></li>
+						<li><a href="">인스타그램</a></li>
+						<li><a href="">페이스북</a></li>
+						<li><a href="">네이버블로그</a></li>
+						<li><a href="">트위터</a></li>
+						<li><a href="">카카오스토리</a></li>
+					</ul>
+				</div>
+				<div class="info">
+					<ul>
+						<li><a href="">개인정보처리방침</a></li>
+						<li><a href="">저작권정책</a></li>
+						<li><a href="">오시는길</a></li>
+						<li><a href="">정부/지자체조직도</a></li>
+						<li><a href="">부서전화번호/팩스번호안내</a></li>
+					</ul>
+					<div class="fot">
+						<div class="left3">
+							<address>
+								<strong>주소</strong> 36759 경상북도 안동시 풍천면 도청대로 455 <strong>대표</strong>054-880-2114 <strong>팩스</strong>054-880-4999 
+								<p><strong>행복콜센터</strong> 1522-0120 (월~금 8:30~18:30, 공휴일 제외)</p>
+								<p>Copyright 2021. Province of Gyeongsangbuk-do. All Rights Reserved.</p>
+							</address>
+						</div>	
+						<div class="mark">
+							<a href="">
+								<img src="https://gb.go.kr/Main/Images/new/ko/common/mark_open.png" alt="">
+							</a>
+							<a href="">
+								<img src="https://gb.go.kr/Main/Images/new/ko/common/mark_wa.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

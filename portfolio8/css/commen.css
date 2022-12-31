@@ -1,0 +1,26 @@
+@charset "utf-8";
+.block{
+    display: block;
+}
+.block_center{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.none{
+    display: none;
+}
+.down1 {
+  background-color:rgba(0,0,0,.8);
+  -webkit-transition-duration:0.4s;
+  -webkit-transition-timing-function:ease;
+  box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
+  transition-duration:0.4s;
+  transition-timing-function:ease;
+  z-index: 2;
+  height: 50px;
+  padding: 30px 0 0;
+}
+.down1 .ham{
+
+    top: 40px;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=decice-width, intial-scale=1">
+    <title>stated</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/control.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>    
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //헤더 메뉴 이동 
+        var po1=Math.floor($("#home").offset().top);
+        var po2=Math.floor($("#property").offset().top);
+        var po3=Math.floor($("#company").offset().top);
+        var po4=Math.floor($("#contactus").offset().top);
+        po=[po1,po2,po3,po4];
+
+        var n;
+        $("header ul.gnb li:first-child a").addClass("click");
+        $("header ul.gnb li a").click(function(){
+          $(this).addClass("click");
+          $("header ul.gnb li a").not(this).removeClass("click");
+
+          n=$(this).attr("data-n");
+          $("html,body").stop().animate({scrollTop:po[n]},1000);
+          return false;
+        });
+        // 밑 스크롤 바
+        $(".down p").click(function(){
+          $("html,body").stop().animate({scrollTop:po2},1000);
+        });
+      });//
+    </script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script>
+      $(document).ready(
+        function(){
+        new Swiper('.swiper-container');
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <!-- //////////////// 상단영역 /////////////// -->
+    <header id="home">
+      <div class="block_center">
+        <h1><a href="">Stated.</a></h1>
+        <ul class="gnb">
+          <li><a href="#home" data-n="0">Home</a></li>
+          <li><a href="#property" data-n="1">Properties</a></li>
+          <li><a href="#company" data-n="2">About</a></li>
+          <li><a href="#contactus" data-n="3">Contact</a></li>
+        </ul>
+        <span class="ham"></span>
+      </div>
+    </header>
+    <!-- //////////////// 타이틀 ///////////////// -->
+    <div id="title" class="w1200">
+      <h2 class="h2">Buy and sell real estate <span class="block">properties</span></h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam <span class="block"></span> assumenda ea quo cupiditate facere deleniti fuga officia.</p>
+      <div class="down">
+        <p>아래보기</p>
+      </div>
+    </div>
+    <!-- //////////////// 컨텐추 /////////////////// -->
+    <main class='page-start'>
+      <!-- how it works -->
+      <section id="works" class="w1200">
+        <h2 class="h2">How It Works</h2>
+        <ul>
+          <li>
+            <h3>Find Property.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h3>Buy Property.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h3>Make Investment.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+        </ul>
+      </section>
+      <!-- properties -->
+      <section id="property" class="w1200">
+        <!-- h2+(ul>li*4>img+strong+span*3+p) -->
+        <h2 class="h2">Properties</h2>
+        <ul>
+          <li>
+            <img src="img/property_2.jpg" alt="">
+            <div class="prodiv">
+              <strong class="block">$3,400,000</strong>
+              <span>6 beds</span>
+              <span>4 beths</span>
+              <span>4 250sqft</span>
+              <p>480 12th, Unit14, Sans Francisco.CA</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/property_3.jpg" alt="">
+            <div class="prodiv">
+              <strong class="block">$3,400,000</strong>
+              <span>6 beds</span>
+              <span>4 beths</span>
+              <span>4 250sqft</span>
+              <p>480 12th, Unit14, Sans Francisco.CA</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/property_4.jpg" alt="">
+            <div class="prodiv">
+              <strong class="block">$3,400,000</strong>
+              <span>6 beds</span>
+              <span>4 beths</span>
+              <span>4 250sqft</span>
+              <p>480 12th, Unit14, Sans Francisco.CA</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/property_1.jpg" alt="">
+            <div class="prodiv">
+              <strong class="block">$3,400,000</strong>
+              <span>6 beds</span>
+              <span>4 beths</span>
+              <span>4 250sqft</span>
+              <p>480 12th, Unit14, Sans Francisco.CA</p>
+            </div>
+          </li>
+        </ul>
+        <span class="control">
+          <button>previous</button>
+          <button>next</button>
+        </span>
+        <a href="">view All Property Listing</a>
+      </section>
+      <!-- RealEstate Company -->
+      <section id="company" class="w1200">
+        <!-- div.block_center>(div.right>h2+p*2+(ul>li*5)+a)+(div.left>(figure>img)+span>button*2) -->
+        <div class="block_center">
+          <div class="right">
+            <h2 class="h2">We Are The Best RealEstate Company</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
+            <ul>
+              <li>Placeat maxime animi minus</li>
+              <li>Dolore qui placeat maxime</li>
+              <li>Consectetur adipisicing</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Placeat molestias animi</li>
+            </ul>
+            <a href="">learn more</a>
+          </div>
+          <div class="left">
+            <figure class="slider">
+              <img src="img/property_2.jpg" alt="" >
+              <img src="img/property_4.jpg" alt="" >
+              <img src="img/property_3.jpg" alt="" >
+              <img src="img/property_1.jpg" alt="">        
+            </figure>
+            <span><button>prev</button><button>next</button></span>
+          </div>
+        </div>
+      </section>
+      <!-- People Says... -->
+      <section id="says" class="w1200">
+        <div class="all_slide swiper-container" >
+          <div class="two_slide swiper-wrapper">
+            <div class="slide1 slideitem swiper-slide">
+              <h2 class="h2">People Says...</h2>
+              <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</p>
+              <p><img src="img/person_2.jpg" alt="">Christine Aguilar</p>
+            </div>
+            <div class="slide2 slideitem swiper-slide">
+              <h2 class="h2">People Says...</h2>
+              <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</p>
+              <p><img src="img/person_3.jpg" alt="">Robert Spears</p>
+            </div>
+            <div class="slide3 slideitem swiper-slide">
+              <h2 class="h2">People Says...</h2>
+              <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.”</p>
+              <p><img src="img/person_4.jpg" alt="">Bruce Rogers</p>
+            </div>
+         </div>
+        </div>
+       
+      </section>
+      <!-- Contact Us -->
+      <section id="contactus" class="w1200">
+        <!-- div.block_center>h2+(form>fieldset>legend+(label+input)*5+button)+ul>li*3>h3+p -->
+        <div class="block_center">
+            <h2 class="h2">Contct Us</h2>
+            <form action="">
+              <fieldset>
+                <legend>Contact Form</legend>
+                <span class="inline-block">
+                  <label for="">First Name</label>
+                  <input type="text">
+                </span>
+                <span class="inline-block">
+                  <label for="">Last Name</label>
+                  <input type="text">
+                </span>
+                <label for="">Email</label>
+                <input type="email">
+                <label for="">Subject</label>
+                <input type="text">
+                <label for="">Message</label>
+                <textarea name="name" rows="8" cols="80" placeholder="Write your notes or questions here..."></textarea>
+                <button>send message</button>
+              </fieldset>
+            </form>
+            <ul>
+              <li>
+                <h3>Address</h3>
+                <p>203 Fake St. Mountain View, San Francisco, California,USA</p>
+              </li>
+              <li>
+                <h3>Phone</h3>
+                <p>+1 232 3235 324</p>
+              </li>
+              <li>
+                <h3>Email Address</h3>
+                <p>youremail@domain.com</p>
+              </li>
+            </ul>
+          </div>
+      </section>
+    </main>
+    <!-- ///////////////////// 하단영 ////////// -->
+    <footer>
+      <div class="block_center">
+        <div class="fff">
+          <div class="f1">
+            <h2 class="h5">About Stated</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+          </div>
+          <div class="f2">
+            <h2 class="h5">Quick Links</h2>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Testimonials</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="f3">
+          <h2 class="h5">Subscribe Newsletter</h2>
+          <form action="">
+            <fieldset><input type="email" placeholder="Enter Email"><button>send</button></fieldset>
+          </form>
+          <div>
+            <h2 class="h5">Follow Us</h2>
+            <ul>
+              <li><a href=""><ion-icon name="caret-up-circle"></ion-icon><span class="">페이스북</span></a></li>
+              <li><a href=""><ion-icon name="at-outline"></ion-icon><span class="">트위터</span></a></li>
+              <li><a href="">인스타그램</a></li>
+              <li><a href="">링크에딘</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <p class="copyright">Copyright ©2021 All rights reserved | This template is made with  by <a href="">Colorlib</a></p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>

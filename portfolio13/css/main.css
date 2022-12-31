@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/* 비즈니스 */
+main{
+    
+    /*! position: relative; */
+    /*! top: -32%; */
+}
+#business::before{
+ content:"";
+ background-color: #fff;
+ width: 68.7%;
+ height: 62px;
+ display: block;
+ margin: 0 auto;
+ border-radius: 6px 6px 0 0;
+ margin-top: -78px;
+ position: relative;
+ z-index: 0;
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0.43, #eeefec), color-stop(0.44, #ffffff));
+	background: -moz-linear-gradient(top, #eeefec 43%, #ffffff 44%);
+	background: -webkit-linear-gradient(top, #eeefec 55%, #ffffff 44%);
+	background: -o-linear-gradient(top,  #eeefec 43%, #ffffff 44%);
+	background: -ms-linear-gradient(top,  #eeefec 43%, #ffffff 44%);
+	background: linear-gradient(top,  #eeefec 43%, #ffffff 44%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc', endColorstr='#ffffff', gradientType=0);
+}
+#business li{
+  height: 322px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
+  padding: 16px;
+  box-sizing: border-box;
+  border: navajowhite;
+  color: #fff;
+  position:relative;
+  transition:all 1s; 
+}
+#business li::after{
+ content: "";
+ width: calc(100% - 32px);
+ height: 90px;
+ display: block;
+ position: absolute;
+ left: 16px;
+ bottom:16px;
+ /*start ------------*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,0,0)), color-stop(1, rgba(0,0,0,0.5)));
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0,0,0,0)', endColorstr='rgba(0,0,0,0.5)', gradientType=0);
+   
+}
+#business li:nth-child(1){
+    background-image: url(../img/bg_business_01.png);
+}
+#business li:nth-child(2){
+    background-image: url(../img/bg_business_02.png);
+}
+#business li:nth-child(3){
+    background-image: url(../img/bg_business_03.png);
+}
+#business li:nth-child(4){
+    background-image: url(../img/bg_business_04.png);
+}
+#business li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 1;  
+  /*! border: 1px solid #e4dede; */
+  margin-left: -5px;
+  margin-right: -5px;
+}
+#business li a:hover{
+    text-decoration: none;
+}
+#business li .front{
+     display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 1;  
+  border: 1px solid #e4dede;
+  margin-left: -5px;
+  margin-right: -5px;
+     padding: 12px;
+}
+/* news */
+
+#news .list>li:nth-child(1){
+ height: 320px; 
+ border-right: 1px solid #e9e9e9;
+}
+#news .list>li:nth-child(2){
+  margin-bottom: 20px;
+  background-image: url(../img/bk_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#news .list > li:nth-child(3){
+  background-image: url(../img/bk_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#news .list>li:not(:nth-child(1)){
+  background-color: #eee;  
+  line-height: 7;
+}
+#news .list>li::before{
+ content: "";
+ width: 60%;
+ height: 100%;
+ background-image: url(../img/gastruck.jpg); 
+ background-size: cover;
+ float: left;
+}
+#news .list>li>a{
+ /*! display: inline-block; */
+ vertical-align: top;
+ color: #000;
+}
+#news .list > li:nth-child(1) >a{
+   width: 35%; 
+   float: right;
+   color: #000;
+}
+#news .list-inline > li{
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+}
+#news .list-inline > li:first-child{
+   background-image: url(../img/bg_sns.png);
+}
+#news .list-inline > li:nth-child(2){
+   background-image: url(../img/bg_sns.png);
+   background-position-x: 30px; 
+}
+#news .list-inline > li:nth-child(3){
+   background-image: url(../img/bg_sns.png);
+   background-position-x: 70px; 
+}
+#news .list-inline > li:last-child{
+   background-image: url(../img/bg_sns.png);
+   background-position-x: 110px; 
+}
+.sns{
+    float: left;
+width: 35;
+width: 35%;
+margin-left: 5%;
+margin-top: 10px;
+}
+.text-center th {
+    text-align: center;
+}
+.fadeIn .btn{
+    
+    width: 22%;
+    font-size: 16px;
+    background-image: linear-gradient(to bottom,#f1592a 0,#f1592a 100%);
+    border-color: #f1592a !important;
+}
+.btn-primary{
+   background-color: #f1592a !important;
+   border-color: orange !important;
+}
+.slick-initialized .slick-slide{
+    
+    height: 400px;
+}
+.slick-slide img{
+    height: 80%;
+    width: 80%;
+}
+/* 소셜미디어 */
+
+/* 바로가기 */
+#direct li{
+ background-color: #ccc;
+ height: 160px;
+ background-repeat: no-repeat;
+ background-size: 100%;
+ background-position: center;
+}
+#direct li:nth-child(1){
+ background-image: url(../img/p1.jpg);   
+}
+#direct li:nth-child(2){
+ background-image: url(../img/p2.jpg);    
+}
+#direct li:nth-child(3){
+  background-image: url(../img/p3.jpg);      
+}
+#direct li:nth-child(4){
+  background-image: url(../img/p4.jpg);      
+}
+/* 검색하기 */
+#search .searchinput{
+    width: 63%;
+    padding: 25px;
+    border-radius: 10px;
+    border-color: #f60;
+}
+#search .searchinput + button{
+    
+    line-height: 3;
+    background-color: #fff;
+    border: 1px solid #ff6600;
+    border-radius: 10px;
+    background-color: #f60;
+    text-indent: -9999px;
+    width: 45px;
+    background-image: url(../img/arr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#search fieldset{
+    width: 60%;
+}
+#socialmedia .container-fluid{
+    
+    background-color: #f8f8f8;
+    padding-top: 50px;
+}
+#socialmedia .container-fluid h2{
+    
+    font-weight: bold;
+    color: #808080;
+}
+#socialmedia .container-fluid h2:after{
+    content: "";
+    width: 10%;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../img/more.png);
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+.btn-danger{
+    background-image: linear-gradient(to bottom,#ff6600 0,#ff6600 100%);
+    margin-top: 30px;
+    border: #ff6600;
+}
+.btn-danger:hover{
+background-position: 0 -33px;
+background-color: #ea5e00;
+}
+.slick-dotted.slick-slider{
+    margin-top: 50px;
+}
+#search{
+    
+    background-color: #f8f8f8;
+}
+#search h2{
+    
+    font-weight: bold;
+    color: #808080;
+    line-height: 2;
+}

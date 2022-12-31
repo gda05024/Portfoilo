@@ -1,0 +1,132 @@
+/* 하단영역 */
+
+footer{
+  padding: 40px 0;
+  margin-top:60px;
+}
+footer .f1{
+  background-color: #efefef;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+footer .f1 .f1in{
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+footer .f1 .f1in div{
+  display: inline-block;
+  vertical-align: top;
+}
+footer .f1 .f1in div>*{
+ line-height: 2;
+ color: #999;
+}
+footer .f1 .f1in div:nth-child(1){
+  width: 15%;
+}
+footer .f1 .f1in div:nth-child(1) h1{
+
+}
+footer .f1 .f1in div:nth-child(1) p{
+
+}
+footer .f1 .f1in div:nth-child(2){
+
+  width: 45%;
+}
+footer .f1 .f1in div:nth-child(2) p{
+
+}
+footer .f1 .f1in div:nth-child(2) address{
+font-style: normal;
+}
+footer .f1 .f1in div:nth-child(3){
+
+  width: 28%;
+}
+footer .f1 .f1in div:nth-child(3) p{
+transform:rotate(-90deg) scaleY(2);
+transform: scaleY(1);
+}
+footer .f1 .f1in div:nth-child(4){
+
+}
+footer .f1 .f1in div:nth-child(4) ul{
+
+}
+footer .f1 .f1in div:nth-child(4) ul li{
+
+}
+footer .f1 .f1in div:nth-child(4) ul li a{
+line-height: 2;
+display: block;
+}
+footer .f1 .f1in div:nth-child(4) ul li:nth-child(1) a{
+  color:#f00;
+}
+footer .f2{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+footer .f2>*{
+  display: inline-block;
+  vertical-align: top;
+}
+footer .f2 .banner{
+width: 55%;
+}
+footer .f2 .banner li{
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+footer .f2 .banner li a{
+ height: 100%;
+ display: block;
+ padding:0 6px;
+}
+footer .f2 .banner li a img{
+
+}
+footer .f2 .sns{
+ width: 30%;
+ text-align: right;
+}
+footer .f2 .sns li{
+  display: inline-block;
+  vertical-align: top;
+}
+footer .f2 .sns li a{
+
+}
+footer .f2 .sns li a i{
+  width: 40px;
+  height: 40px;
+  background-color: #999;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 18px;
+}
+footer .f2 .sns li:nth-child(1) a i{
+  font-size: 13px;
+}
+footer .f2 .sns li:nth-child(2) a i{
+  font-size: 16px;
+}
+footer .f2 select{
+  float:right;
+  padding: 10px 12px;
+  color: #999;
+  background-color: #fff;
+  border:none;
+  border: 1px solid #999;
+}
+footer .f2 select option{
+
+}

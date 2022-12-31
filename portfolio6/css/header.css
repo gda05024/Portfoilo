@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* 헤더 부분---------------- */
+/* 상단영역----------------------------------- */
+header{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 24%;
+ height: 100%;
+ z-index: 1;
+ box-shadow: 5px 0px 15px 0px rgba(0, 0, 0, 0.25);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ background-color: #fff;
+}
+header .logo{
+    
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    align-items: center;
+    margin-top: 50px;
+}
+header .logo span{
+    background-image: url(../img/g2.gif);
+    width: 58px;
+    height: 60px;
+    display: block;
+    text-indent: -1090px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+header .logo h1{
+    
+    margin-left: 12px;
+}
+header .logo h1 a{
+    
+    display: block;
+    line-height: 2;
+    font-size: 20px;
+    font-weight: bold;
+}
+header ul.up{
+
+    position: absolute;
+    top: 30%;
+    left: 50px;
+}
+header ul.up li{
+
+    line-height: 2;
+}
+header ul.up li a{
+
+    font-size: 25px;
+    font-weight: bold;
+    width: 131%;
+    display: inline-block;
+}
+header ul.up li a::after{
+
+}
+header ul.down{
+
+    position: absolute;
+    top: 90%;
+    left: 50px;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+header ul.down li{
+    
+}
+header ul.down li a{
+    
+    display: block;
+    border: 1px solid #f0f0f0;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: all 1s;
+}
+header ul.down li a:hover{
+   background-color: #333; 
+    color: #fff;
+}
+.hide{
+    display: none;
+}

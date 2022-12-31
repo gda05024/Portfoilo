@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+@media screen and (max-width:1200px){
+/* 베스트셀러 */
+  #BESTSELLERS div ul li{
+    width: 47%;
+  }
+  #BESTSELLERS div ul li:nth-child(3n+2) {
+    margin-top:0px;
+  }
+  /*  energy */
+  #INGREDIENTS > div{
+  display: block;
+  }
+  #INGREDIENTS div h2{ 
+  font-size: 32px;
+  width: auto;
+  text-align: center;
+  position: relative;
+  top: -50px;
+  }
+  #INGREDIENTS div h2 span{
+    display: inline;
+    margin-left:10px; 
+  }
+  #INGREDIENTS div ul{
+  width: 100%;
+  }
+  #INGREDIENTS div ul li h3 span{
+    display: inline;
+  }
+/*  prev,next  */
+  #INGREDIENTS .slick-prev, #INGREDIENTS  .slick-next{
+  top: auto;
+  bottom: 58px;
+  
+  }
+  #INGREDIENTS .slick-prev{
+    left:  60%;
+  } 
+  #INGREDIENTS  .slick-next{
+    right: 15%;
+  }
+  #INGREDIENTS .slick-dots{
+    /*! text-align: center; */
+    /*! position: relative; */
+    bottom: 50px;
+    top: auto;
+    right: 22.5%;
+    padding-bottom: 0;
+  }
+  
+/*  하단  */
+  footer div ul.left{
+    width: 70%;
+  }
+  footer div ul.right{
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:768px){
+/* 타이틀  */
+  #title .w1000{
+    padding-right: 0;
+    }
+  #title ul.titleFade li.titlelist{
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+  #title .slick-prev,#title .slick-next {
+    right: 40px;
+    left: auto;
+    z-index: 3;
+  }
+  #title .slick-dots{
+    right: 70px;
+    }
+  #BESTSELLERS div h2{
+  text-align: center;
+  }
+  #BESTSELLERS div ul li{
+  width: 100%;
+  }
+/*  브랜드스토리  */
+  #BRANDSTORY{
+   padding-left:  0;
+   }
+  #BRANDSTORY > div{
+   padding-left: 20px;
+   }
+  #BRANDSTORY > div h2{
+   margin-bottom: 20px;
+   font-size: 65px;
+  }
+/*  디자인스토리  */
+  #DESIGNSTORY{
+    display: block;
+  }
+  #INGREDIENTS div ul{
+    padding-bottom:40px;
+  }
+  #INGREDIENTS div ul li{
+    display: block;
+  }
+  #INGREDIENTS .slick-dots{
+  bottom: 0;
+  right: auto;
+  left: calc(50% - 23px);
+  }
+  #INGREDIENTS .slick-prev, #INGREDIENTS .slick-next{
+  bottom: 15px;
+  }
+  #INGREDIENTS .slick-prev{
+  left: 25%;
+  }
+  #INGREDIENTS .slick-next{
+  right: 25%;
+  }
+  
+  #INGREDIENTS div ul li .right{
+    padding-bottom: 60px; 
+  }
+  #INGREDIENTS div ul li a{
+  bottom: 40px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+

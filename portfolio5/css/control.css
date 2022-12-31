@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* 다음이전 */
+span.control{
+position: absolute;
+right: calc((100% - 1000px) / 2);
+top: 97px;
+/*! letter-spacing: 5px; */
+display: none;
+}
+span.control button{
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  letter-spacing: 2px;
+}
+span.control button+button::before{
+  content: "/ ";
+  position: absolute;
+  left: -5px;
+  color: #ccc;
+}
+@media screen and (max-width:1200px){
+  span.control{
+   right: calc((100% - 83.33333333333333vw) / 2); 
+  }
+}

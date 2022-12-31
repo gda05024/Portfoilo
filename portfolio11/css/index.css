@@ -1,0 +1,498 @@
+@charset "utf-8";
+/* 메인-BESTSELLERS */
+html{
+}
+body{
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  perspective: 1px;
+}
+main{
+  
+}
+#BESTSELLERS{
+  padding-top: 100px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+#BESTSELLERS [data-aos] {
+    transition-duration: 2.4s;
+}
+#BESTSELLERS div h2{
+  font-size: 40px;
+}
+#BESTSELLERS div ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(9% / 3);
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+#BESTSELLERS div ul li{
+  width: 28%;
+  margin-bottom: 90px;
+}
+#BESTSELLERS div ul li:nth-child(3n+2){
+  margin-top:-90px;
+}
+#BESTSELLERS div ul li a{
+position: relative;
+display: block;
+}
+#BESTSELLERS div ul li a img{
+  max-width: 100%;
+}
+#BESTSELLERS div ul li a img.overImg{
+ position: absolute;
+ left: 0;
+ top: 0;
+ z-index: 1;
+ display: none;
+}
+#BESTSELLERS div ul li a h3{
+
+  line-height: 3;
+  color: #999;
+}
+
+#BESTSELLERS div #bestMore {
+  margin: 0 auto;
+  display: block;
+}
+#BESTSELLERS div #bestMore a{
+  color:#fff;
+}
+/* BRANDSTORY */
+#BRANDSTORY{
+  padding-left: 100px;
+  overflow: hidden;
+  padding-top: 81px;
+  position: relative;
+  z-index: 2;
+  
+}
+#BRANDSTORY>div{
+  height: 620px;
+  padding-left: 120px;
+  position: relative;
+  background-image: url(../img/beach.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#BRANDSTORY>div h2{
+  font-size: 100px;
+  margin-bottom: 70px;
+  position: relative;
+  top: -56px;
+  left: 548px;
+  display: inline-block;
+  color: transparent;
+  background-image: url(../img/beach.jpg);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-size: cover;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  width: 710px;
+}
+#BRANDSTORY>div ul{
+
+  color: #fff;
+}
+#BRANDSTORY div ul li{
+
+}
+#BRANDSTORY div ul li:not(:first-child){
+display: none;
+}
+#BRANDSTORY div ul li h3{
+  font-size: 33px;
+}
+#BRANDSTORY div ul li p{
+  color: #fff;
+  line-height: 1.7;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#BRANDSTORY div ul li a{
+
+  color: #fff;
+}
+#BRANDSTORY .brandvideo{
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+/* DESIGNSTORY */
+#DESIGNSTORY{
+background:url(../img/design1.svg) no-repeat left bottom,
+  url(../img/design2.svg) no-repeat right bottom,
+  -webkit-gradient(linear, left top, left bottom, color-stop(0, #00739d), color-stop(1, #3aa690)); background:url(../img/design1.svg) no-repeat left bottom,
+  url(../img/design2.svg) no-repeat right bottom,
+  -moz-linear-gradient(top, #00739d 0%, #3aa690 100%); background:
+  url(../img/design1.svg) no-repeat left bottom,
+  url(../img/design2.svg) no-repeat right bottom,
+  -webkit-linear-gradient(top, #00739d 0%, #3aa690 100%); background: url(../img/design1.svg) no-repeat left bottom,
+  url(../img/design2.svg) no-repeat right bottom,
+  -o-linear-gradient(top, #00739d 0%, #3aa690 100%); background:url(../img/design1.svg) no-repeat left bottom,
+  url(../img/design2.svg) no-repeat right bottom,
+  -ms-linear-gradient(top, #00739d 0%, #3aa690 100%); background:url(../img/design1.svg) no-repeat left bottom,
+  url(../img/design2.svg) no-repeat right bottom,
+  linear-gradient(top, #00739d 0%, #3aa690 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00739d', endColorstr='#3aa690', gradientType=0);
+ padding: 200px 0 400px;
+display: flex;
+justify-content: center;
+gap: 100px;
+position: relative;
+top: -150px;
+z-index: 1;
+  overflow: hidden;
+  transform-style:inherit;
+}
+#DESIGNSTORY::before{
+  content:"";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right:0;
+  top:0;
+  bottom:0;
+  transform: translateZ(-1px) scale(2);
+  background-image: url(https://images.unsplash.com/photo-1628784420252-1bfad7ad4aa0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+#DESIGNSTORY  a{
+ color: #fff;
+  text-align: center;
+ cursor: pointer;
+}
+#DESIGNSTORY  a::before{
+ content: "";
+ width: 210px;
+ height: 350px;
+ display: block;
+/*  border: 1px solid;  */
+ margin:0 auto;
+ margin-bottom:30px;
+ background-size:contain;
+ background-repeat:no-repeat;
+ background-position:center bottom;
+}
+#DESIGNSTORY  h3{
+ font-size:27px;
+  margin-bottom:30px;
+}
+#DESIGNSTORY  p{
+ font-size:15px;
+  line-height:2;
+}
+#DESIGNSTORY .SCENT{
+
+}
+#DESIGNSTORY .SCENT a::before{
+background-image: url(../img/main-material-design.png);
+}
+#DESIGNSTORY .SCENT a h3{
+
+}
+#DESIGNSTORY .SCENT a p{
+
+}
+#DESIGNSTORY .INGREDIENTS{
+
+}
+#DESIGNSTORY .INGREDIENTS a::before{
+background-image: url(../img/main-material-ingredients.png);
+}
+#DESIGNSTORY .INGREDIENTS a h3{
+
+}
+#DESIGNSTORY .INGREDIENTS a p{
+
+}
+
+/* bubble물방울 */
+#DESIGNSTORY .bubbles_l{
+
+}
+}
+#DESIGNSTORY .bubbles_r{
+
+}
+#DESIGNSTORY .bubbles{
+position: relative; 
+display: block;
+animation-name: bubbleupTwist;
+animation-duration: 3s;
+animation-iteration-count: infinite ;
+animation-timing-function: linear ; 
+}
+@keyframes bubbleupTwist{
+  0%{
+    transform:rotate(0deg);
+  }
+  10%{
+    transform:rotate(2deg);
+  }
+  20%{
+    transform:rotate(0deg);
+  }
+  30%{
+    transform:rotate(2deg);
+  }
+  40%{
+    transform:rotate(0deg);
+  }
+  50%{
+  transform:rotate(2deg);
+  }
+  80%{
+  transform:rotate(0deg);
+  }
+}
+#DESIGNSTORY .bubbles::before{
+  content:"";
+  display:block;
+  width: 15px;
+  height: 15px;
+  border-radius:50%;
+  background-color: rgba(255,255,255,0.6);
+  position:absolute;
+  animation-name: bubbleup;
+  animation-duration: 6s;
+  animation-iteration-count: infinite ;
+  animation-timing-function: linear ;
+/*font-size: 60px;
+  color:yellow; */
+}
+@keyframes bubbleup{
+  0%{
+    opacity: 0.2;
+    transform:translateY(0px) scale(0.2);
+  }
+  50%{
+    opacity: 0.8;
+  }
+  75%{
+    opacity: 0.5;
+    transform:translateY(-375px) scale(0.5);
+  }
+  100%{
+    opacity: 0;
+    transform:translateY(-500px);
+  }
+}
+/*  물결 */
+#DESIGNSTORY .wave{
+  background-color: #ccc;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 213px;
+  left: calc(50% - 40px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+#DESIGNSTORY .wave i{
+  display: block;
+  width: 200%;
+  height: 200%;
+  background-color: #cbd6eb;
+  position: absolute;
+  bottom: 30px;
+  left: -50%;
+  border-radius: 45%;
+  animation: rot 3s infinite linear;
+  transform-origin: 50% 50%;
+}
+#DESIGNSTORY .wave i:nth-child(1){
+  z-index:2;
+}
+#DESIGNSTORY .wave i:nth-child(2){
+  background-color: #2b9993;
+  bottom: 20px;
+  z-index:1;
+   animation: rot 5s infinite linear;
+}
+#DESIGNSTORY .wave i:nth-child(3){
+  background-color: #239295;
+  bottom: 0px;
+   animation: rot 7s infinite linear;
+}
+@keyframes rot{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+   transform: rotate(360deg);
+  }
+}
+
+
+/* INGREDIENTS */
+
+#INGREDIENTS{
+  padding: 0 5%;
+  padding-bottom: 90px;
+}
+#INGREDIENTS>div{
+ display: flex;
+ justify-content: center;
+}
+#INGREDIENTS div h2{
+  width: 35%;
+  line-height: 1.7;
+  font-size: 44px;
+  color:#999;
+}
+#INGREDIENTS div h2 span:first-child{
+  color:#333;
+}
+#INGREDIENTS div ul{
+  width: 65%;
+}
+#INGREDIENTS div ul li{
+  display: flex;
+}
+#INGREDIENTS div ul li img{
+
+}
+#INGREDIENTS div ul li .right{
+  padding-top: 50px;
+  max-height: 400px;
+}
+#INGREDIENTS div ul li h3{
+  font-size: 23px;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+  margin-bottom:50px;
+}
+#INGREDIENTS div ul li h3::before{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 24px;
+  background-image: url(../img/quote.svg);
+  background-repeat:no-repeat;
+  top: -24px;
+  left: 0;
+  background-position-x: center;
+  transform: rotate(180deg);
+}
+#INGREDIENTS div ul li h3::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 24px;
+  background-image: url(../img/quote.svg);
+  background-repeat:no-repeat;
+  bottom: -24px;
+  left: 0;
+  background-position-x: center;
+}
+#INGREDIENTS div ul li p{
+  color: #999;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#INGREDIENTS div ul li a{
+  position: absolute;
+  bottom:  150px;
+}
+/* slick좌우화살표큰것 */
+#INGREDIENTS .slick-prev::before,#INGREDIENTS .slick-next::before,
+#title .slick-prev::before,#title .slick-next::before{
+  color:#333;
+  content: "_____";
+}
+
+#INGREDIENTS .slick-next,
+#title .slick-next{
+  right: 10px;
+  top:30%;
+  z-index:3;
+}
+#INGREDIENTS .slick-prev,
+#title .slick-prev{
+  right: 10px;
+  left: auto;
+  top:60%;
+  z-index:3;
+}
+#INGREDIENTS .slick-prev::after,#INGREDIENTS .slick-next::after,
+#title .slick-prev::after,#title .slick-next::after{
+  content: "";
+  border-top:1px solid #666;
+  border-right:1px solid #666;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 16px;
+  right: -14px;
+}
+#INGREDIENTS .slick-next::after,
+#title .slick-next::after{
+
+}
+#INGREDIENTS .slick-prev::after,
+#title .slick-prev::after{
+  left: 0px;
+  right: auto;
+  transform: rotate(225deg);
+}
+#INGREDIENTS .slick-dots{
+  text-align: right;
+}
+#INGREDIENTS .slick-dots li{
+  display: inline-block;
+}
+#INGREDIENTS .slick-dots li button::before,
+#INGREDIENTS .slick-dots li button::after{
+  background-color: #999;
+  border-radius:50%;
+  width: 12px;
+  height: 12px;
+  content: "";
+}
+/* 에너지 이미지카운트 */
+#INGREDIENTS  .slick-dots{
+  position: absolute;
+  right: -10px;
+  top: 45%;
+  width: auto;
+  height: 44px;
+}
+#INGREDIENTS .slick-dots li{
+ display: none; 
+}
+#INGREDIENTS .slick-dots li.slick-active{
+ display: inline-block; 
+}
+#INGREDIENTS  .slick-dots li button{
+  font-size: 24px;
+  line-height: 1;
+  color: #333;
+}
+#INGREDIENTS .slick-dots li button::before,
+#INGREDIENTS .slick-dots li button::after{
+  display: none;
+}

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아인스미디어</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/title.css">
+		<link rel="stylesheet" href="css/commen.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous">
+    </script>
+		
+		<script type="text/javascript" src="js/header.js"></script>
+		<script type="text/javascript" src="js/slide.js"></script>
+		<script type="text/javascript">
+      $(document).ready(
+        function(){
+        new Swiper('.swiper-container');
+
+				//대메뉴 클릭시 전체 맵
+				$("body").prepend("<div class='all_menu'></div>");
+				$(".all_menu").hide();
+
+				$(".ham").click(function(){
+					$(".all_menu").fadeIn();
+					$("header .gnb").clone().appendTo(".all_menu");
+					$("header .gnb").remove();
+
+					//대메뉴 닫기 버튼 
+					$(".all_menu button.close").remove();
+					$(".all_menu").append("<button class='close'>x</button>");
+
+					//대메뉴 클릭시 닫기 
+					$(".all_menu button.close").click(function(){
+            $(".all_menu").fadeOut();
+          });
+          return false;
+				});
+
+				var po1=$("#title").offset().top;
+				var po2=$("#section1").offset().top;
+				var po3=$("#section2").offset().top;
+				var po4=$("#section3").offset().top;
+				var po5=$("#section4").offset().top;
+				var po6=$("#section5").offset().top;
+				var po7=$("#section6").offset().top;
+				var po=[po1,po2,po3,po4,po5,po6,po7];
+				var n;
+
+				//점 클릭시 위치 이동
+				$("#title .dot li a").click(function(){
+					$(this).addClass("red");
+					$("#title .dot li a").not(this).removeClass("red");
+
+					n=$(this).attr("data-n");
+					$("html,body").stop().animate({scrollTop:po[n]},1000);
+					return false;
+				});
+				//스크롤시 대메뉴 색상변경
+				$(window).scroll(function(){
+					if($(window).scrollTop()>=po1){
+						$("#title .dot li:nth-child(1) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(1) a").removeClass("red");
+						}
+						if($(window).scrollTop()>=po2){
+						$("#title .dot li:nth-child(2) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(2) a").removeClass("red");
+						}
+						if($(window).scrollTop()>=po3){
+						$("#title .dot li:nth-child(3) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(3) a").removeClass("red");
+						}
+						if($(window).scrollTop()>=po4){
+						$("#title .dot li:nth-child(4) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(4) a").removeClass("red");
+						}
+						if($(window).scrollTop()>=po5){
+						$("#title .dot li:nth-child(5) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(5) a").removeClass("red");
+						}
+						if($(window).scrollTop()>=po6){
+						$("#title .dot li:nth-child(6) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(6) a").removeClass("red");
+						}
+						if($(window).scrollTop()>=po7){
+						$("#title .dot li:nth-child(7) a").addClass("red");
+						$("#title .dot li a").not("#title .dot li:nth-child(7) a").removeClass("red");
+						}
+					});
+        });//
+
+
+    </script>
+		<!-- 미우스휠 이벤트 -->
+		<script type="text/javascript">
+			window.onload = function () {
+				if($(window).width()>767){
+					var elm = ".box";
+					$(elm).each(function (index) {
+							// 개별적으로 Wheel 이벤트 적용
+							$(this).on("mousewheel DOMMouseScroll", function (e) {
+									e.preventDefault();
+									var delta = 0;
+									if (!event) event = window.event;
+									if (event.wheelDelta) {
+											delta = event.wheelDelta / 120;
+											if (window.opera) delta = -delta;
+									} 
+									else if (event.detail)
+											delta = -event.detail / 3;
+									var moveTop = $(window).scrollTop();
+									var elmSelecter = $(elm).eq(index);
+									// 마우스휠을 위에서 아래로
+									if (delta < 0) {
+											if ($(elmSelecter).next() != undefined) {
+													try{
+															moveTop = $(elmSelecter).next().offset().top;
+													}catch(e){}
+											}
+									// 마우스휠을 아래에서 위로
+									} else {
+											if ($(elmSelecter).prev() != undefined) {
+													try{
+															moveTop = $(elmSelecter).prev().offset().top;
+													}catch(e){}
+											}
+									}
+									 
+									// 화면 이동 0.8초(800)
+									$("html,body").stop().animate({
+											scrollTop: moveTop + 'px'
+									}, {
+											duration: 500, complete: function () {
+											}
+									});
+							});
+					});
+			}
+		}
+		</script>
+		<!-- 스크롤이벤트 aos -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+      $(document).ready(
+        function(){
+            AOS.init();
+        }
+      );
+    </script>
+</head>
+<body>
+    <!-- --------------------상단영역------------------ -->
+		<header>
+			<div class="block_center">
+				<h1><a href="">einsmedia</a></h1>
+					<nav>
+						<ul class="gnb">
+							<li>
+								<h2><a href="#">business</a></h2>
+								<div class="submenu">
+									<ul>
+										<li><a href="">검색광고</a></li>
+										<li><a href="">커머스광고</a></li>
+										<li><a href="">SNS광고</a></li>
+										<li><a href="">디스플레이광고</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h2><a href="">WhyEINS</a></h2>
+							</li>
+							<li>
+								<h2><a href="">solution</a></h2>
+								<div class="submenu">
+									<ul>
+										<li><a href="">로그분석</a></li>
+										<li><a href="">자동입찰</a></li>
+										<li><a href="">커머스 리포트</a></li>
+										<li><a href="">검색리포트</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h2><a href="">portfolio</a></h2>
+								<div class="submenu">
+									<ul>
+										<li><a href="">전체</a></li>
+										<li><a href="">검색광고</a></li>
+										<li><a href="">커머스 광고</a></li>
+										<li><a href="">SNS광고</a></li>
+										<li><a href="">디스플레이광고</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h2><a href="">company</a></h2>
+								<div class="submenu">
+									<ul>
+										<li><a href="">인삿말</a></li>
+										<li><a href="">조직도</a></li>
+										<li><a href="">회사 현황</a></li>
+										<li><a href="">오시는길</a></li>
+										<li><a href="">광고문의</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h2><a href="">people</a></h2>
+								<div class="submenu">
+									<ul>
+										<li><a href="">아인스피플</a></li>
+										<li><a href="">채용정보</a></li>
+										<li><a href="">복리후생</a></li>
+										<li><a href="">인터뷰</a></li>
+									</ul>
+								</div>
+
+							</li>
+						</ul>
+						<span class="ham"></span>
+					</nav>
+					
+			</div>
+		</header>
+    <!-- --------------------타이틀-------------------- -->
+		<div id="title" class="box">
+					<div class="inner">
+						<ul class="titleFade slider">
+							<li class="titlelist titlelist1">
+								<div class="inner2">
+									<h2><strong>More than advertising <span class="block"></span> expert ‘einsmedia’</strong></h2>
+									<p>사용자와 클라이언트를 연결해 주는 No1 디지털 마케팅 그룹</p>
+									<span class="control">
+										<a href="">Next</a>
+										<a href="">Prev</a>
+									</span>
+									<ul class="social">
+										<li><a href="">트위터</a></li>
+										<li><a href="">페이스북</a></li>
+										<li><a href="">인스타그램</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="titlelist titlelist2">
+								<div class="inner2">
+									<h2><strong>More than advertising <span class="block"></span> expert ‘einsmedia’</strong></h2>
+									<p>사용자와 클라이언트를 연결해 주는 No1 디지털 마케팅 그룹</p>
+									<span class="control">
+										<a href="">Next</a>
+										<a href="">Prev</a>
+									</span>
+									<ul class="social">
+										<li><a href="">트위터</a></li>
+										<li><a href="">페이스북</a></li>
+										<li><a href="">인스타그램</a></li>
+									</ul>
+									</div>
+							</li>
+							<li class="titlelist titlelist3">
+								<div class="inner2">
+									<h2><strong>More than advertising <span class="block"></span> expert ‘einsmedia’</strong></h2>
+									<p>사용자와 클라이언트를 연결해 주는 No1 디지털 마케팅 그룹</p>
+									<span class="control">
+										<a href="">Next</a>
+										<a href="">Prev</a>
+									</span>
+									<ul class="social">
+										<li><a href="">트위터</a></li>
+										<li><a href="">페이스북</a></li>
+										<li><a href="">인스타그램</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="titlelist titlelist4">
+								<div class="inner2">
+									<h2><strong>More than advertising <span class="block"></span> expert ‘einsmedia’</strong></h2>
+									<p>사용자와 클라이언트를 연결해 주는 No1 디지털 마케팅 그룹</p>
+									<span class="control">
+										<a href="">Next</a>
+										<a href="">Prev</a>
+									</span>
+									<ul class="social">
+										<li><a href="">트위터</a></li>
+										<li><a href="">페이스북</a></li>
+										<li><a href="">인스타그램</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+			</div>
+			<ul class="dot">
+				<li><a href="#title" data-n="0"></a></li>
+				<li><a href="#section1" data-n="1"></a></li>
+				<li><a href="#section2" data-n="2"></a></li>
+				<li><a href="#section3" data-n="3"></a></li>
+				<li><a href="#section4" data-n="4"></a></li>
+				<li><a href="#section5" data-n="5"></a></li>
+				<li><a href="#section6" data-n="6"></a></li>
+			</ul>
+		</div>
+    <!-- --------------------컨텐츠역역----------------- -->
+			<section id="section1" class="page-start box">
+				<div class="block_center">
+					<h2 data-aos="fade-right"><strong>A부터 Z까지 꼼꼼하게 <span class="block"></span>따져볼수록 아인스미디어</strong></h2>
+					<p data-aos="fade-left">광고관리의 노하우와 경험을 통해 최적화 된 광고 전략과 <span class="block"></span>솔루션을 제공합니다</p>
+					<ul>
+						<li  data-aos="fade-up">
+							<a href="">
+								<h3>체계적인 광고관리</h3>
+								<p>상황분석 및 전략수립을 토대로 최적의 <span class="block"></span>광고 효과를 제공합니다.</p>
+							</a>
+						</li>
+						<li  data-aos="fade-up">
+							<a href="">
+								<h3>광고 효과를 제공합니다</h3>
+								<p>고객사의 철저한 현황분석을 통해<span class="block"></span>최적의 미디어를 제안합니다. </p>
+							</a>
+						</li>
+						<li  data-aos="fade-up">
+							<a href="">
+								<h3>DATA기반 전략 수립</h3>
+								<p>고도화된 솔루션을 바탕으로 정확하고<span class="block"></span>빠르게 효율적인 전략을 수립합니다. </p>
+							</a>
+						</li>
+						<li  data-aos="fade-up">
+							<a href="">
+								<h3>고도화된 솔루션 제공</h3>
+								<p>로그분석, 자동입찰, 커머스 & 검색 리포트 등<span class="block"></span>다양한 솔루션을 제공합니다. </p>
+							</a>
+						</li>
+						<li  data-aos="fade-up">
+							<a href="">
+								<h3>페이지 제작 지원</h3>
+								<p>이탈율 방지와 광고의 효율성을 높이기 위해 <span class="block"></span>랜딩페이지 제안 및 제작을 지원합니다.</p>
+							</a>
+						</li>
+						<li  data-aos="fade-up">
+							<a href="">
+								<h3>경쟁사 현황 비교 분석</h3>
+								<p>경쟁사의 집행현황을 파악하고 그에 맞는 대응전략을 <span class="block"></span>도출하여 차별화 전략을 확보합니다</p>
+							</a>
+						</li>
+					</ul>
+				</div >
+			</section>
+			<section id="section2" class="box">
+				<div class="block_center">
+					<h2 data-aos="fade-right"><strong>고객에게 가장 적합한 <span class="block"></span>마케팅 채널 제안</strong></h2>
+					<p data-aos="fade-left">고도의 운영노하우와 축적된 데이터를 통해<span class="block"></span>최적의 마케팅 채널을 제안합니다</p>
+					<ul data-aos="fade-up">
+						<li>
+							<a href="">
+								<h3>검색광고</h3>
+								<p>사용자가 포털의 검색창에 키워드를 입력했을 때 Client의 사이트를 보여주는 검색 광고는 검색을 통해
+									사용자가 원하는 정보를 보여주는 형태로 제품 또는 서비스에 관심이 있는 잠재 고객에게 사이트를 홍보 할 수 있습니다.
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<h3>커머스 광고</h3>
+								<p>상품검색, 키워드검색, 가격 비교 등 사용자와 Client 쇼핑몰을 연결해주는 커머스 광고는 네이버 쇼핑 검색 및
+									G마켓, 옥션 등의 오픈마켓 검색결과 페이지에 상품 단위로 노출하여 제품에 관심이 있는 잠재 고객에게 홍보 할 수 있습니다.
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<h3>SNS 광고</h3>
+								<p>페이스북, 인스타그램 등 인맥, 관심사 기반의 소셜 네트워크 서비스를 통한 SNS 광고는 체계적인 분석을 토대로
+									필요한 정보를 제공하고 브랜드에 대한 신뢰도 및 가치 상승을 위한 광고를 통해 세분화된 Target에게 홍보 할 수 있습니다.
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<h3>디스플레이 광고</h3>
+								<p>주요 포털 사이트 네이버, 카카오, Google, 네이트 등 가장 눈에 잘 띄는 영역에 노출되는 이미지 광고로 애니메이션을 활용한
+									다이내믹한 효과를 통해 강렬한 메시지 전달로 단기간 내 많은 사용자에게 홍보 할 수 있습니다.
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="section3" class="box">
+				<div class="block_center">
+					<h2 data-aos="fade-right"><strong>
+						다양한 솔루션을 통한<span class="block"></span>정확하고 빠른 분석.</strong></h2>
+					<p data-aos="fade-left">고도의 운영 Know-how와 축적된 데이터 기반의 솔루션을 통해<span class="block"></span>정확하게 분석하고, 빠르게 제안하고, 효율적으로 운영합니다</p>
+						<ul>
+							<li data-aos="fade-up">
+								<h3><a href="">로그분석 솔루션</a> </h3>
+								<p>광고 성과 분석, 사용자 유입과 이탈에 대한<span class="block"></span>추적관리를 통한 다양한 전략 도출</p>
+							</li>
+							<li data-aos="fade-up">
+								<h3><a href="">자동입찰 솔루션</a></h3>
+								<p>빠른 목표 순위 도달, 보다 저렴한 입찰가 운용,<span class="block"></span>	목표 순위 유지를 통한 효율적 운영</p>
+							</li>
+							<li data-aos="fade-up">
+								<h3><a href="">커머스 리포트솔루션 </a></h3>
+								<p>광고 효과에 대한 신속한 공유 및 진행중인 광고에 대한<span class="block"></span>효율 최적화, 문제 발생 시 빠른 해결</p>
+							</li>
+							<li data-aos="fade-up">
+								<h3><a href="">검색 리포트솔루션 </a></h3>
+								<p>네이버, 카카오 등 검색 광고 진행 결과 피드백을<span class="block"></span>일간/주간/월간 원하는 포맷으로 제공 가능</p>
+							</li>
+						</ul>
+			  </div>
+			</section>
+			<section id="section4" class="box">
+				<div class="block_center">
+					<h2 data-aos="fade-up"><strong>아인스미디어는 사용자와 클라이언트를 연결해 주는<span class="block"></span>No.1 디지털 마케팅 그룹입니다.</strong></h2>
+					<ul>
+						<li data-aos="fade-up">
+							<h3><strong>열정있는 전문가와<span class="block"></span>함께합니다.</strong></h3>
+							<p>보다 정확하게 분석하고, 보다 빠르게<span class="block"></span>
+								제안하고, 보다 효율적으로 운영하며 Client의<span class="block"></span>
+								성과를 최우선으로 생각하는 열정이 넘치는<span class="block"></span>
+								인재들이 함께 하고 있습니다. </p>
+						</li>
+						<li data-aos="fade-up">
+							<h3><strong>광고의 영역을<span class="block"></span>계속 확장하고 있습니다.</strong></h3>
+							<p>검색광고를 시작으로 e커머스 광고, SNS광고,<span class="block"></span>
+								디스플레이 광고까지 온라인 미디어 커버리지를<span class="block"></span>
+								확장해 왔습니다. </p>
+						</li>
+						<li data-aos="fade-up">
+							<h3><strong>노하우를 토대로<span class="block"></span>목표에 맞게 제안합니다.</strong></h3>
+							<p>지난 11년간 다수의 광고 캠페인 진행을 통해<span class="block"></span>
+								축적된 고도의 운영 노하우와 데이터를 토대로<span class="block"></span>
+								고객님의 목표에 맞는 통합 마케팅을 제안합니다. </p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="section5" class="box">
+				<div class="block_center">
+					<h2 data-aos="fade-up"><strong>고객의 신뢰를 기반으로 200배에 이르는 폭발적인<span class="block"></span>매출 성장률을 기록하고 있습니다.</strong></h2>
+					<div data-aos="fade-up">
+						<img src="img/grf.png" alt="">
+					</div>
+					<p data-aos="fade-up">아인스미디어는 창립 이래 다수의 고객사와 함께 꾸준한 성장을 이루어 가고 있습니다.</p>
+				</div>
+			</section>
+			<section id="section6" class="box">
+				<div class="block_center">
+					<h2 data-aos="fade-up"><strong>고객과 함께 성장하며 최고의 인재로 성장할<span class="block"></span>마케팅 프로페셔널 아인스피플을 찾습니다.</strong></h2>
+					<ul>
+						<li data-aos="fade-up">
+							<h3><a href="">아인스피플 </a></h3>
+							<p>젊은 감각으로 함께 성장하는 아인스피플</p>
+						</li>
+						<li data-aos="fade-up">
+							<h3><a href="">채용정보 </a></h3>
+							<p>채용 프로세스 및 관련 정보</p>
+						</li>
+						<li data-aos="fade-up">
+							<h3><a href="">복리후생 </a></h3>
+							<p>워라벨을 중시하는 혜택과 보상</p>
+						</li>
+						<li data-aos="fade-up">
+							<h3><a href="">인터뷰 </a></h3>
+							<p>아인스 선배들의 생생한 인터뷰</p>
+						</li>
+					</ul>
+					<div class="red" data-aos="fade-up">
+						<div class="red_in">
+							<h4>광고 및 컨설팅 문의</h4>
+							<p>02-2088-8844</p>
+						</div>
+						<fieldset>
+							<label for="" class="none">이름</label>
+							<input type="text" placeholder="이름">
+							<label for="" class="none">연락처</label>
+							<input type="text" placeholder="연락처">
+							<label for="" class="none">체크박스</label>
+							<input type="checkbox">
+							<label for="">개인정보수집 및 이용에 동의합니다.(내용보기)</label>
+							<button>무료상담신청</button>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.939922297471!2d127.10761601563584!3d37.32025074595128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5a1c02997df1%3A0x625265cf93b9e842!2z6rK96riw64-EIOyaqeyduOyLnCDquLDtnaXqtawg67O07KCV64-ZIDEyNjEtNCA27Li1!5e0!3m2!1sko!2skr!4v1628047313271!5m2!1sko!2skr" width="100%" heght="450" frameborder="0" width="100%" height="500" allowfullscreen></iframe>
+				</div>
+			</section>
+    <!-- --------------------하단영역------------------- -->
+		<footer>
+			<div class="block_center">
+				<h1><a href="">einsmedia</a></h1>
+				<ul>
+					<li><a href="">광고문의</a></li>
+					<li><a href="">상품안내</a></li>
+					<li><a href="">회사소개서 다운로드</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+				</ul>
+				<p>     대표이사 : 김중완 개인정보보호책임자 : 홍성일 사업자등록번호 : 109-86-20253 대표전화 : 02-2088-8866 팩스 : 02-2085-7747 </p>
+				<address>서울 금천구 가산디지털1로 168 우림라이온스밸리 B동 907호, 908호, 909호, 910호 (우: 08507)</address>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	</body>
+</html>

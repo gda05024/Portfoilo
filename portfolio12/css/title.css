@@ -1,0 +1,179 @@
+@charset "utf-8";
+#title{
+ clear:both;
+ overflow: hidden;
+}
+#title .main .nav{
+  cursor: pointer;
+  width: 10%;
+  line-height: 3.6;
+  position: absolute;
+  background-color: #fff;
+  height: 550px;
+  z-index: 1;
+  left: 347px;
+  border-radius: 10px;
+}
+#title .main .nav ul{
+    
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+}
+#title .main .nav ul li{
+    
+   text-align: center;
+}
+#title .nav ul li a{
+    
+   font-size: 17px;
+   display: inline-block;
+   width: 60%;
+   color: #666;
+   font-weight: bold;
+}
+#title .nav ul li:before{
+  content: "";
+  width: 31px;
+  height: 17px; 
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(1):before{
+  content: "";
+  background-image: url(../img/b1.png);
+}
+#title .nav ul li:nth-child(2):before{
+  content: "";
+  background-image: url(../img/b2.png);
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(3):before{
+  content: "";
+  background-image: url(../img/b3.png);
+  width: 31px;
+  height: 26px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(4):before{
+  content: "";
+  background-image: url(../img/b4.png);
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(5):before{
+  content: "";
+  background-image: url(../img/b5.png);
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(6):before{
+  content: "";
+  background-image: url(../img/b6.png);
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(7):before{
+  content: "";
+  background-image: url(../img/b7.png);
+  width: 31px;
+  height: 29px;
+  vertical-align: middle;
+}
+#title .nav ul li:nth-child(8):before{
+  content: "";
+  background-image: url(../img/b8.png);
+}
+#title .nav ul li:nth-child(9):before{
+  content: "";
+  background-image: url(../img/b9.png);
+}
+#title .main{
+  height: 554px;
+  /*! max-width: 1200px; */
+  margin: 0 auto;
+  margin-top: 0px;
+  position: relative;
+}
+#title .main ul.nav_in{
+
+}
+#title .main  ul.nav_in  li{
+
+text-align: center;
+/*! height: 550px; */
+}
+
+#title .main ul.nav_in li img{
+  width: 59%;
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  left: 96px;
+  height: 550px;
+}
+
+#title .main ul.nav_in li a{
+  position: absolute;
+  top: calc(100% - 25%);
+  left: calc(100% - 92%);
+  padding: 15px 110px 15px 15px;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-image: url(../img/bt_arr.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(100% - 10%);
+}
+#title .main ul li a h2{
+
+}
+#title .main ul li a h3{
+
+}
+#title .main ul li a p{
+
+}
+#title .main ul li a a{
+    
+}
+#title .dot{
+
+   width: 100%;
+   border-bottom: 1px solid#ddd;
+}
+#title .dot ul{
+   max-width: 1200px;
+   margin:  0 auto;
+   display: flex;
+   justify-content: space-between;
+   /*! border-bottom: #ddd; */
+}
+#title .dot ul li.slick-dots li button{
+    
+}
+#title .dot ul li{
+  
+}
+#title .dot li a{
+    
+   padding: 16px 29px;
+   line-height: 5;
+   font-size: 19px;
+   color: #999;
+}

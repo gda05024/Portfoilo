@@ -1,0 +1,114 @@
+@charset "utf-8"; 
+#introduce{
+    min-height:100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0)), color-stop(1, #ffffff));
+    background: -moz-linear-gradient(top, rgba(204,105,43) 0%, #ffffff 250px);
+    background: -webkit-linear-gradient(top, rgba(204,105,43) 0%, #ffffff 250px);
+    background: -o-linear-gradient(top, rgba(204,105,43) 0%, #ffffff 250px);
+    background: -ms-linear-gradient(top, rgba(204,105,43) 0%, #ffffff 250px);
+    background: linear-gradient(top, rgba(204,105,43) 0%, #ffffff 250px);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255,0,0)', endColorstr='#ffffff', gradientType=0);
+}
+.introduceIn{
+    background-color: #fff;
+    box-shadow: 0px 7px 22px #dfd8d8;
+    padding:0 60px;
+  
+    padding-bottom: 120px;
+}
+.introduceIn .breadcrumb{
+  margin:0 -60px;  
+}
+
+.introduceIn iframe{
+  margin-left:-30px;
+  height: 400px;
+}
+.introduceIn .container-fluid{
+    margin:30px 0 20px;
+}
+.challenge{
+  background-image: url(../img/challenge.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.challenge li{
+    height: 200px;
+}
+.challenge li:nth-child(2){
+  margin-top:calc(40% - 100px);  
+}
+.profile{
+    
+}
+.vision ul{
+  position: relative;
+}
+.vision ul::before{
+  width: 350px;
+  height: 350px;
+  background-color: #ccc;
+  border-radius:50%;
+  position: absolute;
+  display: block;
+  left: calc(50% - 175px);
+  top: calc(50% - 175px);
+}
+.vision li{
+  position: relative;
+}
+.vision li:nth-child(2){
+  left: 60px;
+  top: -55px;
+}
+.vision li:nth-child(3){
+  left: -60px;
+  top: -55px;
+}
+.vision li:nth-child(4){
+  left: 128px;
+  top: -36px;
+}
+.vision li:nth-child(5){
+  left: -128px;
+  top: -37px;
+}
+.vision li::before{
+  content: "";
+  width: 195px;
+  height: 195px;
+  display: block;
+  border: 10px solid orange;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.vision li h5{
+  position: absolute;
+  width: 195px;
+  height: 195px;
+  left: calc(50% - 96px);
+  top: 0;
+  line-height: 90px;
+}
+.vision li p{
+  width: 100px;
+  height: 195px;
+  position: absolute;
+  top: 71px;
+  left: calc(50% - 50px);
+}
+.introduceIn .sidemenu{
+  position: fixed;
+  left: 10px;
+  top: 100px;
+}
+.introduceIn .sidemenu ul{
+
+}
+.introduceIn .sidemenu ul li{
+
+}
+.introduceIn .sidemenu ul li a{
+
+}

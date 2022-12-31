@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>노엘로힐스</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//헤더 색상변경
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 1) {
+          $(".navbar").css("background" , "#fff");
+					$(".navbar").css("box-shadow" , "0 0 10px rgba(0,0,0,0.1)");
+        }
+        else{
+          $(".navbar").css("background" , "#fff5d6");   
+					$(".navbar").css("box-shadow" , "none");
+        }
+      });
+			//타이틀 배경화면 이동,자동플레이
+			var cn=1;
+			$("#title .control li").click(function(){
+				$(this).addClass("current_c");
+				$(this).siblings().removeClass("current_c");
+				cn=$(this).attr("data-cn");
+				$("#title .newborn_in").stop().animate({"left":-100*cn+"%"},1500);
+			});
+			var cn1=1;
+        setInterval(function(){
+          if(cn<3){
+             if(cn==0){
+              cn1=cn1*-1;
+            }
+						$("#title .newborn_in").stop().animate({"left":-100*cn+"%"},1500);
+						$("#title .control li:eq("+cn+")").addClass("current_c");
+						$("#title .control li:eq("+cn+")").siblings().removeClass("current_c");
+						//cn++; //++증감연산자 값을 1씩 증가해라 cn-- 1씩 감소해//
+						// cn=cn+1;
+						// cn=cn+1;
+						// cn=cn+(-1)
+							cn=cn+cn1;
+					}else if(cn==3){
+						// cn=0;
+						cn=1;
+						cn1=cn1*-1;
+					}
+				},3000);
+		});
+	</script>
+</head>
+<body>
+	<!-- 상단영역--------------------------------- -->
+	<header class="navbar">
+		<div class="headerin">
+			<h1><a href="index.html">노엘로힐스</a></h1>
+			<ul class=gnb>
+				<li><a href="">Shop</a></li>
+				<li><a href="">Our Story</a></li>
+				<li><a href="">Happy Formula</a></li>
+				<li><a href="">Healthy Care</a></li>
+				<li><a href="">Honest Review</a></li>
+				<li><a href="">Fun Events</a></li>
+			</ul>
+			<ul class=enb>
+				<li><a href=""><i></i></a></li>
+				<li><a href=""><i></i></a></li>
+				<li><a href=""><i></i></a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- 타이틀영역--------------------------------- -->
+	<div id="title">
+		<div class="newborn_in">
+			<div class="newborn">
+				<h2>Newborn Baby Skincare <br> Perfected with <br> Expert Knowledge</h2>
+				<p>전문가 그룹의 지식으로 완성한 신생아 스킨케어</p>
+				<a href="">Shop now</a>
+			</div>
+			<div class="newborn_1">
+				<h2>Newborn Baby Skincare <br> Perfected with <br> Expert Knowledge</h2>
+				<p>전문가 그룹의 지식으로 완성한 신생아 스킨케어</p>
+				<a href="">Shop now</a>
+			</div>
+			<div class="newborn_2">
+				<h2>Newborn Baby Skincare <br> Perfected with <br> Expert Knowledge</h2>
+				<p>전문가 그룹의 지식으로 완성한 신생아 스킨케어</p>
+				<a href="">Shop now</a>
+			</div>
+		</div>
+		<ul class="control">
+			<li data-cn="0"></li>
+			<li data-cn="1"></li>
+			<li data-cn="2"></li>
+		</ul>
+	</div>
+	<!-- 내용영역--------------------------------- -->
+	<main>
+		<!-- safe---------------------------- -->
+		<section id="safe">
+			<div class="safe">
+				<h2><span>OURPROMISE</span><strong>Safety & Trust</strong></h2>
+				<ul>
+					<li>
+						<h3>German Dermatest <br>Certified</h3>
+						<p>독일 더마테스트 완료</p>
+					</li>
+					<li>
+						<h3>Skin Irritation <br>Tested</h3>
+						<p>피부 저자극 테스트 완료</p>
+					</li>
+					<li>
+						<h3>Eye Irritation <br> Tested</h3>
+						<p>안자극 대체 테스트 완료</p>
+					</li>
+					<li>
+						<h3>20 Harmful Ingredients <br>Excluded</h3>
+						<p>유해 우려 성분 20가지 배제</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- meet---------------------------- -->
+		<section id="meet">
+			<div class="box1">
+				<h2>
+					<span>OUR PRODUCTS</span>
+					<strong>Meet Our <br>Essentials</strong>
+				</h2>
+			</div>
+			<div class="box2">
+				<h2>모이스처라이징 로션 200ml</h2>
+				<p>피부에 힘을 길러주는 보습장벽케어</p>
+				<strong>38,000원</strong>
+				<a href="">See more</a>
+			</div>
+			<div class="box3">
+				<h2>마일드 젤 워시 300ml</h2>
+				<p>피부를 씻는 동시에 보호하는 워시케어</p>
+				<strong>35,000원</strong>
+				<a href="">See more</a>
+			</div>
+		</section>
+		<!-- belief---------------------------- -->
+		<section id="belief">
+			<div class="b0">
+				<img src="https://www.noelohills.com/web/upload/noelo/main/bg-main-info01.png" alt="">
+			</div>
+			<div class="b1">
+				<h2>A Belief Based on Knowledge,
+					Conscience and Love</h2>
+				<p>내 아이의 피부에 직접 닿는 제품, 안심할 수 있는 성분으로 만들어,<br>
+					공신력 있는 기관의 테스트를 통해 제품의 안전성에 대한 관리를 하고 있습니다.</p>
+				<a href="">Read more</a>
+			</div>
+		</section>
+	  <!--smart---------------------------- -->
+		<section id="smart">
+			<div class="s0">
+				<img src="https://www.noelohills.com/web/upload/noelo/main/bg-main-info02.png" alt="">
+			</div>
+			<div class="s1">
+				<h2>Smart Habits for Healthy <br>
+					Young Skin</h2>
+				<p>소중하다는 말로도 부족한 우리 아이들에게 <br>			
+					최선의 피부관리 솔루션을 전해주기 위해 <br>
+					Noelo Hills의 진지한 고민은 오늘도 멈추지 않습니다.</p>
+				<a href="">Read more</a>
+			</div>
+		</section>
+		<!--beginning---------------------------- -->
+		<section id="beginning">
+			<div class="e0">
+				<img src="https://www.noelohills.com/web/upload/noelo/main/bg-main-info03.png" alt="">
+			</div>
+			<div class="e1">
+				<h2>The Beginning of Noelo Hills</h2>
+				<p>우리가 가장 중요하게 여기는 가치는 진정성입니다. <br>
+					우리가 하는 모든 일, 만드는 모든 제품 그리고 제공하는 <br>
+					모든 정보는 과학, 진실 그리고 양심에 기초합니다. </p>
+				<a href="">Read more</a>
+			</div>
+		</section>
+		<!--only---------------------------- -->
+		<section id="only">
+			<div class="o0">
+				<img src="https://www.noelohills.com/web/upload/noelo/main/bg-main-info04.png" alt="">
+			</div>
+			<div class="o1">
+				<h2>Our Promise to Use <br>
+					Only the Best Ingredients</h2>
+				<p>내 아이의 피부에 직접 닿는 제품, <br>
+					아무것이나 사용할 수 없기에 유해 논란이 있는 성분은 최대한 <br>
+					배제하고안심할 수 있는 성분으로 만들었습니다.</p>
+				<a href="">Read more</a>
+			</div>
+		</section>
+		<!-- instagram---------------------- -->
+		<section id="instagram">
+			<h2>instagram</h2>
+			<div class="i1">
+				<p></p>
+				<a href="">Follow</a>
+		  </div>
+			<ul>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/170547789_654420552018884_4648463498901374243_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=VfPaXZvdZ1AAX9y52pQ&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=d91a207662e558d324c3880a98a60526&oe=60C61F22" alt=""></a></li>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/169350046_853170695263119_4358495314617828137_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=t9XmaB1zVKwAX-cTYRq&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=b97e02e59cc6fdd391379aea10b81426&oe=60C93F6B" alt=""></a></li>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/169350046_853170695263119_4358495314617828137_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=t9XmaB1zVKwAX-cTYRq&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=b97e02e59cc6fdd391379aea10b81426&oe=60C93F6B" alt=""></a></li>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/169481272_857830014948095_3705023689113650916_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=jd4Z2IbETdEAX_lFpFi&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=a176f332de73d41d791b60eeeb03c308&oe=60C74FDF" alt=""></a></li>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/169802315_469586407671450_1688294224333865193_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=O-k1NcRfOoQAX95GM6E&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=962328d5e37f3f30e48aedf1421b5977&oe=60C7531A" alt=""></a></li>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/169973628_278683070511874_8197051816416171718_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=kQ2xNYlyLMwAX9Ln3az&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=d03cd72061e8a70d79fc81b37c94fc0e&oe=60C7078F" alt=""></a></li>
+				<li><a href=""><img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/169946450_160791749245315_4439212898176364508_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=u75o85fCXPsAX-4pH26&_nc_ht=scontent-ssn1-1.cdninstagram.com&oh=485d23bb7380630d84d4de38ffeb7487&oe=60C6C37D" alt=""></a></li>
+			</ul>
+			<span class="control">
+				<a href="">이전</a><a href="">다음</a>
+			</span>
+		</section>
+	</main>
+	<hr class="hide">
+	<!-- 하단영역--------------------------------- -->
+	<footer>
+		<div id="foot">
+			<ul>
+				<li><a href="">Noelo Hills</a></li>
+				<li><a href="">CS Center</a></li>
+				<li><a href="">PrivacyPolicy</a></li>
+				<li><a href="">Terms&Condition</a></li>
+			</ul>
+			<span><a href="">Noelo Hills</a></span>
+		</div>
+		<p>© Copyright Seisson Inc. All rights reserved. </p>
+	</footer>
+</body>
+</html>

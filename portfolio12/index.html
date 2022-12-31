@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItS SKIN BEAUTY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/title.css">
+		<link rel="stylesheet" href="css/common.css">
+		<script  src="js/jquery-3.6.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){							
+			
+				$('.center').slick({
+					centerMode: true,
+					centerPadding: '100px',
+					slidesToShow: 1,
+					autoplay: true,
+					autoplaySpeed: 2000,
+					dots: true,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								arrows: false,
+								centerMode: true,
+								centerPadding: '40px',
+								slidesToShow: 3
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								arrows: false,
+								centerMode: true,
+								centerPadding: '40px',
+								slidesToShow: 1
+							}
+						}
+					]
+				});
+			  //스크롤 - 이슈 이동.멉춤.이동
+				var scrollT=$(window).scrollTop();
+				var hotissueT=$("#section6").offset().top;
+				var colorT=$("#section7").offset().top;
+						colorT=colorT-$(window).height();
+				var hotsideT=colorT-hotissueT+150;
+				$(window).scroll(function(){
+          scrollT=$(window).scrollTop();
+
+          if(scrollT>=hotissueT){
+            $(".in_6").css({"position":"fixed"});
+          }
+          if(scrollT>=colorT){
+            if($(window).width()>1200){
+              $(".in_6").css({"position":"absolute","top":hotsideT});
+            }else{
+              hotsideT=colorT-hotissueT+130;
+              $(".in_6").css({"position":"absolute","top":hotsideT});
+            }
+
+          }
+          if(scrollT<colorT && scrollT>=hotissueT){
+            if($(window).width()>1200){
+              $(".in_6").css({"position":"fixed","top":"190px"});
+            }else{
+              $(".in_6").css({"position":"fixed","top":"130px"});
+            }
+
+          }
+          if(scrollT<hotissueT){
+              $(".in_6").css({"position":"absolute"});
+          }
+
+        });
+			});//
+		</script>
+		<script type="text/javascript">
+		 window.onload=function(){
+			var fday=new Date(2021,10,29);
+			var cday=new Date();
+			var dis=fday.getDate()-cday.getDate();
+			document.getElementById("count").innerHTML="D-"+dis+"";
+			var d_day = new Date();
+          var hour=d_day.getHours();
+          var minute=d_day.getMinutes();
+          var second=d_day.getSeconds();
+           // document.write("현재 날짜는 "+year+"년 "+month+"월 "+date+"일 "+day[d_day.getDay()]+hour+"시 "+minute+"분입니다");
+          document.getElementById("e").innerHTML=hour+":";
+          document.getElementById("f").innerHTML=minute+":";
+					document.getElementById("g").innerHTML=second+"";
+
+					var timer=setInterval(function(){
+          var d_day = new Date();
+          var hour=d_day.getHours();
+          var minute=d_day.getMinutes();
+          var second=d_day.getSeconds();
+           // document.write("현재 날짜는 "+year+"년 "+month+"월 "+date+"일 "+day[d_day.getDay()]+hour+"시 "+minute+"분입니다");
+          document.getElementById("e").innerHTML=hour+":";
+          document.getElementById("f").innerHTML=minute+":";
+          document.getElementById("g").innerHTML=second+"";
+
+
+        },1000);
+
+		 }
+		</script>
+</head>
+<body>
+    <!-- -----------------------------------------------상단영역----------------------------------------------- -->
+		<header>
+			<div class="w1200">
+					<div class="position">
+						<ul class="po1">
+							<li><a href="">it's skin</a></li>
+							<li><a href="">aue pasd</a></li>
+							<li><a href="">dixionst</a></li>
+							<li><a href="">flamel</a></li>
+							<li><a href="">enature</a></li>
+						</ul>
+						<ul class="po2">
+							<li><a href="">로그인</a></li>
+							<li><a href="">회원가입</a></li>
+							<li><a href="">고객센터</a></li>
+						</ul>
+					</div>
+					<div class="headerbox">
+						<div class="logo">
+							<h1><a href="">it's skin BEAUTY</a></h1>
+						</div>
+						<div class="form">
+							<fieldset>
+								<input type="text" placeholder="#올인원 남성바디워시,향기까지 취저"><button>search</button>
+							</fieldset>
+						</div>
+						<div class="right">
+							<ul>
+								<li><a href="">로그인</a></li>
+								<li><a href="">장바구니</a></li>
+								<li><a href="">주문내역</a></li>
+							</ul>
+						</div>
+					</div>
+				<div class="nav">
+					<div class="gnb">
+						<ul class="menu_h">
+							<li><a href="">햄버거</a></li>
+							<li><a href="">NEW</a></li>
+							<li><a href="">BEST</a></li>
+							<li>
+								<a href="">기획전</a>
+								<div class="submenu">
+									<ul>
+										<li><a href="">이벤트</a></li>
+										<li><a href="">당첨자 발표</a></li>
+										<li><a href="">뷰티테스터</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="">세일ON</a>
+								<div class="submenu">
+									<ul>
+										<li><a href="">타임딜</a></li>
+										<li><a href="">특가존</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="">멤버쉽/쿠폰</a></li>
+							<li><a href="">출석체크</a></li>
+							<li><a href="">아울렛</a></li>
+						</ul>
+						<div class="select">
+							<a href=""><strong>1</strong>파워10</a>
+							<ul>
+								<li><a href=""><strong>1</strong>파워10</a></li>
+								<li><a href=""><strong>2</strong>비건</a></li>
+								<li><a href=""><strong>3</strong>퀘 파쏘 원샷워시</a></li>
+								<li><a href=""><strong>4</strong>마스크 맛집</a></li>
+								<li><a href=""><strong>5</strong>틴시틴트</a></li>
+								<li><a href=""><strong>6</strong>오픈이벤트</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- -----------------------------------------------타이틀영역----------------------------------------------- -->
+		<div id="title">
+			<div class="main">
+				<div class="nav">
+					<ul>
+						<li><a href="">전체보기</a></li>
+						<li><a href="">스킨케어</a></li>
+						<li><a href="">클렌징</a></li>
+						<li><a href="">마스크/팩</a></li>
+						<li><a href="">남성</a></li>
+						<li><a href="">바디케어</a></li>
+						<li><a href="">메이크업</a></li>
+						<li><a href="">미용소품</a></li>
+						<li><a href="">세트상품</a></li>
+					</ul>
+				</div>
+				<ul class="nav_in center">
+					<li >
+							<img src="img/title_8.jpg" alt="">
+							<a href="">VIEW MORE</a>
+					</li>
+					<li >
+						<img src="img/title_1.jpg" alt="">
+						<a href="">VIEW MORE</a>
+					</li>
+					<li>
+						<img src="img/title_2.jpg" alt="">
+						<a href="">VIEW MORE</a>
+					</li>
+					<li>
+						<img src="img/title_3.jpg" alt="">
+						<a href="">VIEW MORE</a>
+					</li>
+					<li>
+						<img src="img/title_4.jpg" alt="">
+						<a href="">VIEW MORE</a>
+					</li>
+					<li>
+						<img src="img/title_5.jpg" alt="">
+						<a href="">VIEW MORE</a>
+					</li>
+					<li>
+						<img src="img/title_6.jpg" alt="">
+						<a href="">VIEW MORE</a>
+					</li>
+					<li >
+						<img src="img/title_7.png" alt="">	
+						<a href="">VIEW MORE</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- -----------------------------------------------메인영역----------------------------------------------- -->
+			<section id=section1>
+				<div class="w1200">
+					<h2>쇼핑은 타이밍</h2>
+					<div class="left_1">
+						<div class="top">
+							<h3>오늘의 특가</h3>
+							<time>
+								<span id="count">D-2</span>
+								<span id="e"></span>
+								<span id="f"></span>
+								<span id="g"></span>
+							</time>
+						</div>
+						<div class="bottom">
+							<h3>타이거 시카 그린 칠 다운 폼 클렌저</h3>
+							<p>잇츠스킨</p>
+							<h4>타이거 시카 그린 칠 다운 폼 클렌저</h4>
+							<span>50%
+								<strong>
+									17,000%
+								</strong>
+							<span>
+								8,500원
+							</span>
+								<ul>
+									<li><a href="">하트</a></li>
+									<li><a href="">장바구니</a></li>
+								</ul>
+							</span>
+						</div>
+					</div>
+					<div class="right_1">
+						<div class="img_1">
+							<a href="">
+								<img src="img/clear_f.png" alt="">
+							</a>
+						</div>
+						<div class="img2_1">
+							<ul>
+								<li><a href="">	<img src="img/clear_2.png" alt=""></a></li>
+								<li><a href="">	<img src="img/clear_3.png" alt=""></a></li>
+								<li><a href="">	<img src="img/clear_5.png" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id=section2>
+				<div class="w1200">
+					<div class="left_2">
+						<a href=""><img src="img/background_1.png" alt=""></a>
+					</div>
+					<div class="right1_2">
+						<a href=""><img src="img/background_2.png" alt=""></a>
+					</div>
+				</div>
+			</section>
+			<section id=section3>
+				<div class="w1200">
+					<h2>가장 사랑받는 베스트</h2>
+					<ul class="menu_3">
+						<li><a href="">#지금이 베스트</a></li>
+						<li><a href="">#스킨케어</a></li>
+						<li><a href="">#클렌징</a></li>
+						<li><a href="">#남성그루밍</a></li>
+						<li><a href="">#마스크</a></li>
+						<li><a href="">#메이크업</a></li>
+						<li><a href="">#바디케어</a></li>
+					</ul>
+					<ul class="menuin">
+						<li>
+							<a href="">
+								<ul>
+									<li>
+										<div class="menu_div">
+											<div class="menu_div_in">
+												<h3>잇츠스킨</h3>
+												<p>파워 10 포뮬라 이펙터 13종</p>
+												<span>50%</span><span>12,000원 </span><span>6,000원</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="menu_div">
+											<div class="menu_div_in">
+												<h3>잇츠스킨</h3>
+												<p>★마스크프루프틴트★ 틴시 올데일..</p>
+												<span>30%</span><span>12,000원 </span><span>8,400원</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="menu_div">
+											<div class="menu_div_in">
+												<h3>잇츠스킨</h3>
+												<p>타이거 시카 그린 칠 다운 토너</p>
+												<span>30%</span><span>17,000원 </span><span>11,900원</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="menu_div">
+											<div class="menu_div_in">
+												<h3>잇츠스킨</h3>
+												<p>타이거 시카 그린 칠 다운 젤 크림</p>
+												<span>30%</span><span>12,000원 </span><span>13,300원</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</a>
+						</li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+					<a href="">VIEW MORE</a>
+				</div>
+			</section>
+			<section id=section4>
+				<div class="w1200">
+					<div class="top_3">
+						<div class="left_3">
+							<img src="img/special_1.jpg" alt="">
+						</div>
+						<div class="right_3">
+							<h2>조회수 높은<span class="block"></span>스페셜 기획전</h2>
+							<span>타이거 시카 그린 칠 다운 30%</span>
+							<span>더 착하고 더 강한 어흥시카</span>
+							<span>30% + 무료배송</span>
+							<span>8.02-8.31</span>
+						</div>
+						<ul>
+							<li>
+								<div class="t">
+									<img src="img/tint_2.png" alt="">
+								</div>
+								<div class="rightin">
+									<h3>잇츠스킨 </h3>
+									<p>타이거 시카 그린 칠 다운 토너</p>
+									<span>30%</span>
+									<span>17,000</span>
+									<span>11,900</span>
+									<ul>
+										<li><a href="">좋아요</a></li>
+										<li><a href="">장바구니</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="t">
+									<img src="img/tint_3.png" alt="">
+								</div>
+								<div class="rightin">
+									<h3>잇츠스킨 </h3>
+									<p>타이거 시카 그린 칠 다운 토너</p>
+									<span>30%</span>
+									<span>17,000</span>
+									<span>11,900</span>
+									<ul>
+										<li><a href="">좋아요</a></li>
+										<li><a href="">장바구니</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="t">
+									<img src="img/tint_3.png" alt="">
+								</div>
+								<div class="rightin">
+									<h3>잇츠스킨 </h3>
+									<p>타이거 시카 그린 칠 다운 토너</p>
+									<span>30%</span>
+									<span>17,000</span>
+									<span>11,900</span>
+									<ul>
+										<li><a href="">좋아요</a></li>
+										<li><a href="">장바구니</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="t">
+									<img src="img/tint_3.png" alt="">
+								</div>
+								<div class="rightin">
+									<h3>잇츠스킨 </h3>
+									<p>타이거 시카 그린 칠 다운 토너</p>
+									<span>30%</span>
+									<span>17,000</span>
+									<span>11,900</span>
+									<ul>
+										<li><a href="">좋아요</a></li>
+										<li><a href="">장바구니</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<a href="">VIEW MORE</a>
+					</div>
+				</div>
+			</section>
+			<section id=section5>
+				<div class="w1200">
+					<h2>꾸준히 믿고 쓰는</h2>
+					<ul class="top_5">
+						<li><a href="">NEW</a></li>
+						<li><a href="">MD추천</a></li>
+					</ul>
+					<ul class="bottom_5">
+						<li>
+							<div class="ssun">
+								<h3>퀘파쏘</h3>
+								<p>내추럴 톤업 선 비비</p>
+								<span>30%</span><span>19,900 원</span><span>13,930원</span>
+								<span class="shopping">
+									<a href="">좋아요</a>
+									<a href="">장바구니</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="ssun">
+								<h3>퀘파쏘</h3>
+								<p>내추럴 톤업 선 비비</p>
+								<span>30%</span><span>19,900 원</span><span>13,930d원</span>
+								<span class="shopping">
+									<a href="">좋아요</a>
+								  <a href="">장바구니</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="ssun">
+								<h3>잇츠스킨</h3>
+								<p>파워10 최초 1+2 이펙...</p>
+								<span>30%</span><span>19,900 원</span><span>13,930d원</span>
+								<span class="shopping">
+									<a href="">좋아요</a>
+								  <a href="">장바구니</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="ssun">
+								<h3>잇츠스킨</h3>
+								<p>[1+1] 타이거 시카 레드 으르...</p>
+								<span>30%</span>19,900 원<span></span><span>13,930d원</span>
+								<span class="shopping">
+									<a href="">좋아요</a>
+								  <a href="">장바구니</a>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id=section6>
+				<div class="w1200">
+					<div class="in_6">
+						<ul class="top_6">
+							<li><a href="">잇츠스킨</a></li>
+							<li><a href="">oyrpasd</a></li>
+							<li><a href="">dixionist</a></li>
+							<li><a href="">flamel</a></li>
+							<li><a href="">enature</a></li>
+						</ul>
+						<div class="i">
+							<img src="img/skin_1.png" alt="">
+							<div class="i_p">
+								<h2>잇츠스킨 #가장 나 다운 Clinical 케어</h2>
+								<p>나 답게, 가장 자연스러운 나를 위한 내 피부 맞춤솔루션</p>
+								<a href="">VIEW MORE</a>
+							</div>
+						</div>
+					</div>
+					<div class="all_5">
+						<ul class="i_b">
+							<li>
+								<a href="">
+									<img src="img/img_1.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_2.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_3.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_4.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_5.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_6.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_7.png" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/img_8.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id=section7>
+				<div class="w1200">
+					<div class="left_6">
+						<a href=""><img src="img/bk_1.png" alt=""></a>
+					</div>
+				</div>
+			</section>
+		<!-- -----------------------------------------------하단영역----------------------------------------------- -->
+		<footer>
+			<div class="w1200">
+				<div class="fot_t">
+					<h1><a href="">잇츠스킨</a></h1>
+					<select name="" id="">
+						<option value="">familytit</option>
+						<option value="">잇츠스킨</option>
+						<option value="">딕셔니스트</option>
+						<option value="">플라멜엠디</option>
+						<option value="">이네이처</option>
+					</select>
+					<div class="sns">
+						<ul>
+							<li><a href="">유튜브</a></li>
+							<li><a href="">페이스북</a></li>
+							<li><a href="">네이버</a></li>
+							<li><a href="">인스타그램</a></li>
+							<li><a href="">카카오톡</a></li>
+							<li><a href="">네이버지도</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="fot_b">
+					<div class="fleft">
+						<ul>
+							<li><a href="">고객센터</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">서비스이용약관</a></li>
+							<li><a href="">개인정보취급방침</a></li>
+							<li><a href="">이메일 무단수집거부</a></li>
+						</ul>
+					</div>
+					<div class="fcenter">
+						<h2>제휴 및 해외 수출 문의</h2>
+						<p>공식몰 이용 문의: itsskincs@itshanbul.com</p>
+						<p>마케팅 제휴 문의: its_mkt@itshanbul.com</p>
+						<p>글로벌 제휴 문의: gbd@itshanbul.com</p>
+					</div>
+					<div class="fright">
+						<h2>회사정보</h2>
+						<address>
+							<strong>본사</strong> : 서울특별시 강남구 학동로 311 (논현동) 3F <strong>대표</strong> : 김양수 <span class="block"></span>
+							<strong>개인정보관리책임자</strong> : 임진성 <strong>통신사업자</strong> : (주)잇츠한불 <span class="block"></span>
+							<strong>사업자번호</strong> : 220-87-23971 <strong>통신판매신고</strong> : 제 2015-서울강남-03038호
+						</adress>
+					</div>
+				</div>
+			</div>
+			<p>Copyrightⓒ2021 ITS SKIN SHOP. All Rights Reserved.</p>
+		</footer>
+	</body>
+</html>

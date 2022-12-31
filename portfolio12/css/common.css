@@ -1,0 +1,12 @@
+@charset "utf-8";
+.hide{
+    display: none;
+}
+.block{
+    display: block;
+}
+
+.slick-dots li {
+    top: 22px;
+    z-index: 1;
+}

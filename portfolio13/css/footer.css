@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+footer{
+  
+  background-color: #1d1d1e;
+  padding-top: 50px;
+}
+footer .top{
+  
+}
+footer .top div{
+  
+}
+footer .top div .left{
+  
+  padding-bottom: 50px;
+}
+footer .top div .left h2{
+  
+  color: #ffffffbf;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+footer .top div .right{
+  
+  padding-top: 82px;
+}
+footer .top div .right ul:nth-child(1){
+  
+  border-bottom: 1px solid #cccccc2b;
+  padding-bottom: 30px;
+}
+footer .top div .right h3{
+  font-weight: bold;
+  color: #fff;
+}
+footer .top div .right a{
+  line-height: 2;
+  color: #fff;
+}
+footer .bottom{
+  
+  height: 100px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .bottom h1{
+  
+  text-indent: -9999px;
+  width: 12% !important;
+  background-image: url(../img/logo_w.png);
+  height: 40px;
+}
+footer .bottom p{
+  
+  color: #ffffffc4;
+  margin-top: 20px;
+}
+footer .bottom a{
+  color: #ffffffc4;
+  margin-top: 20px;
+}
+footer .bottom  .dropup{
+  text-align: right;
+  margin-top: 15px;
+}
+footer .bottom .dropup button{
+  
+  background-image: linear-gradient(to bottom,#5c5c5c 0,#5c5c5c 100%);
+  color: #ededed;
+  border-radius: 0px;
+  padding: 8px 30px;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+footer .bottom .dropup button:hover{
+  background-color:#5c5c5c;
+}
+footer .bottom .dropdown-menu{
+  width: 100%;
+}
+footer .bottom h1,footer .bottom p,footer .bottom a{
+  width: auto;
+}
+.list-inline{
+  
+}
+.list-inline > li{
+  
+  display: none;
+}
+.list-inline > li a{
+  /*! width: 40px; */
+  display: inline-block;
+  text-indent: -9999px;
+}
+@media screen and (max-width:991px){
+  footer .snb{
+    text-align:center;
+  }
+}
